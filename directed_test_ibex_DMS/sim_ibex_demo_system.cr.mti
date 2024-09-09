@@ -71,16 +71,16 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	prim_generic_buf
 
-} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_2p_pkg.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_2p_pkg.sv
+} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_pkg.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_pkg.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling package prim_ram_2p_pkg
+-- Compiling package prim_pkg
 
 Top level modules:
 	--none--
 
-} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_pkg.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_pkg.sv
+} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_2p_pkg.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_2p_pkg.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling package prim_pkg
+-- Compiling package prim_ram_2p_pkg
 
 Top level modules:
 	--none--
@@ -226,6 +226,13 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 
 Top level modules:
 	ibex_multdiv_fast
+
+} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_prefetch_buffer.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_prefetch_buffer.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module ibex_prefetch_buffer
+
+Top level modules:
+	ibex_prefetch_buffer
 
 } {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_alu.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_alu.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -462,13 +469,6 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 
 Top level modules:
 	ibex_alu
-
-} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_prefetch_buffer.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_prefetch_buffer.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module ibex_prefetch_buffer
-
-Top level modules:
-	ibex_prefetch_buffer
 
 } {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_top.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_top.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -723,6 +723,14 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 
 Top level modules:
 	ibex_branch_predict
+
+} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_demo_system.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_demo_system.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module ibex_demo_system
+-- Importing package ibex_pkg
+
+Top level modules:
+	ibex_demo_system
 
 } {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_slow.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_slow.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018

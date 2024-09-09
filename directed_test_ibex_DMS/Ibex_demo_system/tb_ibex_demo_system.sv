@@ -42,7 +42,7 @@ module tb_ibex_demo_system #(
   // Clock generation
   initial begin
     clk_sys_i = 0;
-    forever #5 clk_sys_i = ~clk_sys_i;
+    forever #2 clk_sys_i = ~clk_sys_i;
   end
 
   // Test sequence
@@ -50,7 +50,10 @@ module tb_ibex_demo_system #(
     // Initialize inputs
     rst_sys_ni = 0;
     // Release reset after some time
-    #10 rst_sys_ni = 1;
+    #4 rst_sys_ni = 1;
+    //Stop simulation
+    repeat (100000) @(posedge clk_sys_i);
+    $stop;
   end
 
   // initial begin

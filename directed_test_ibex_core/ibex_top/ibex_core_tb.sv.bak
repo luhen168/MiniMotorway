@@ -1,0 +1,185 @@
+`timescale 1ns / 1ns
+
+module ibex_core_tb #(
+  parameter bit          PMPEnable         = 1'b0,
+  parameter int unsigned PMPGranularity    = 0,
+  parameter int unsigned PMPNumRegions     = 4,
+  parameter int unsigned MHPMCounterNum    = 0,
+  parameter int unsigned MHPMCounterWidth  = 40,
+  parameter bit          RV32E             = 1'b0,
+  parameter ibex_pkg::rv32m_e RV32M            = ibex_pkg::RV32MFast,
+  parameter ibex_pkg::rv32b_e RV32B            = ibex_pkg::RV32BNone,
+  parameter bit          BranchTargetALU   = 1'b0,
+  parameter bit          WritebackStage    = 1'b0,
+  parameter bit          ICache            = 1'b0,
+  parameter bit          ICacheECC         = 1'b0,
+  parameter int unsigned BusSizeECC        = ibex_pkg::BUS_SIZE,
+  parameter int unsigned TagSizeECC        = ibex_pkg::IC_TAG_SIZE,
+  parameter int unsigned LineSizeECC       = ibex_pkg::IC_LINE_SIZE,
+  parameter bit          BranchPredictor   = 1'b0,
+  parameter bit          DbgTriggerEn      = 1'b0,
+  parameter int unsigned DbgHwBreakNum     = 1,
+  parameter bit          ResetAll          = 1'b0,
+  parameter ibex_pkg::lfsr_seed_t  RndCnstLfsrSeed   = ibex_pkg::RndCnstLfsrSeedDefault,
+  parameter ibex_pkg::lfsr_perm_t  RndCnstLfsrPerm   = ibex_pkg::RndCnstLfsrPermDefault,
+  parameter bit          SecureIbex        = 1'b0,
+  parameter bit          DummyInstructions = 1'b0,
+  parameter bit          RegFileECC        = 1'b0,
+  parameter int unsigned RegFileDataWidth  = 32,
+  parameter bit          MemECC            = 1'b0,
+  parameter int unsigned MemDataWidth      = MemECC ? 32 + 7 : 32,
+  parameter int unsigned DmHaltAddr        = 32'h1A110800,
+  parameter int unsigned DmExceptionAddr   = 32'h1A110808
+) (
+    logic clk,
+    logic rst,
+    wire [31:0] mem_out,
+    wire [31:0] data_rdata_core
+
+);
+  
+    
+    /*************************** DUT ******************************/
+    
+     ibex_core #(
+    .PMPEnable        (PMPEnable),
+    .PMPGranularity   (PMPGranularity),
+    .PMPNumRegions    (PMPNumRegions),
+    .MHPMCounterNum   (MHPMCounterNum),
+    .MHPMCounterWidth (MHPMCounterWidth),
+    .RV32E            (RV32E),
+    .RV32M            (RV32M),
+    .RV32B            (RV32B),
+    .BranchTargetALU  (BranchTargetALU),
+    .ICache           (ICache),
+    .ICacheECC        (ICacheECC),
+    .BusSizeECC       (BusSizeECC),
+    .TagSizeECC       (TagSizeECC),
+    .LineSizeECC      (LineSizeECC),
+    .BranchPredictor  (BranchPredictor),
+    .DbgTriggerEn     (DbgTriggerEn),
+    .DbgHwBreakNum    (DbgHwBreakNum),
+    .WritebackStage   (WritebackStage),
+    .ResetAll         (ResetAll),
+    .RndCnstLfsrSeed  (RndCnstLfsrSeed),
+    .RndCnstLfsrPerm  (RndCnstLfsrPerm),
+    .SecureIbex       (SecureIbex),
+    .DummyInstructions(DummyInstructions),
+    .RegFileECC       (RegFileECC),
+    .RegFileDataWidth (RegFileDataWidth),
+    .MemECC           (MemECC),
+    .MemDataWidth     (MemDataWidth),
+    .DmHaltAddr       (DmHaltAddr),
+    .DmExceptionAddr  (DmExceptionAddr)
+  ) dut_ibex_core (
+    .clk_i(clk),
+    .rst_ni(rst),
+
+    .hart_id_i(),
+    .boot_addr_i(),
+
+    .instr_req_o(),
+    .instr_gnt_i(),
+    .instr_rvalid_i(),
+    .instr_addr_o(),
+    .instr_rdata_i(),
+    .instr_err_i(),
+
+    .data_req_o(),
+    .data_gnt_i(),
+    .data_rvalid_i(),
+    .data_we_o(),
+    .data_be_o(),
+    .data_addr_o(),
+    .data_wdata_o(mem_out),
+    .data_rdata_i(data_rdata_core),
+    .data_err_i(),
+
+    .dummy_instr_id_o (),
+    .dummy_instr_wb_o (),
+    .rf_raddr_a_o     (),
+    .rf_raddr_b_o     (),
+    .rf_waddr_wb_o    (),
+    .rf_we_wb_o       (),
+    .rf_wdata_wb_ecc_o(),
+    .rf_rdata_a_ecc_i (),
+    .rf_rdata_b_ecc_i (),
+
+    .ic_tag_req_o      (),
+    .ic_tag_write_o    (),
+    .ic_tag_addr_o     (),
+    .ic_tag_wdata_o    (),
+    .ic_tag_rdata_i    (),
+    .ic_data_req_o     (),
+    .ic_data_write_o   (),
+    .ic_data_addr_o    (),
+    .ic_data_wdata_o   (),
+    .ic_data_rdata_i   (),
+    .ic_scr_key_valid_i(),
+    .ic_scr_key_req_o  (),
+
+    .irq_software_i(),
+    .irq_timer_i(),
+    .irq_external_i(),
+    .irq_fast_i(),
+    .irq_nm_i(),
+    .irq_pending_o(),
+
+    .debug_req_i(),
+    .crash_dump_o(),
+    .double_fault_seen_o(),
+
+`ifdef RVFI
+    .rvfi_valid,
+    .rvfi_order,
+    .rvfi_insn,
+    .rvfi_trap,
+    .rvfi_halt,
+    .rvfi_intr,
+    .rvfi_mode,
+    .rvfi_ixl,
+    .rvfi_rs1_addr,
+    .rvfi_rs2_addr,
+    .rvfi_rs3_addr,
+    .rvfi_rs1_rdata,
+    .rvfi_rs2_rdata,
+    .rvfi_rs3_rdata,
+    .rvfi_rd_addr,
+    .rvfi_rd_wdata,
+    .rvfi_pc_rdata,
+    .rvfi_pc_wdata,
+    .rvfi_mem_addr,
+    .rvfi_mem_rmask,
+    .rvfi_mem_wmask,
+    .rvfi_mem_rdata,
+    .rvfi_mem_wdata,
+    .rvfi_ext_pre_mip,
+    .rvfi_ext_post_mip,
+    .rvfi_ext_nmi,
+    .rvfi_ext_nmi_int,
+    .rvfi_ext_debug_req,
+    .rvfi_ext_debug_mode,
+    .rvfi_ext_rf_wr_suppress,
+    .rvfi_ext_mcycle,
+    .rvfi_ext_mhpmcounters,
+    .rvfi_ext_mhpmcountersh,
+    .rvfi_ext_ic_scr_key_valid,
+    .rvfi_ext_irq_valid,
+`endif
+
+    .fetch_enable_i        (),
+    .alert_minor_o         (),
+    .alert_major_internal_o(),
+    .alert_major_bus_o     (),
+    .core_busy_o           ()
+    );
+    /**************************************************************/
+    always #2 clk = !clk;
+    initial begin
+           rst = 0;
+           clk  = 1;
+           #1 rst = 1;
+           #1399 $finish;
+    end
+   
+endmodule

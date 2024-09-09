@@ -18,7 +18,9 @@ module ibex_demo_system #(
   parameter int unsigned        ClockFrequency = 50_000_000,
   parameter int unsigned        BaudRate       = 115_200,
   parameter ibex_pkg::regfile_e RegFile        = ibex_pkg::RegFileFF,
+  // parameter                     SRAMInitFile   = "/home/luanle/Downloads/add-01.mem"
   parameter                     SRAMInitFile   = "/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/beq-01.mem"
+
 ) (
   input  logic clk_sys_i,
   input  logic rst_sys_ni,

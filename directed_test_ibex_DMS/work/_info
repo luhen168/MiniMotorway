@@ -9,10 +9,10 @@ z2
 cModel Technology
 Z0 d/home/luanle/ibex/directed_test
 T_opt
-!s110 1725774043
-V_:aQT@Mi]6eOLITHD;DBH3
+!s110 1725811747
+ViT5RLQoaLAj[@17n8ZBL10
 04 19 4 work tb_ibex_demo_system fast 0
-=7-f48c507843d5-66dd38da-df8fe-2db9d
+=13-f48c507843d5-66ddcc23-57fc9-381d8
 Z1 o-quiet -auto_acc_if_foreign -work work +acc
 Z2 tCvgOpt 0
 n@_opt
@@ -29,32 +29,32 @@ R3
 R0
 vbus
 Z4 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
-Z5 !s110 1725774036
+!s110 1725811736
 !i10b 1
 !s100 PQOK^WO:@b>YEIM?HnH2b1
 I?ZGT?lADAYkJ`keC3O<Ia3
-Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z5 VDg1SIo80bB@j0V0VzS_@n1
 !s105 bus_sv_unit
 S1
-Z7 d/home/luanle/ibex/directed_test_ibex_DMS
+Z6 d/home/luanle/ibex/directed_test_ibex_DMS
 w1724663200
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/bus.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/bus.sv
-Z8 L0 17
-Z9 OL;L;10.7c;67
+Z7 L0 17
+Z8 OL;L;10.7c;67
 r1
 !s85 0
 31
-Z10 !s108 1725774036.000000
+Z9 !s108 1725811736.000000
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/bus.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/bus.sv|
 !i113 0
-Z11 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
 vdebounce
 R4
 DXx4 work 16 debounce_sv_unit 0 22 HJjNPiA^?HSQ<9>?VRXo=0
-R6
+R5
 r1
 !s85 0
 !i10b 1
@@ -62,18 +62,18 @@ r1
 I:n8Tjc@^_NlQ>CFMQHT0X0
 !s105 debounce_sv_unit
 S1
-R7
-Z12 w1724659360
-Z13 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/debounce.sv
-Z14 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/debounce.sv
-Z15 L0 12
-R9
+R6
+Z11 w1724659360
+Z12 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/debounce.sv
+Z13 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/debounce.sv
+Z14 L0 12
+R8
 31
-R10
-Z16 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/debounce.sv|
-Z17 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/debounce.sv|
+R9
+Z15 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/debounce.sv|
+Z16 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/debounce.sv|
 !i113 0
-R11
+R10
 R2
 Xdebounce_sv_unit
 R4
@@ -85,48 +85,48 @@ r1
 IHJjNPiA^?HSQ<9>?VRXo=0
 !i103 1
 S1
-R7
+R6
+R11
 R12
 R13
-R14
-Z18 L0 10
-R9
+Z17 L0 10
+R8
 31
-R10
+R9
+R15
 R16
-R17
 !i113 0
-R11
+R10
 R2
 vgpio
 R4
-R5
+Z18 !s110 1725811737
 !i10b 1
 !s100 SLeDBVY7kV3cWgW<893eR2
 IYUBC5ECm?H:aiC`o_[HHA1
-R6
+R5
 !s105 gpio_sv_unit
 S1
-R7
-R12
+R6
+R11
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/gpio.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/gpio.sv
 L0 5
-R9
+R8
 r1
 !s85 0
 31
-R10
+Z19 !s108 1725811737.000000
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/gpio.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/gpio.sv|
 !i113 0
-R11
+R10
 R2
 vibex_alu
 R4
-Z19 DXx4 work 8 ibex_pkg 0 22 OUHfzU8o2i`XcN3f=WX6A0
+Z20 DXx4 work 8 ibex_pkg 0 22 OUHfzU8o2i`XcN3f=WX6A0
 DXx4 work 16 ibex_alu_sv_unit 0 22 V1T0CCT[0==2JTK>4J>lO0
-R6
+R5
 r1
 !s85 0
 !i10b 1
@@ -134,22 +134,22 @@ r1
 I^oSc=kfP9<1mhi4XD=9A00
 !s105 ibex_alu_sv_unit
 S1
-R7
-Z20 w1725068138
-Z21 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_alu.sv
-Z22 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_alu.sv
-Z23 L0 14
-R9
+R6
+Z21 w1725068138
+Z22 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_alu.sv
+Z23 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_alu.sv
+Z24 L0 14
+R8
 31
-R10
-Z24 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_alu.sv|
-Z25 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_alu.sv|
+R19
+Z25 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_alu.sv|
+Z26 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_alu.sv|
 !i113 0
-R11
+R10
 R2
 Xibex_alu_sv_unit
 R4
-R19
+R20
 VV1T0CCT[0==2JTK>4J>lO0
 r1
 !s85 0
@@ -158,25 +158,25 @@ r1
 IV1T0CCT[0==2JTK>4J>lO0
 !i103 1
 S1
-R7
-R20
+R6
 R21
 R22
-Z26 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv
-R15
-R9
+R23
+Z27 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv
+R14
+R8
 31
-R10
-R24
+R19
 R25
+R26
 !i113 0
-R11
+R10
 R2
 vibex_branch_predict
 R4
-R19
+R20
 DXx4 work 27 ibex_branch_predict_sv_unit 0 22 `=Zhz_<D>jTbC`GH`RaMI1
-R6
+R5
 r1
 !s85 0
 !i10b 1
@@ -184,22 +184,22 @@ r1
 Ie=E3[d@S=U5=CL2dCQj_`2
 !s105 ibex_branch_predict_sv_unit
 S1
-R7
-Z27 w1725068442
-Z28 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_branch_predict.sv
-Z29 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_branch_predict.sv
-Z30 L0 22
-R9
+R6
+Z28 w1725068442
+Z29 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_branch_predict.sv
+Z30 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_branch_predict.sv
+Z31 L0 22
+R8
 31
-R10
-Z31 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_branch_predict.sv|
-Z32 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_branch_predict.sv|
+R19
+Z32 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_branch_predict.sv|
+Z33 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_branch_predict.sv|
 !i113 0
-R11
+R10
 R2
 Xibex_branch_predict_sv_unit
 R4
-R19
+R20
 V`=Zhz_<D>jTbC`GH`RaMI1
 r1
 !s85 0
@@ -208,25 +208,25 @@ r1
 I`=Zhz_<D>jTbC`GH`RaMI1
 !i103 1
 S1
-R7
-R27
+R6
 R28
 R29
-R26
-Z33 L0 18
-R9
+R30
+R27
+Z34 L0 18
+R8
 31
-R10
-R31
+R19
 R32
+R33
 !i113 0
-R11
+R10
 R2
 vibex_compressed_decoder
 R4
-R19
+R20
 DXx4 work 31 ibex_compressed_decoder_sv_unit 0 22 @fV9A;k`UlGD?GgYY`7Q71
-R6
+R5
 r1
 !s85 0
 !i10b 1
@@ -234,22 +234,22 @@ r1
 Ie9Z]U35:XESK:`KB1fA5c2
 !s105 ibex_compressed_decoder_sv_unit
 S1
-R7
+R6
 w1725068448
-Z34 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_compressed_decoder.sv
-Z35 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_compressed_decoder.sv
-R33
-R9
+Z35 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_compressed_decoder.sv
+Z36 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_compressed_decoder.sv
+R34
+R8
 31
-R10
-Z36 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_compressed_decoder.sv|
-Z37 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_compressed_decoder.sv|
+R19
+Z37 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_compressed_decoder.sv|
+Z38 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_compressed_decoder.sv|
 !i113 0
-R11
+R10
 R2
 Xibex_compressed_decoder_sv_unit
 R4
-R19
+R20
 V@fV9A;k`UlGD?GgYY`7Q71
 r1
 !s85 0
@@ -258,56 +258,56 @@ r1
 I@fV9A;k`UlGD?GgYY`7Q71
 !i103 1
 S1
-R7
-Z38 w1725068951
-R34
+R6
+Z39 w1725068951
 R35
-R26
-Z39 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv
-Z40 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh
-Z41 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh
-Z42 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv
-Z43 L0 15
-R9
-31
-R10
 R36
+R27
+Z40 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv
+Z41 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh
+Z42 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh
+Z43 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv
+Z44 L0 15
+R8
+31
+R19
 R37
+R38
 !i113 0
-R11
+R10
 R2
 vibex_controller
 R4
-R19
-R5
+R20
+R18
 !i10b 1
 !s100 X1hHSGRXUc1V9i<KGUQiR0
 II]h_F1bo7Qk1N^Ognmz9g1
-R6
+R5
 !s105 ibex_controller_sv_unit
 S1
-R7
+R6
 w1725069946
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_controller.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_controller.sv
-R15
-R9
+R14
+R8
 r1
 !s85 0
 31
-R10
+R19
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/dv_fcov_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_controller.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_controller.sv|
 !i113 0
-R11
+R10
 R2
 vibex_core
 R4
-R19
-Z44 DXx4 work 15 prim_ram_1p_pkg 0 22 Bi8dkEfVkmBmo2S[mhIfk0
-Z45 DXx4 work 15 prim_secded_pkg 0 22 HN4Jc6FIDB493odo4O6`G2
+R20
+Z45 DXx4 work 15 prim_ram_1p_pkg 0 22 Bi8dkEfVkmBmo2S[mhIfk0
+Z46 DXx4 work 15 prim_secded_pkg 0 22 HN4Jc6FIDB493odo4O6`G2
 DXx4 work 17 ibex_core_sv_unit 0 22 [ObK6E9hYI8f_KLgeFW1T2
-R6
+R5
 r1
 !s85 0
 !i10b 1
@@ -315,24 +315,24 @@ r1
 IGeU_VQjX<JmUHjGXePPLh1
 !s105 ibex_core_sv_unit
 S1
-R7
-Z46 w1725205557
-Z47 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_core.sv
-Z48 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_core.sv
+R6
+Z47 w1725205557
+Z48 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_core.sv
+Z49 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_core.sv
 L0 23
-R9
+R8
 31
-R10
-Z49 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/dv_fcov_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_secded_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_1p_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_core.sv|
-Z50 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_core.sv|
+R19
+Z50 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/dv_fcov_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_secded_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_1p_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_core.sv|
+Z51 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_core.sv|
 !i113 0
-R11
+R10
 R2
 Xibex_core_sv_unit
 R4
-R19
-R44
+R20
 R45
+R46
 V[ObK6E9hYI8f_KLgeFW1T2
 r1
 !s85 0
@@ -341,32 +341,32 @@ r1
 I[ObK6E9hYI8f_KLgeFW1T2
 !i103 1
 S1
-R7
-R46
+R6
 R47
 R48
-R26
-R39
+R49
+R27
 R40
 R41
 R42
-Z51 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_1p_pkg.sv
-Z52 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_secded_pkg.sv
-Z53 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/dv_fcov_macros.svh
-R33
-R9
+R43
+Z52 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_1p_pkg.sv
+Z53 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_secded_pkg.sv
+Z54 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/dv_fcov_macros.svh
+R34
+R8
 31
-R10
-R49
+R19
 R50
+R51
 !i113 0
-R11
+R10
 R2
 vibex_core_tb
 R4
-R19
+R20
 DXx4 work 20 ibex_core_tb_sv_unit 0 22 FRGjan603hOSj3jJkocJN1
-R6
+R5
 r1
 !s85 0
 !i10b 1
@@ -374,22 +374,22 @@ r1
 INHnT22;D5VTz[fH2hO^9l1
 !s105 ibex_core_tb_sv_unit
 S1
-R7
-Z54 w1725635813
-Z55 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_core_tb.sv
-Z56 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_core_tb.sv
+R6
+Z55 w1725635813
+Z56 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_core_tb.sv
+Z57 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_core_tb.sv
 L0 4
-R9
+R8
 31
-Z57 !s108 1725674918.000000
-Z58 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_core_tb.sv|
-Z59 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_core_tb.sv|
+Z58 !s108 1725674918.000000
+Z59 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_core_tb.sv|
+Z60 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_core_tb.sv|
 !i113 0
-R11
+R10
 R2
 Xibex_core_tb_sv_unit
 R4
-R19
+R20
 VFRGjan603hOSj3jJkocJN1
 r1
 !s85 0
@@ -398,142 +398,142 @@ r1
 IFRGjan603hOSj3jJkocJN1
 !i103 1
 S1
-R7
-R54
+R6
 R55
 R56
-L0 3
-R9
-31
 R57
+L0 3
+R8
+31
 R58
 R59
+R60
 !i113 0
-R11
+R10
 R2
 vibex_counter
 R4
-Z60 !s110 1725774037
+R18
 !i10b 1
 !s100 K8z:LgU0Q<MaP9KQJ1Ro=0
 I40@=fdAY`@WN]>j7^FzL52
-R6
+R5
 !s105 ibex_counter_sv_unit
 S1
-R7
-R20
+R6
+R21
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_counter.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_counter.sv
 L0 5
-R9
+R8
 r1
 !s85 0
 31
-Z61 !s108 1725774037.000000
+R19
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_counter.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_counter.sv|
 !i113 0
-R11
+R10
 R2
 vibex_cs_registers
 R4
-R19
-R60
+R20
+Z61 !s110 1725811738
 !i10b 1
 !s100 T[3On:YHPMY227lbABGPL1
 I?U<EA8a_hP;GA@5FBNnIO2
-R6
+R5
 !s105 ibex_cs_registers_sv_unit
 S1
-R7
+R6
 w1725068643
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_cs_registers.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_cs_registers.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pmp_reset_default.svh
-R15
-R9
+R14
+R8
 r1
 !s85 0
 31
-R61
+R19
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pmp_reset_default.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_cs_registers.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_cs_registers.sv|
 !i113 0
-R11
+R10
 R2
 vibex_csr
 R4
-R60
+R61
 !i10b 1
 !s100 b`d9E3^g>6;GUeE7KXDOO2
 I:oA`nE0<Lf_41I:64;=Xn2
-R6
+R5
 !s105 ibex_csr_sv_unit
 S1
-R7
+R6
 w1725068649
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_csr.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_csr.sv
 Z62 L0 11
-R9
+R8
 r1
 !s85 0
 31
-R61
+Z63 !s108 1725811738.000000
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_csr.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_csr.sv|
 !i113 0
-R11
+R10
 R2
 vibex_decoder
 R4
-R19
-R60
+R20
+R61
 !i10b 1
 !s100 WmTAEKDVkRDfHd13@ag4V3
 IolJ@U^5GS<_Qk^bS9YWFF3
-R6
+R5
 !s105 ibex_decoder_sv_unit
 S1
-R7
+R6
 w1725068654
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_decoder.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_decoder.sv
-Z63 L0 16
-R9
+Z64 L0 16
+R8
 r1
 !s85 0
 31
-R61
+R63
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_decoder.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_decoder.sv|
 !i113 0
-R11
+R10
 R2
 vibex_demo_system
 R4
-R19
-Z64 !s110 1725774039
+R20
+!s110 1725811741
 !i10b 1
-!s100 3Md;hg`N=j6060EmdRVhh1
-Io:CbDOMK1KCG1SFF>;mhT3
-R6
+!s100 ]jkiHLnGSRH<d6K3P:okM3
+I:b^1GOK]mb9T7>aaS;G8M2
+R5
 !s105 ibex_demo_system_sv_unit
 S1
-R7
-w1725773915
+R6
+w1725811731
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_demo_system.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_demo_system.sv
-R23
-R9
+R24
+R8
 r1
 !s85 0
 31
-Z65 !s108 1725774039.000000
+Z65 !s108 1725811740.000000
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_demo_system.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_demo_system.sv|
 !i113 0
-R11
+R10
 R2
 vibex_demo_system_tb
 R4
@@ -541,15 +541,15 @@ R4
 !i10b 1
 !s100 ;n3FYe1KmWe9NMP=4`IDY3
 IlVZ]4NN8`5`ZoWR:T5L831
-R6
+R5
 !s105 _1ibex_demo_system_tb_sv_unit
 S1
-R7
+R6
 w1725727083
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/1ibex_demo_system_tb.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/1ibex_demo_system_tb.sv
 L0 2
-R9
+R8
 r1
 !s85 0
 31
@@ -557,13 +557,13 @@ r1
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/1ibex_demo_system_tb.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/1ibex_demo_system_tb.sv|
 !i113 0
-R11
+R10
 R2
 vibex_dummy_instr
 R4
-R19
+R20
 DXx4 work 24 ibex_dummy_instr_sv_unit 0 22 En@;zd]b@<ec`GZ`iBSB53
-R6
+R5
 r1
 !s85 0
 !i10b 1
@@ -571,22 +571,22 @@ r1
 IIo`cVoMK6?iXz46MZa_fc1
 !s105 ibex_dummy_instr_sv_unit
 S1
-R7
-R20
+R6
+R21
 Z66 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_dummy_instr.sv
 Z67 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_dummy_instr.sv
-R43
-R9
+R44
+R8
 31
-R61
+R63
 Z68 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_dummy_instr.sv|
 Z69 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_dummy_instr.sv|
 !i113 0
-R11
+R10
 R2
 Xibex_dummy_instr_sv_unit
 R4
-R19
+R20
 VEn@;zd]b@<ec`GZ`iBSB53
 r1
 !s85 0
@@ -595,25 +595,25 @@ r1
 IEn@;zd]b@<ec`GZ`iBSB53
 !i103 1
 S1
-R7
-R20
+R6
+R21
 R66
 R67
-R26
-R15
-R9
+R27
+R14
+R8
 31
-R61
+R63
 R68
 R69
 !i113 0
-R11
+R10
 R2
 vibex_ex_block
 R4
-R19
+R20
 DXx4 work 21 ibex_ex_block_sv_unit 0 22 ?AjB^WFJzFSI^4`jS4Z[f2
-R6
+R5
 r1
 !s85 0
 !i10b 1
@@ -621,22 +621,22 @@ r1
 IRn_;[]10S2Vgf3ka400<B0
 !s105 ibex_ex_block_sv_unit
 S1
-R7
-R20
+R6
+R21
 Z70 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_ex_block.sv
 Z71 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_ex_block.sv
-R43
-R9
+R44
+R8
 31
-R61
+R63
 Z72 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_ex_block.sv|
 Z73 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_ex_block.sv|
 !i113 0
-R11
+R10
 R2
 Xibex_ex_block_sv_unit
 R4
-R19
+R20
 V?AjB^WFJzFSI^4`jS4Z[f2
 r1
 !s85 0
@@ -645,49 +645,49 @@ r1
 I?AjB^WFJzFSI^4`jS4Z[f2
 !i103 1
 S1
-R7
-R20
+R6
+R21
 R70
 R71
-R26
+R27
 Z74 L0 13
-R9
+R8
 31
-R61
+R63
 R72
 R73
 !i113 0
-R11
+R10
 R2
 vibex_fetch_fifo
 R4
-R60
+R61
 !i10b 1
 !s100 ^^PjoP`JN:nK9=ELGO`R@0
 II?1WNHF[7FcT8>T^8mec62
-R6
+R5
 !s105 ibex_fetch_fifo_sv_unit
 S1
-R7
+R6
 w1725068677
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_fetch_fifo.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_fetch_fifo.sv
-R23
-R9
+R24
+R8
 r1
 !s85 0
 31
-R61
+R63
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_fetch_fifo.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_fetch_fifo.sv|
 !i113 0
-R11
+R10
 R2
 vibex_icache
 R4
-R19
+R20
 DXx4 work 19 ibex_icache_sv_unit 0 22 W3THelozWV^0bnb<Q12Nz0
-R6
+R5
 r1
 !s85 0
 !i10b 1
@@ -695,22 +695,22 @@ r1
 Ih5a:2f?2m^D8lm<c1=ZNn0
 !s105 ibex_icache_sv_unit
 S1
-R7
+R6
 w1725068682
 Z75 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_icache.sv
 Z76 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_icache.sv
-R63
-R9
+R64
+R8
 31
-R61
+R63
 Z77 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_icache.sv|
 Z78 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_icache.sv|
 !i113 0
-R11
+R10
 R2
 Xibex_icache_sv_unit
 R4
-R19
+R20
 VW3THelozWV^0bnb<Q12Nz0
 r1
 !s85 0
@@ -719,29 +719,29 @@ r1
 IW3THelozWV^0bnb<Q12Nz0
 !i103 1
 S1
-R7
-R38
+R6
+R39
 R75
 R76
-R39
 R40
 R41
 R42
-R26
-R23
-R9
+R43
+R27
+R24
+R8
 31
-R61
+R63
 R77
 R78
 !i113 0
-R11
+R10
 R2
 vibex_id_stage
 R4
-R19
+R20
 DXx4 work 21 ibex_id_stage_sv_unit 0 22 GaDl<B;Io48;V8Xd>kP=22
-R6
+R5
 r1
 !s85 0
 !i10b 1
@@ -749,22 +749,22 @@ r1
 IkQK95fT9LjaCI1cSGfm=?0
 !s105 ibex_id_stage_sv_unit
 S1
-R7
+R6
 Z79 w1725370147
 Z80 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_id_stage.sv
 Z81 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_id_stage.sv
-R18
-R9
+R17
+R8
 31
-R61
+R63
 Z82 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/dv_fcov_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_id_stage.sv|
 Z83 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_id_stage.sv|
 !i113 0
-R11
+R10
 R2
 Xibex_id_stage_sv_unit
 R4
-R19
+R20
 VGaDl<B;Io48;V8Xd>kP=22
 r1
 !s85 0
@@ -773,26 +773,26 @@ r1
 IGaDl<B;Io48;V8Xd>kP=22
 !i103 1
 S1
-R7
+R6
 R79
 R80
 R81
-R26
-R53
+R27
+R54
 L0 7
-R9
+R8
 31
-R61
+R63
 R82
 R83
 !i113 0
-R11
+R10
 R2
 vibex_if_stage
 R4
-R19
+R20
 DXx4 work 21 ibex_if_stage_sv_unit 0 22 f77LDN7WaRNG4oZSzj30b1
-R6
+R5
 r1
 !s85 0
 !i10b 1
@@ -800,22 +800,22 @@ r1
 ImR]zcQXC4e@J93>f5Lf_b1
 !s105 ibex_if_stage_sv_unit
 S1
-R7
+R6
 Z84 w1725633104
 Z85 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_if_stage.sv
 Z86 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_if_stage.sv
 Z87 L0 19
-R9
+R8
 31
-R61
+R63
 Z88 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/dv_fcov_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_if_stage.sv|
 Z89 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_if_stage.sv|
 !i113 0
-R11
+R10
 R2
 Xibex_if_stage_sv_unit
 R4
-R19
+R20
 Vf77LDN7WaRNG4oZSzj30b1
 r1
 !s85 0
@@ -824,54 +824,54 @@ r1
 If77LDN7WaRNG4oZSzj30b1
 !i103 1
 S1
-R7
+R6
 R84
 R85
 R86
-R39
 R40
 R41
 R42
-R26
-R53
+R43
+R27
+R54
+R7
 R8
-R9
 31
-R61
+R63
 R88
 R89
 !i113 0
-R11
+R10
 R2
 vibex_load_store_unit
 R4
-R60
+Z90 !s110 1725811739
 !i10b 1
 !s100 9jb=ai_kdg^eCbV0om]Hn0
 IOe3XVc>=cmPRLDE4OO?^I3
-R6
+R5
 !s105 ibex_load_store_unit_sv_unit
 S1
-R7
+R6
 w1725121284
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_load_store_unit.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_load_store_unit.sv
-R63
-R9
+R64
+R8
 r1
 !s85 0
 31
-R61
+R63
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/dv_fcov_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_load_store_unit.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_load_store_unit.sv|
 !i113 0
-R11
+R10
 R2
 vibex_multdiv_fast
 R4
-R19
+R20
 DXx4 work 25 ibex_multdiv_fast_sv_unit 0 22 VU]iEmcYY84R?ghMQ:35b1
-R6
+R5
 r1
 !s85 0
 !i10b 1
@@ -879,22 +879,22 @@ r1
 I<KNZlAh8g6:Km^MCL>RDG0
 !s105 ibex_multdiv_fast_sv_unit
 S1
-R7
-Z90 w1725068790
-Z91 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_fast.sv
-Z92 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_fast.sv
+R6
+Z91 w1725068790
+Z92 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_fast.sv
+Z93 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_fast.sv
 R87
-R9
+R8
 31
-R61
-Z93 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_fast.sv|
-Z94 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_fast.sv|
+Z94 !s108 1725811739.000000
+Z95 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_fast.sv|
+Z96 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_fast.sv|
 !i113 0
-R11
+R10
 R2
 Xibex_multdiv_fast_sv_unit
 R4
-R19
+R20
 VVU]iEmcYY84R?ghMQ:35b1
 r1
 !s85 0
@@ -903,25 +903,25 @@ r1
 IVU]iEmcYY84R?ghMQ:35b1
 !i103 1
 S1
-R7
-R90
+R6
 R91
 R92
-R26
-R63
-R9
-31
-R61
 R93
+R27
+R64
+R8
+31
 R94
+R95
+R96
 !i113 0
-R11
+R10
 R2
 vibex_multdiv_slow
 R4
-R19
+R20
 DXx4 work 25 ibex_multdiv_slow_sv_unit 0 22 ^k5OjMKO3dV6jD6imCb`01
-R6
+R5
 r1
 !s85 0
 !i10b 1
@@ -929,22 +929,22 @@ r1
 Iifc9dKWBKWmcglFhd=nm[0
 !s105 ibex_multdiv_slow_sv_unit
 S1
-R7
-Z95 w1725068801
-Z96 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_slow.sv
-Z97 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_slow.sv
-R63
-R9
+R6
+Z97 w1725068801
+Z98 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_slow.sv
+Z99 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_slow.sv
+R64
+R8
 31
-R61
-Z98 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_slow.sv|
-Z99 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_slow.sv|
+R94
+Z100 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_slow.sv|
+Z101 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_slow.sv|
 !i113 0
-R11
+R10
 R2
 Xibex_multdiv_slow_sv_unit
 R4
-R19
+R20
 V^k5OjMKO3dV6jD6imCb`01
 r1
 !s85 0
@@ -953,106 +953,106 @@ r1
 I^k5OjMKO3dV6jD6imCb`01
 !i103 1
 S1
-R7
-R95
-R96
+R6
 R97
-R26
-R74
-R9
-31
-R61
 R98
 R99
+R27
+R74
+R8
+31
+R94
+R100
+R101
 !i113 0
-R11
+R10
 R2
 Xibex_pkg
 R4
-Z100 !s110 1725774038
+Z102 !s110 1725811740
 !i10b 1
 !s100 a=Rnah8GVzSW5JV2nkm2B2
 IOUHfzU8o2i`XcN3f=WX6A0
 VOUHfzU8o2i`XcN3f=WX6A0
 S1
-R7
-R20
+R6
+R21
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv
-R26
+R27
 L0 9
-R9
+R8
 r1
 !s85 0
 31
-Z101 !s108 1725774038.000000
-Z102 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_clock_gating.sv|
-Z103 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_clock_gating.sv|
+R94
+Z103 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_clock_gating.sv|
+Z104 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_clock_gating.sv|
 !i113 0
-R11
+R10
 R2
 vibex_prefetch_buffer
 R4
-R100
+R90
 !i10b 1
 !s100 5]QbZzhgY7E6B7WgB[`ZZ1
 I_oFXfI[z2OOzmM41A8D;z0
-R6
+R5
 !s105 ibex_prefetch_buffer_sv_unit
 S1
-R7
+R6
 w1725680650
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_prefetch_buffer.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_prefetch_buffer.sv
-R15
-R9
+R14
+R8
 r1
 !s85 0
 31
-R101
+R94
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_prefetch_buffer.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_prefetch_buffer.sv|
 !i113 0
-R11
+R10
 R2
 vibex_register_file_ff
 R4
-R100
+R90
 !i10b 1
 !s100 ;U4WMaZGZBGl_E<:JdAL^3
 IO8b;346PhO>j:c]aiHP0d1
-R6
+R5
 !s105 ibex_register_file_ff_sv_unit
 S1
-R7
-R20
+R6
+R21
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_register_file_ff.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_register_file_ff.sv
 R74
-R9
+R8
 r1
 !s85 0
 31
-R101
+R94
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_register_file_ff.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_register_file_ff.sv|
 !i113 0
-R11
+R10
 R2
 vibex_register_file_fpga
 R4
-R64
+R102
 !i10b 1
 !s100 H9?SabP:h74VbPS5bSzno3
 I`Md<j_^ndg6RV[LMCn0J50
-R6
+R5
 !s105 ibex_register_file_fpga_sv_unit
 S1
-R7
-R20
+R6
+R21
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_register_file_fpga.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_register_file_fpga.sv
-R23
-R9
+R24
+R8
 r1
 !s85 0
 31
@@ -1060,15 +1060,15 @@ R65
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_register_file_fpga.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_register_file_fpga.sv|
 !i113 0
-R11
+R10
 R2
 vibex_top
 R4
-R19
-R44
+R20
 R45
+R46
 DXx4 work 16 ibex_top_sv_unit 0 22 m5L@zkF=BW1Dl<2on;_TP3
-R6
+R5
 r1
 !s85 0
 !i10b 1
@@ -1076,24 +1076,24 @@ r1
 I2If5b;>NQc<TLX3@mD=?n2
 !s105 ibex_top_sv_unit
 S1
-R7
-Z104 w1725644985
-Z105 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_top.sv
-Z106 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_top.sv
-R30
-R9
+R6
+Z105 w1725644985
+Z106 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_top.sv
+Z107 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_top.sv
+R31
+R8
 31
-R101
-Z107 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_secded_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_1p_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/dv_fcov_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_top.sv|
-Z108 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_top.sv|
+R94
+Z108 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_secded_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_1p_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/dv_fcov_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_top.sv|
+Z109 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_top.sv|
 !i113 0
-R11
+R10
 R2
 Xibex_top_sv_unit
 R4
-R19
-R44
+R20
 R45
+R46
 Vm5L@zkF=BW1Dl<2on;_TP3
 r1
 !s85 0
@@ -1102,31 +1102,31 @@ r1
 Im5L@zkF=BW1Dl<2on;_TP3
 !i103 1
 S1
-R7
-R104
+R6
 R105
 R106
-R39
+R107
 R40
 R41
 R42
-R53
-R51
-R52
 R43
-R9
+R54
+R52
+R53
+R44
+R8
 31
-R101
-R107
+R94
 R108
+R109
 !i113 0
-R11
+R10
 R2
 vibex_wb_stage
 R4
-R19
+R20
 DXx4 work 21 ibex_wb_stage_sv_unit 0 22 LjYcRG82062EIKB36SM[X2
-R6
+R5
 r1
 !s85 0
 !i10b 1
@@ -1134,22 +1134,22 @@ r1
 I>mO>WWjmS15j46C]FI0Qf3
 !s105 ibex_wb_stage_sv_unit
 S1
-R7
-Z109 w1725069884
-Z110 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_wb_stage.sv
-Z111 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_wb_stage.sv
-Z112 L0 20
-R9
+R6
+Z110 w1725069884
+Z111 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_wb_stage.sv
+Z112 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_wb_stage.sv
+Z113 L0 20
+R8
 31
-R101
-Z113 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/dv_fcov_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_wb_stage.sv|
-Z114 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_wb_stage.sv|
+R94
+Z114 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/dv_fcov_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_wb_stage.sv|
+Z115 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_wb_stage.sv|
 !i113 0
-R11
+R10
 R2
 Xibex_wb_stage_sv_unit
 R4
-R19
+R20
 VLjYcRG82062EIKB36SM[X2
 r1
 !s85 0
@@ -1158,50 +1158,50 @@ r1
 ILjYcRG82062EIKB36SM[X2
 !i103 1
 S1
-R7
-R109
+R6
 R110
 R111
-R26
-R53
+R112
+R27
+R54
+R7
 R8
-R9
 31
-R101
-R113
+R94
 R114
+R115
 !i113 0
-R11
+R10
 R2
 vprim_buf
 R4
-R100
+R90
 !i10b 1
 !s100 jLQCf1AU`WAhUVD0_2W783
 I0B76Ik]PYah<mY^f7SejS3
-R6
+R5
 !s105 prim_buf_sv_unit
 S1
-R7
-Z115 w1721657538
+R6
+Z116 w1721657538
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_buf.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_buf.sv
 R62
-R9
+R8
 r1
 !s85 0
 31
-R101
+R94
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_buf.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_buf.sv|
 !i113 0
-R11
+R10
 R2
 vprim_clock_gating
 R4
-Z116 DXx4 work 8 prim_pkg 0 22 1f5B;5JmTg4<Y447d?WmQ0
+Z117 DXx4 work 8 prim_pkg 0 22 1f5B;5JmTg4<Y447d?WmQ0
 DXx4 work 25 prim_clock_gating_sv_unit 0 22 Gm`QO`3lWA7G9>z@HDDT32
-R6
+R5
 r1
 !s85 0
 !i10b 1
@@ -1209,22 +1209,22 @@ r1
 IMH101Ezm>CDoHPTR8Nc]i3
 !s105 prim_clock_gating_sv_unit
 S1
-R7
-Z117 w1725674173
-Z118 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_clock_gating.sv
-Z119 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_clock_gating.sv
+R6
+Z118 w1725674173
+Z119 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_clock_gating.sv
+Z120 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_clock_gating.sv
 R87
-R9
+R8
 31
-R101
-R102
+R94
 R103
+R104
 !i113 0
-R11
+R10
 R2
 Xprim_clock_gating_sv_unit
 R4
-R116
+R117
 VGm`QO`3lWA7G9>z@HDDT32
 r1
 !s85 0
@@ -1233,86 +1233,86 @@ r1
 IGm`QO`3lWA7G9>z@HDDT32
 !i103 1
 S1
-R7
-R117
+R6
 R118
 R119
-R26
-Z120 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_pkg.sv
+R120
+R27
+Z121 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_pkg.sv
 R74
-R9
+R8
 31
-R101
-R102
+R94
 R103
+R104
 !i113 0
-R11
+R10
 R2
 vprim_generic_buf
 R4
-R100
+R102
 !i10b 1
 !s100 ZOD]_]8Umj8GN_eiK][QB1
 IC0jYHi0z3d2CNn]QT=zho0
-R6
+R5
 !s105 prim_generic_buf_sv_unit
 S1
-R7
-Z121 w1725640266
+R6
+Z122 w1725640266
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_generic_buf.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_generic_buf.sv
 L0 7
-R9
+R8
 r1
 !s85 0
 31
-R101
+R65
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_generic_buf.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_generic_buf.sv|
 !i113 0
-R11
+R10
 R2
 vprim_generic_clock_gating
 R4
-R100
+R102
 !i10b 1
 !s100 <7?1V3hL5c7k[`<jG;?dD2
 IMoOL3L4R:ZHb6KmiTYQcW0
-R6
+R5
 !s105 prim_generic_clock_gating_sv_unit
 S1
-R7
-R121
+R6
+R122
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_generic_clock_gating.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_generic_clock_gating.sv
-R18
-R9
+R17
+R8
 r1
 !s85 0
 31
-R101
+R65
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_generic_clock_gating.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_generic_clock_gating.sv|
 !i113 0
-R11
+R10
 R2
 vprim_generic_ram_1p
 R4
-R44
+R45
 !s110 1725730138
 !i10b 1
 !s100 53U`E57AWgRLPK=bMmfNJ2
 I^?Wz?8iReJ>Wc65ESATjk3
-R6
+R5
 !s105 prim_generic_ram_1p_sv_unit
 S1
-R7
+R6
 w1725696082
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_generic_ram_1p.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_generic_ram_1p.sv
-Z122 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_util_memload.svh
+Z123 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_util_memload.svh
 L0 9
-R9
+R8
 r1
 !s85 0
 31
@@ -1320,25 +1320,25 @@ r1
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_util_memload.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_generic_ram_1p.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_generic_ram_1p.sv|
 !i113 0
-R11
+R10
 R2
 vprim_generic_ram_2p
 R4
-Z123 DXx4 work 15 prim_ram_2p_pkg 0 22 ZRJ1gG0K<fP=S<G64Di>12
-R64
+Z124 DXx4 work 15 prim_ram_2p_pkg 0 22 ZRJ1gG0K<fP=S<G64Di>12
+R102
 !i10b 1
 !s100 bDKk339kGP2oT;J2QGIMP0
 IHXg[iIFk4GUZ2=P2nWdD;1
-R6
+R5
 !s105 prim_generic_ram_2p_sv_unit
 S1
-R7
+R6
 w1725730248
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_generic_ram_2p.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_generic_ram_2p.sv
-R122
+R123
 L0 9
-R9
+R8
 r1
 !s85 0
 31
@@ -1346,245 +1346,245 @@ R65
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_util_memload.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_generic_ram_2p.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_generic_ram_2p.sv|
 !i113 0
-R11
+R10
 R2
 Xprim_pkg
 R4
-R100
+R102
 !i10b 1
 !s100 SHHc`FlQ:lo@Z?O^]7ml]2
 I1f5B;5JmTg4<Y447d?WmQ0
 V1f5B;5JmTg4<Y447d?WmQ0
 S1
-R7
-R115
+R6
+R116
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_pkg.sv
-R120
+R121
 R62
-R9
+R8
 r1
 !s85 0
 31
-R101
+R65
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_pkg.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_pkg.sv|
 !i113 0
-R11
+R10
 R2
 vprim_ram_1p
 R4
-R44
-R116
-Z124 !s110 1725730205
+R45
+R117
+Z125 !s110 1725730205
 !i10b 1
 !s100 Thbai4Qn5eCn6QCTc0>l41
 I3gU?jTFJ5Hc1<>Pj[WVUL0
-R6
+R5
 !s105 prim_ram_1p_sv_unit
 S1
-R7
+R6
 w1725696869
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_1p.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_1p.sv
-R112
-R9
+R113
+R8
 r1
 !s85 0
 31
-Z125 !s108 1725730205.000000
+Z126 !s108 1725730205.000000
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_pkg.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_1p.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_1p.sv|
 !i113 0
-R11
+R10
 R2
 Xprim_ram_1p_pkg
 R4
-R100
+R90
 !i10b 1
 !s100 EOoBY[aBhTN4=NzYbFjRz1
 IBi8dkEfVkmBmo2S[mhIfk0
 VBi8dkEfVkmBmo2S[mhIfk0
 S1
-R7
-R20
+R6
+R21
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_1p_pkg.sv
-R51
+R52
 L0 6
-R9
+R8
 r1
 !s85 0
 31
-R101
-R107
+R94
 R108
+R109
 !i113 0
-R11
+R10
 R2
 vprim_ram_2p
 R4
-R123
-R100
+R124
+R102
 !i10b 1
 !s100 bAjSU`30BT2fBAZ?g88LK2
 IS7;@j16MJ9mkWG1TVEA@50
-R6
+R5
 !s105 prim_ram_2p_sv_unit
 S1
-R7
+R6
 w1725730389
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_2p.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_2p.sv
-R23
-R9
+R24
+R8
 r1
 !s85 0
 31
-R101
+R65
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_2p.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_2p.sv|
 !i113 0
-R11
+R10
 R2
 Xprim_ram_2p_pkg
 R4
-R100
+R102
 !i10b 1
 !s100 ^=O>EjaKW23>eJLKnaIzl1
 IZRJ1gG0K<fP=S<G64Di>12
 VZRJ1gG0K<fP=S<G64Di>12
 S1
-R7
-R20
+R6
+R21
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_2p_pkg.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_2p_pkg.sv
 L0 6
-R9
+R8
 r1
 !s85 0
 31
-R101
+R65
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_2p_pkg.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_2p_pkg.sv|
 !i113 0
-R11
+R10
 R2
 Xprim_secded_pkg
 R4
-R100
+R90
 !i10b 1
 !s100 =K0XPCcSIoT8N`3jIIUPo1
 IHN4Jc6FIDB493odo4O6`G2
 VHN4Jc6FIDB493odo4O6`G2
 S1
-R7
-R20
+R6
+R21
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_secded_pkg.sv
-R52
+R53
 L0 8
-R9
+R8
 r1
 !s85 0
 31
-R101
-R107
+R94
 R108
+R109
 !i113 0
-R11
+R10
 R2
 vram_1p
 R4
-R124
+R125
 !i10b 1
 !s100 Xbh7GCZemHfd;@;l]SgGL2
 Ik93?0Sz>6:m>dd^Pg1ZDj1
-R6
+R5
 !s105 ram_1p_sv_unit
 S1
-R7
+R6
 w1725723190
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ram_1p.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ram_1p.sv
 R62
-R9
+R8
 r1
 !s85 0
 31
-R125
+R126
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ram_1p.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ram_1p.sv|
 !i113 0
-R11
+R10
 R2
 vram_2p
 R4
-R100
+R102
 !i10b 1
 !s100 g76FamW=C<gEAgH62>S=51
 ILHo132@`3ST1ZWU;XjPcb2
-R6
+R5
 !s105 ram_2p_sv_unit
 S1
-R7
+R6
 w1725773944
 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ram_2p.sv
 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ram_2p.sv
 R62
-R9
+R8
 r1
 !s85 0
 31
-R101
+R65
 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_flop_macros.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_sec_cm.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert_standard_macros.svh|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_assert.sv|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ram_2p.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ram_2p.sv|
 !i113 0
-R11
+R10
 R2
 vtb_ibex_demo_system
 R4
-R19
-DXx4 work 27 tb_ibex_demo_system_sv_unit 0 22 ZTgnFNW_Dk4hn<Z45dddm2
-R6
+R20
+DXx4 work 27 tb_ibex_demo_system_sv_unit 0 22 ]:;dEP@iQ4jF0Yd>ISF^Y3
+R5
 r1
 !s85 0
 !i10b 1
-!s100 lzb^NDl4gA7k0WH8E_f6>2
-IaMS[demoBkOz]H?TgQbV00
+!s100 JI9Md@SM3Z?DLDO1dKoz?0
+I8IP3SNLnzOV1RB522k8S?3
 !s105 tb_ibex_demo_system_sv_unit
 S1
-R7
-Z126 w1725774033
-Z127 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/tb_ibex_demo_system.sv
-Z128 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/tb_ibex_demo_system.sv
+R6
+Z127 w1725808650
+Z128 8/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/tb_ibex_demo_system.sv
+Z129 F/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/tb_ibex_demo_system.sv
 L0 4
-R9
+R8
 31
-R101
-Z129 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/tb_ibex_demo_system.sv|
-Z130 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/tb_ibex_demo_system.sv|
+R65
+Z130 !s107 /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/tb_ibex_demo_system.sv|
+Z131 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/tb_ibex_demo_system.sv|
 !i113 0
-R11
+R10
 R2
 Xtb_ibex_demo_system_sv_unit
 R4
-R19
-VZTgnFNW_Dk4hn<Z45dddm2
+R20
+V]:;dEP@iQ4jF0Yd>ISF^Y3
 r1
 !s85 0
 !i10b 1
-!s100 nRDH3ePEi0f=Z_md;?QEg1
-IZTgnFNW_Dk4hn<Z45dddm2
+!s100 9Vl7naROhNERi?dk[5cLU0
+I]:;dEP@iQ4jF0Yd>ISF^Y3
 !i103 1
 S1
-R7
-R126
+R6
 R127
 R128
-L0 3
-R9
-31
-R101
 R129
+L0 3
+R8
+31
+R65
 R130
+R131
 !i113 0
-R11
+R10
 R2

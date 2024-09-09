@@ -1,25 +1,25 @@
-#Chạy ModelSim
+#1.Questasim Linux: https://drive.google.com/drive/u/0/folders/12tQXvh8veksHScQ6VrZCLLe9KkT6B7Yr
+   Questasim Window: 
+   https://l.messenger.com/l.php?u=https%3A%2F%2Frahim-soft.com%2Fquestasim-10-7c-free-   download%2F&h=AT1tcLjnalDHlMIs2ZD462sYwfDxrdVD6nQpTypGRPpQy0txSv9RHmY5a4pCWBLEh2Oj-9mTKD37zxbepn6LAvhP3yU8JXgut1NFeoIv3Q1C6UvwTz3NR25BpA30VXrPAfUm9v1LY3Fy2H4
 
 #2.Hướng dẫn chạy Gennus trên server lab: https://github.com/cern143/edabk_SoC_doc/blob/main/edabk_server_manual(cookbook).md
 ##2.1.Cài đặt Tailscale trên Linux: https://tailscale.com/download/linux
 ##2.2.Cài đặt RealVNC lựa chọn bản cho Linux: https://www.realvnc.com/en/connect/download/viewer/
-####100.75.44.97:22 là user
-####@edabk  là password
+user: 100.75.44.97:22
+password: @edabk
 
 #3.Hướng dẫn setup simple system for ibex
 fix lỗi cho verilator: https://stackoverflow.com/questions/75916275/building-and-running-most-basic-verilator
 sudo dpkg -i tên_gói.deb
 
 
-How to install Xilinx Vivado 2019.2:
-#Step1: Access https://www.xilinx.com/support/download.html
-
-#Step2: Choose field name "Vivado Archive"
-
-#Step3: Next to select version 2019.2 have name Vivado Design Suite - HLx Editions - 2019.2  	
+#4.How to install Xilinx Vivado 2019.2:
+>Step1: Access https://www.xilinx.com/support/download.html
+>Step2: Choose field name "Vivado Archive"
+>Step3: Next to select version 2019.2 have name 
+Vivado Design Suite - HLx Editions - 2019.2  	
 and click  Vivado HLx 2019.2: All OS installer Single-File Download 
-
-#Step4: Intall Vivado flow the video:
+>Step4: Intall Vivado flow the video:
 https://www.youtube.com/watch?v=cQHe651AEaM
 https://www.youtube.com/watch?v=1uJzjvgTQUk
 cd Downloads
@@ -27,18 +27,21 @@ sudo mkdir /opt/Xilinx
 sudo chmod -R 777 /opt/Xilinx
 cd Xilinx_Vivado_2019.2_1106_2127
 sudo ./xsetup
-
-#Step5: After install finish is get license 
+>Step5: After install finish is get license 
 Select Get My Full or Purchased Certificate-Based License -> Select Save Link -> Save in home
 Click Xilinx_ConnectLater.html -> Login -> Register License -> Download License
 Add License to Vivado License Manager and Done
 
-How to use Xilinx Vivado 
+#5.How to use Xilinx Vivado 
 https://itsembedded.com/dhd/vivado_sim_1/?fbclid=IwY2xjawERUlxleHRuA2FlbQIxMAABHTA5Kyt07FHQvJ4PyMZ4uEk-jeweMTBELkjb-CoIBAP8ZJByvspIGlv98w_aem_n9s_quwXc7uVxQL9C6MZHQ
 
-Access: https://login.tailscale.com/admin/invite/XoPzdaB2CL1 to register IP
+#6.Access: https://login.tailscale.com/admin/invite/XoPzdaB2CL1 to register IP
 ssh edabk2003@100.72.83.79
 ssh( security shell romte)
 Pass: 2003
 Pass VNC: @edabk
+
+#7.Convert .elf sang .vmem
+riscv32-unknown-elf-objcopy -O binary beq-01.elf beq-01.bin 
+srec_cat beq-01.bin -binary -offset 0x0000 -byte-swap 4 -o beq-01.vmem -vmem
 
