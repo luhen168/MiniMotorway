@@ -44,18 +44,8 @@ import prim_ram_2p_pkg::*;
   input ram_2p_cfg_t       cfg_i
 );
 
-  // if (1) begin : gen_generic
-  //   prim_generic_ram_2p #(
-  //     .DataBitsPerMask(DataBitsPerMask),
-  //     .Depth(Depth),
-  //     .MemInitFile(MemInitFile),
-  //     .Width(Width)
-  //   ) u_impl_generic (
-  //     .*
-  //   );
-
-  // end
-      prim_generic_ram_2p #(
+  if (1) begin : gen_generic
+    prim_generic_ram_2p #(
       .DataBitsPerMask(DataBitsPerMask),
       .Depth(Depth),
       .MemInitFile(MemInitFile),
@@ -63,6 +53,16 @@ import prim_ram_2p_pkg::*;
     ) u_impl_generic (
       .*
     );
+
+  end
+  //     prim_generic_ram_2p #(
+  //     .DataBitsPerMask(DataBitsPerMask),
+  //     .Depth(Depth),
+  //     .MemInitFile(MemInitFile),
+  //     .Width(Width)
+  //   ) u_impl_generic (
+  //     .*
+  //   );
 
 endmodule
 //ri lint_check_on OUTPUT_NOT_DRIVEN INPUT_NOT_READ HIER_BRANCH_NOT_READ

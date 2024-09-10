@@ -1,17 +1,17 @@
-/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/jtag_id_pkg.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/jtag_id_pkg.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling package jtag_id_pkg
-
-Top level modules:
-	--none--
-
-} {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_demo_system copy.sv} {1 {vlog -work work -vopt -sv -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_demo_system copy.sv}
+{/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_demo_system copy.sv} {1 {vlog -work work -vopt -sv -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_demo_system copy.sv}
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling module ibex_demo_system
 -- Importing package ibex_pkg
 
 Top level modules:
 	ibex_demo_system
+
+} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/jtag_id_pkg.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/jtag_id_pkg.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package jtag_id_pkg
+
+Top level modules:
+	--none--
 
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/prim_buf.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/prim_buf.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -81,6 +81,13 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	ibex_controller
 
+} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_counter.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_counter.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module ibex_counter
+
+Top level modules:
+	ibex_counter
+
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_id_stage.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_id_stage.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling package ibex_pkg
@@ -143,13 +150,6 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	ibex_id_stage
 
-} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_counter.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_counter.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module ibex_counter
-
-Top level modules:
-	ibex_counter
-
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_tracer.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_tracer.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling package ibex_tracer_pkg
@@ -161,13 +161,6 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 
 Top level modules:
 	ibex_tracer
-
-} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/prim_pkg.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/prim_pkg.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling package prim_pkg
-
-Top level modules:
-	--none--
 
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_alu.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_alu.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -404,6 +397,13 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 
 Top level modules:
 	ibex_alu
+
+} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/prim_pkg.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/prim_pkg.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package prim_pkg
+
+Top level modules:
+	--none--
 
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/prim_generic_clock_gating.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/prim_generic_clock_gating.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -860,6 +860,20 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	ibex_ex_block
 
+} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_csr.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_csr.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module ibex_csr
+
+Top level modules:
+	ibex_csr
+
+} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/gpio.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/gpio.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module gpio
+
+Top level modules:
+	gpio
+
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_branch_predict.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_branch_predict.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling package ibex_pkg
@@ -869,20 +883,6 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 
 Top level modules:
 	ibex_branch_predict
-
-} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/gpio.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/gpio.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module gpio
-
-Top level modules:
-	gpio
-
-} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_csr.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_csr.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module ibex_csr
-
-Top level modules:
-	ibex_csr
 
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_top.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_compliance/rtl/ibex_top.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018

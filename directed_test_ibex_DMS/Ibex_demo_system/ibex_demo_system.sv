@@ -19,7 +19,7 @@ module ibex_demo_system #(
   parameter int unsigned        BaudRate       = 115_200,
   parameter ibex_pkg::regfile_e RegFile        = ibex_pkg::RegFileFF,
   // parameter                     SRAMInitFile   = "/home/luanle/Downloads/add-01.mem"
-  parameter                     SRAMInitFile   = "/home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/beq-01.mem"
+  parameter                     SRAMInitFile   = "/home/luanle/DigitalDesign/Lab/MiniMotorway/beq-01.mem"
 
 ) (
   input  logic clk_sys_i,
@@ -41,7 +41,7 @@ module ibex_demo_system #(
   output logic        td_o      // JTAG test data output pad
 );
   localparam logic [31:0] MEM_SIZE      = 256 * 1024; // 64 KiB
-  localparam logic [31:0] MEM_START     = 32'h00100000;
+  localparam logic [31:0] MEM_START     = 32'h00000000;
   localparam logic [31:0] MEM_MASK      = ~(MEM_SIZE-1);
 
   localparam logic [31:0] GPIO_SIZE     =  4 * 1024; //  4 KiB
@@ -248,7 +248,7 @@ module ibex_demo_system #(
 
     .hart_id_i  (32'b0),
     // First instruction executed is at 0x0 + 0x80.
-    .boot_addr_i(32'h00100000),
+    .boot_addr_i(32'h00000000),
 
     .instr_req_o       (core_instr_req),
     .instr_gnt_i       (core_instr_gnt),

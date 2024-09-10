@@ -7,7 +7,7 @@ module tb_ibex_demo_system #(
   parameter int                 PwmWidth       = 12,
   parameter int unsigned        ClockFrequency = 50_000_000,
   parameter int unsigned        BaudRate       = 115_200,
-  parameter ibex_pkg::regfile_e RegFile        = ibex_pkg::RegFileFPGA,
+  parameter ibex_pkg::regfile_e RegFile        = ibex_pkg::RegFileFF,
   parameter                     SRAMInitFile   = ""
 ) (
   
@@ -56,11 +56,6 @@ module tb_ibex_demo_system #(
     $stop;
   end
 
-  // initial begin
-  //   $readmemh("/home/luanle/IBEX_synthesis/rtl/test_program.mem", u_ibex_demo_system_i.imem_dmem.u_ram.u_impl_generic.mem);
-  //   //#13990;
-  //   // Stop simulation
-  //   //$stop;
-  // end
+
 endmodule
 
