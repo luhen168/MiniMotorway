@@ -12,12 +12,12 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	load_modifier
 
-} {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/adder.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/adder.v}
+} {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/cpu.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/cpu.v}
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module adder
+-- Compiling module cpu
 
 Top level modules:
-	adder
+	cpu
 
 } {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/control_unit.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/control_unit.v}
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -26,12 +26,12 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	control_unit
 
-} {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/cpu.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/cpu.v}
+} {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/adder.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/adder.v}
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module cpu
+-- Compiling module adder
 
 Top level modules:
-	cpu
+	adder
 
 } {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/data_mem.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/data_mem.v}
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -53,13 +53,6 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 
 Top level modules:
 	id_exe_reg
-
-} {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/riscv_cb_tb1.sv} {1 {vlog -work work -vopt -sv -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/riscv_cb_tb1.sv}
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module sc_cpu_tb
-
-Top level modules:
-	sc_cpu_tb
 
 } {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/mem_wb_reg.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/mem_wb_reg.v}
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -89,19 +82,19 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	comparator_1bit
 
-} {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/pc_reg.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/pc_reg.v}
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module pc_reg
-
-Top level modules:
-	pc_reg
-
 } {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/instruction_mem.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/instruction_mem.v}
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling module instruction_mem
 
 Top level modules:
 	instruction_mem
+
+} {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/pc_reg.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/pc_reg.v}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module pc_reg
+
+Top level modules:
+	pc_reg
 
 } {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/comparator.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/comparator.v}
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018

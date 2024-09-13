@@ -494,7 +494,7 @@ module ibex_controller #(
       RESET: begin
         instr_req_o   = 1'b0;
         pc_mux_o      = PC_BOOT;
-        pc_set_o      = 1'b1;
+        pc_s  et_o      = 1'b1;
         ctrl_fsm_ns   = BOOT_SET;
       end
 

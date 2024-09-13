@@ -87,7 +87,7 @@ module control_unit (
         ls_b    = 1'bx;
         ls_h    = 1'bx;
         load_signext = 1'bx;
-        wmem    = 1'bx;
+        wmem    = 1'b0;
         pcsrc   = 2'b00;
         aluc    = 5'bxxxxx;
         auipc   = 1'bx;
@@ -499,7 +499,7 @@ module control_unit (
                 ls_b    = 1'bx;
                 ls_h    = 1'bx;
                 load_signext = 1'bx;
-                wmem    = 1'bx;
+                wmem    = 1'b0;
                 pcsrc   = 2'b00;
                 aluc    = 5'bxxxxx;
                 auipc   = 1'bx;

@@ -12,6 +12,7 @@ module cpu(
     wire wmem;
     
     assign mem_out = core_dmem_in;
+    assign addr_out = 32'h0; //default
     
     core core1 (
         .i_clk(i_clk), .i_resetn(i_resetn),

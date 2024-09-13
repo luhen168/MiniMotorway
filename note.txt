@@ -45,3 +45,36 @@ Pass VNC: @edabk
 riscv32-unknown-elf-objcopy -O binary beq-01.elf beq-01.bin 
 srec_cat beq-01.bin -binary -offset 0x0000 -byte-swap 4 -o beq-01.vmem -vmem
 
+
+#Note
+>ibex_top.sv: chứa ibex_core và phần registerfile+ram. 
+
+>ibex_controller.sv:
+>> flush là hủy bỏ (tuôn ra) có thể sử dụng khi 1 lệnh nhánh dự đoán sai và các lệnh được nạp sau đó sẽ bị hủy bỏ HOẶC khi nạp phải 1 lệnh illegal instruction thì sẽ flush 
+ 
+  input  logic                  clk_i,
+  input  logic                  rst_ni,
+
+  output logic                  ctrl_busy_o,             // core is busy processing instrs : chân dành để gửi tín hiệu 
+
+  // decoder related signals
+  input  logic                  illegal_insn_i,          // decoder has an invalid instr : chân dành để nhận tín hiệu từ lệnh k hợp lệ
+  input  logic                  ecall_insn_i,            // decoder has ECALL instr      : chân dành để nhận tín hiệu từ lệnh ecall
+  input  logic                  mret_insn_i,             // decoder has MRET instr	 : chân dành để nhận tín hiệu từ lệnh Machine return
+  input  logic                  dret_insn_i,             // decoder has DRET instr	 : chân dành để nhận tín hiệu từ lệnh Debug return
+  input  logic                  wfi_insn_i,              // decoder has WFI instr	 : chân dành để nhận tín hiệu từ lệnh wait for interrupt
+  input  logic                  ebrk_insn_i,             // decoder has EBREAK instr     : chân dành để nhận tín hiệu từ lệnh ebreak
+  input  logic                  csr_pipe_flush_i,        // do CSR-related pipeline flush: chân dành để nhận tín hiệu thực hiện loạib bỏ (xả) đường ống liên quan đến CSR
+  
+  // to prefetcher
+  output logic                  instr_req_o,             // start fetching instructions			: chân dành để gửi tín hiệu yêu cầu nạp lệnh
+  output logic                  pc_set_o,                // jump to address set by pc_mux(11 tín hiệu)		: chân dành để gửi tín hiệu nhảy tới địa chỉ đặt bởi pc_mux
+  output ibex_pkg::pc_sel_e     pc_mux_o,                // IF stage fetch address selector(11 tín hiệu)		: chân dành để gửi tín hiệu bộ nạp địa chỉ tầng IF  
+                                                         // (boot, normal, exception...)		
+  output logic                  nt_branch_mispredict_o,  // Not-taken branch in ID/EX was(2 tín hiệu)		: chân dành để gửi tín hiệu không lấy nhánh trong tầng ID/EX đã bị dữ đoán sai
+                                                         // mispredicted (predicted taken)
+  output ibex_pkg::exc_pc_sel_e exc_pc_mux_o,            // IF stage selector for exception PC (5 tín hiệu)         : chân dành để gửi tín hiệu bộ mux lựa chọn tầng IF cho PC ngoại lệ
+  output ibex_pkg::exc_cause_t  exc_cause_o,             // for IF stage, CSRs	(12 tín hiệu)			: chân dành để gửi tín hiệu cho tầng IF, CSR
+  
+ >> Trong ibex_controller có một khối fsm được viết trong always_comb
+ 

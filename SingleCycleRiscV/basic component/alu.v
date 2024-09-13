@@ -1,12 +1,12 @@
 module ALU (
     input [31:0] a,
     input [31:0] b,
-    input [3:0] ALUSel,
+    input [3:0] alu_sel,
     output reg [31:0] alu_out
 );
-    always @(ALUSel, a, b) 
+    always @(alu_sel, a, b) 
         begin
-            case (ALUSel)
+            case (alu_sel)
                 4'b0000: alu_out = a & b;       // AND
                 4'b0001: alu_out = a | b;       // OR
                 4'b0010: alu_out = a + b;       // ADD
