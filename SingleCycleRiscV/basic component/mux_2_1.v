@@ -7,4 +7,4 @@ module mux_2_1(
 
 assign mux_out = (sel==1'b0) ? a : b;
 
-endmodule
+endmodule 

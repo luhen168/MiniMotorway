@@ -17,6 +17,7 @@ module sc_cpu_tb();
     initial
     begin
         $readmemh("/home/luanle/DigitalDesign/Lab/MiniMotorway/add-01.mem", cpu_dut.imem.rom);
+	    //$readmemh("/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/imem.mem", cpu_dut.imem.rom);
     end
     //begin
     //    $readmemh("test_compressed.mem", cpu_dut.imem.rom);
@@ -33,7 +34,7 @@ module sc_cpu_tb();
            resetn = 0;
            #10 resetn = 1;
            //#1399 $finish;
-            repeat (1000) @(posedge clk);
+            repeat (100000) @(posedge clk);
             $stop;
     end
     

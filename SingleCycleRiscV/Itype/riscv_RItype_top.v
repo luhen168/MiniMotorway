@@ -1,73 +1,117 @@
-module RISCV_top(
+module riscv_Rtype_top(
      input clk,
      input rst
 );
 
-    //PC wire Add and IMEM
-    wire [31:0] sum, pc_out;
-    //IMEM and Decode wire
-    wire [31:0] inst;
-    //RegisterFile and ALU wire
-    wire [31:0] r_data1, r_data2, alu_out;
-    //Controller and ALU
-    wire [3:0] ALUSel;
-    //Controller and Decode
+    // Instruction fetch stage
+    wire [31:0] pc_in;
+    wire [31:0] instr_data_o;
+
+    // Instruction decode stage
+    wire [31:0] r_data1_o;
+    wire [31:0] r_data2_o;
+    wire [31:0] w_data_to_dmem;
+
+    // Instruction execute stage
+    wire [31:0] ex_alu_o;
+
+    // Data memory stage
+    wire [31:0] r_data_to_wb;
+
+    // Write back stage
+    wire [31:0] data_wb_to_reg;
+
+    // Controller
+    wire [4:0] ALUSel;
+    wire ALUSrc;
     wire RegWEn;
+    wire MemRW;
+    wire MemtoReg;
+    wire [2:0] selStore;
 
     //////////////////
-    //  Instruction //
-    //  Fetch       //
-    //////////////////
-
-    PC PC (
-        .clk(clk),
-        .rst(rst),
-        .pc_in(sum),
-        .pc_out(pc_out)
-    );
-
-    Add Add (
-        .a(32'h4),
-        .b(pc_out),
-        .sum(sum)
-    );
-
-    IMEM IMEM (
-        .r_addr(pc_out),
-        .inst(inst)
-    );
-
-    //////////////////
-    //  Decode      //
+    //  if stage    //
     //              //
     //////////////////
-
-    RegisterFile RegisterFile (
+    if_stage u_if_stage(
         .clk(clk),
-        .w_reg(inst[11:7]),   //rd
-        .r_reg2(inst[24:20]), //rs2
-        .r_reg1(inst[19:15]), //rs1
-        .w_data(alu_out),
-        .RegWEn(RegWEn),
-        .r_data1(r_data1),
-        .r_data2(r_data2)
+        .rst(rst),
+
+        .pc_in(pc_in),
+        .instr_data_o(instr_data_o)
     );
 
-    ALU ALU (
-        .a(r_data1),
-        .b(r_data2),
+    //////////////////
+    //  id stage    //
+    //              //
+    //////////////////
+    id_stage u_id_stage(
+        .clk(clk),
+        .rst(rst),
+
+        .w_data_i(data_wb_to_reg),
+        .instr_data_i(instr_data_o),
+        .ALUSrc(ALUSrc),
+        .RegWEn(RegWEn),
+        .selStore(selStore),
+    
+        .r_data1_o(r_data1_o),
+        .r_data2_o(r_data2_o),
+        .w_data_o(w_data_to_dmem)
+    );
+
+    //////////////////
+    //  ex stage    //
+    //              //
+    //////////////////
+    ex_stage u_ex_stage(
+        .r_data1_in(r_data1_o),
+        .r_data2_in(r_data2_o),
         .ALUSel(ALUSel),
-        .alu_out(alu_out)
+
+        .ex_alu_o(ex_alu_o)
+    );
+
+    //////////////////
+    //  dmem stage  //
+    //              //
+    //////////////////
+    dmem_stage u_dmem_stage(
+        .clk(clk),
+        .rst(rst),
+
+        .MemRW(MemRW),
+        .w_data_i(w_data_to_dmem),
+        .addr_i(ex_alu_o),
+
+        .r_data_o(r_data_to_wb)
+    );
+
+    //////////////////
+    //  wb stage    //
+    //              //
+    //////////////////
+    wb_stage u_wb_stage(
+        .alu_data_i(ex_alu_o),
+        .dmem_data_i(r_data_to_wb),
+        .MemtoReg(MemtoReg),
+
+        .w_data_o(data_wb_to_reg)
     );
 
     //////////////////
     //  Controller  //
     //              //
     //////////////////
-    Controller Controller(
-        .inst(inst),
+    controller controller(
+        .instr(instr_data_o),
+
         .ALUSel(ALUSel),
-        .RegWEn(RegWEn)
+        .ALUSrc(ALUSrc),
+        .RegWEn(RegWEn),
+        .MemRW(MemRW),
+        .MemtoReg(MemtoReg),
+        .selStore(selStore)
     );
 
 

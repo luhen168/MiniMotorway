@@ -615,6 +615,45 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	ibex_load_store_unit
 
+} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module ibex_controller
+-- Importing package ibex_pkg
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(76): (vlog-13314) Defaulting port 'irqs_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(241): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(242): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(243): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(244): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(245): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(246): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(252): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(254): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(256): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(258): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(260): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(262): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(270): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(271): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(272): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(273): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(274): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(275): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(278): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(280): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(282): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(284): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(286): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(288): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(321): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(322): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(323): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(329): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(334): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_controller.sv(335): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+
+Top level modules:
+	ibex_controller
+
 } {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_pkg.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_pkg.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling package prim_pkg

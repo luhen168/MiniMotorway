@@ -78,3 +78,8 @@ srec_cat beq-01.bin -binary -offset 0x0000 -byte-swap 4 -o beq-01.vmem -vmem
   
  >> Trong ibex_controller có một khối fsm được viết trong always_comb
  
+ 
+ 
+ # Note dm.sv
+ dm_pkg: .../ibex-demo-system/vendor/pulp_riscv_dbg/src/dm_pkg.sv
+ 

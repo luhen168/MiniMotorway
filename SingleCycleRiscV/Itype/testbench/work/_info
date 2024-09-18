@@ -1,0 +1,368 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/luanle/Questasim/questasim
+T_opt
+!s110 1726673612
+VAXEjncXSD7O8aA?QmmD3M2
+04 15 4 work riscv_Rtype_top fast 0
+=5-f48c507843d5-66eaf2cc-69d0b-2fa9
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.7c;67
+R0
+T_opt1
+!s110 1726673633
+VK<>U?1zdM[zFMj;lG93cg2
+04 12 4 work RISCV_top_tb fast 0
+=1-f48c507843d5-66eaf2e1-41112-9b88
+R1
+R2
+n@_opt1
+R3
+R0
+vadd_2_op
+Z4 !s110 1726674660
+!i10b 1
+!s100 LkQ8G7_jDBZSEDzz[SKZ?3
+ICFgbAKNAPfJH`ShIa]1Nk0
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 d/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/testbench
+w1726158346
+8/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/add_2_op.v
+F/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/add_2_op.v
+L0 1
+Z7 OL;L;10.7c;67
+r1
+!s85 0
+31
+Z8 !s108 1726674660.000000
+!s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/add_2_op.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/add_2_op.v|
+!i113 0
+Z9 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+valu
+R4
+!i10b 1
+!s100 b80Y35>@geC=^O>ASQcm=0
+IfAU3B>2l0@h_Wc[5ZJ6kX0
+R5
+R6
+w1726627665
+8/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/alu.v
+F/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/alu.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/alu.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/alu.v|
+!i113 0
+R9
+R2
+vcontroller
+R4
+!i10b 1
+!s100 DzDQ0F3`nLh9Fn[1<hoe12
+I_QP^bGfS=N@>A]BQ>JI:]3
+R5
+R6
+w1726673257
+8/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/controller.v
+F/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/controller.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/controller.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/controller.v|
+!i113 0
+R9
+R2
+vdmem_stage
+R4
+!i10b 1
+!s100 <4[X6<F85?U[jhPI0Siz73
+IQhCK]SHA1<Bm?UM`jd5k`1
+R5
+R6
+w1726646155
+8/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/dmem_stage.v
+F/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/dmem_stage.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/dmem_stage.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/dmem_stage.v|
+!i113 0
+R9
+R2
+vex_stage
+Z10 !s110 1726674661
+!i10b 1
+!s100 H26h2MP9UlHH2HbQoT?>K1
+I<4]K1MYn[`?X1<nL`8e601
+R5
+R6
+w1726632003
+8/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/ex_stage.v
+F/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/ex_stage.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/ex_stage.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/ex_stage.v|
+!i113 0
+R9
+R2
+vid_stage
+R10
+!i10b 1
+!s100 jg=g<bUN3XAMmA?0=iFTR3
+I2I10=gQ=RIW=cScgdkKJP3
+R5
+R6
+w1726673318
+8/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/id_stage.v
+F/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/id_stage.v
+L0 1
+R7
+r1
+!s85 0
+31
+Z11 !s108 1726674661.000000
+!s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/id_stage.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/id_stage.v|
+!i113 0
+R9
+R2
+vif_stage
+R10
+!i10b 1
+!s100 RPOHi8OPe`7C5dN]77SdV2
+IifmN20_2cCHfL[XkcnIdi3
+R5
+R6
+w1726324998
+8/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/if_stage.v
+F/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/if_stage.v
+L0 1
+R7
+r1
+!s85 0
+31
+R11
+!s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/if_stage.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/if_stage.v|
+!i113 0
+R9
+R2
+vimem
+R4
+!i10b 1
+!s100 @Gj`]Ui1jmAzg0C4:i8i_3
+IGmEOGHT`3kl>=6zbaPOcD1
+R5
+R6
+w1726306112
+8/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/imem.v
+F/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/imem.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/imem.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/imem.v|
+!i113 0
+R9
+R2
+vimm_gen
+R4
+!i10b 1
+!s100 6mY4Ho9[K;b9W1?;7MWzf3
+IDYK7;<8l6@CNL@nm_W1^i2
+R5
+R6
+w1726673523
+8/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/imm_gen.v
+F/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/imm_gen.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/imm_gen.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/imm_gen.v|
+!i113 0
+R9
+R2
+vmux_2_1
+R4
+!i10b 1
+!s100 D_^ZVEFalBU]LkL;4eXiB0
+IbIAI07;25eOKjo]9_WDLY1
+R5
+R6
+w1726673101
+8/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/mux_2_1.v
+F/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/mux_2_1.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/mux_2_1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/mux_2_1.v|
+!i113 0
+R9
+R2
+vpc
+R4
+!i10b 1
+!s100 L95IV`0Y<2Y2LZ6MV=]oI1
+ImhXRiB:YAU7M3nO[_O<8M3
+R5
+R6
+w1726305066
+8/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/pc.v
+F/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/pc.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/pc.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/pc.v|
+!i113 0
+R9
+R2
+vreg_file
+R4
+!i10b 1
+!s100 [o7:ZPVGGR17BeW9<=Y5J0
+I=ooNR93>SRc?Lbjo3bbef3
+R5
+R6
+w1726307436
+8/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/reg_file.v
+F/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/reg_file.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/reg_file.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/reg_file.v|
+!i113 0
+R9
+R2
+vriscv_Rtype_top
+R10
+!i10b 1
+!s100 ?DDCoAz[;kHKR34XQFbf_1
+IJ_Voo<2JmJMAn1Zk@bb7=1
+R5
+R6
+w1726673364
+8/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/riscv_RItype_top.v
+F/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/riscv_RItype_top.v
+L0 1
+R7
+r1
+!s85 0
+31
+R11
+!s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/riscv_RItype_top.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/riscv_RItype_top.v|
+!i113 0
+R9
+R2
+nriscv_@rtype_top
+vRISCV_top_tb
+R10
+!i10b 1
+!s100 jnh`<0<J]`NPg@UC5:f9h3
+IFeXzXY3VRE;8IUY7W5o<h1
+R5
+R6
+w1726629281
+8/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/RISCV_top_tb.v
+F/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/RISCV_top_tb.v
+L0 3
+R7
+r1
+!s85 0
+31
+R11
+!s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/RISCV_top_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/RISCV_top_tb.v|
+!i113 0
+R9
+R2
+n@r@i@s@c@v_top_tb
+vsel_4_1
+R10
+!i10b 1
+!s100 milHOb^m]kcCjdfT31;4>2
+IN@FZF=CJM:M]IB6c>G7Q01
+R5
+R6
+w1726673595
+8/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/sel_4_1.v
+F/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/sel_4_1.v
+L0 1
+R7
+r1
+!s85 0
+31
+R11
+!s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/sel_4_1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/sel_4_1.v|
+!i113 0
+R9
+R2
+vwb_stage
+R10
+!i10b 1
+!s100 oRSLRbgim4J3gj4Z1QCRd2
+IgN5S=80;[YG?Q^4>LJf;F3
+R5
+R6
+w1726673335
+8/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/wb_stage.v
+F/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/wb_stage.v
+L0 1
+R7
+r1
+!s85 0
+31
+R11
+!s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/wb_stage.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Itype/wb_stage.v|
+!i113 0
+R9
+R2

@@ -1,4 +1,4 @@
-module PC(
+module pc(
 	input clk,
 	input rst,
 	input [31:0] pc_in,
