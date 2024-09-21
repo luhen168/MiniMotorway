@@ -24,8 +24,13 @@ module imm_gen(
                     imm_o = {20'b0,instr[31:20]};
             end
 
+            // I-type (load)
+            7'b0000011: imm_o = {20'b0,instr[31:20]};
+
             // S-type
             7'b0100011: imm_o = {instr[31:25],instr[11:7]}; 
+
+            // B-type 
             7'b1100011: imm_o = {19'b0,instr[31],instr[7],instr[30:25],instr[11:8],1'b0}; // B-type
             // 7'b1101111:  // J-type
             // 7'b1100111:  // I-type (jalr)

@@ -19,7 +19,7 @@ n@_opt
 OL;O;10.7c;67
 R0
 vadder
-Z2 !s110 1726628091
+Z2 !s110 1726735822
 !i10b 1
 !s100 :YMBo10EozAZ0[db429TK2
 IVANEbiJm?fC<f`YDAL95d3
@@ -33,11 +33,11 @@ Z5 OL;L;10.7c;67
 r1
 !s85 0
 31
-!s108 1726628090.000000
+Z6 !s108 1726735822.000000
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/adder.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/adder.v|
 !i113 0
-Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 valu
 R2
@@ -54,11 +54,11 @@ R5
 r1
 !s85 0
 31
-Z7 !s108 1726628091.000000
+R6
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/alu.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/alu.v|
 !i113 0
-R6
+R7
 R1
 vcomparator
 R2
@@ -75,14 +75,14 @@ R5
 r1
 !s85 0
 31
-R7
+R6
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/comparator.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/comparator.v|
 !i113 0
-R6
+R7
 R1
 vcomparator_1bit
-R2
+Z8 !s110 1726735823
 !i10b 1
 !s100 3MJkY6SfQKYOV=V8;h?1W1
 IJf0?QF6DVLA1@QKlaJB260
@@ -96,14 +96,14 @@ R5
 r1
 !s85 0
 31
-R7
+R6
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/comparator_1bit.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/comparator_1bit.v|
 !i113 0
-R6
+R7
 R1
 vcompressed_decoder
-R2
+R8
 !i10b 1
 !s100 aj?JIYa0;naKgGgM1jDH@0
 I442f5=Bl:]hgE8c4<oaB=0
@@ -117,14 +117,14 @@ R5
 r1
 !s85 0
 31
-R7
+Z9 !s108 1726735823.000000
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/compressed_decoder.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/compressed_decoder.v|
 !i113 0
-R6
+R7
 R1
 vcontrol_unit
-R2
+R8
 !i10b 1
 !s100 :N^f4UQCk=9_HJf7F2G2V1
 IM5bj9gQJj?md;k9=^HnEl0
@@ -138,14 +138,14 @@ R5
 r1
 !s85 0
 31
-R7
+R9
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/control_unit.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/control_unit.v|
 !i113 0
-R6
+R7
 R1
 vcore
-R2
+R8
 !i10b 1
 !s100 =P6e6fS9abSW:;YRiOll71
 IlT`F]0`1d?RgYiSlH:lck0
@@ -159,14 +159,14 @@ R5
 r1
 !s85 0
 31
-R7
+R9
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/core.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/core.v|
 !i113 0
-R6
+R7
 R1
 vcpu
-R2
+R8
 !i10b 1
 !s100 ?IS_aogodn9`:bX<5n>]U1
 I3dRi?MODbkFRO65]E7FXN3
@@ -180,20 +180,20 @@ R5
 r1
 !s85 0
 31
-R7
+R9
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/cpu.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/cpu.v|
 !i113 0
-R6
+R7
 R1
 vdata_mem
-R2
+R8
 !i10b 1
 !s100 ?DIaOc@C3>5GJIG7_S?DO1
 I7I;210kLode0QQik0[dK;0
 R3
 R4
-w1725928502
+w1726646129
 8/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/data_mem.v
 F/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/data_mem.v
 L0 1
@@ -201,14 +201,14 @@ R5
 r1
 !s85 0
 31
-R7
+R9
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/data_mem.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/data_mem.v|
 !i113 0
-R6
+R7
 R1
 vexe_mem_reg
-R2
+R8
 !i10b 1
 !s100 i6NKFPJl1JU8VgY`z;NIc3
 IkJQd=:b`CL5EXc5=XP1N^2
@@ -222,14 +222,14 @@ R5
 r1
 !s85 0
 31
-R7
+R9
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/exe_mem_reg.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/exe_mem_reg.v|
 !i113 0
-R6
+R7
 R1
 vid_exe_reg
-R2
+R8
 !i10b 1
 !s100 MainLnHM9IG@RMlG`f4S[1
 I]z0h_7^>X<N6W]T=D@<2i1
@@ -243,14 +243,14 @@ R5
 r1
 !s85 0
 31
-R7
+R9
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/id_exe_reg.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/id_exe_reg.v|
 !i113 0
-R6
+R7
 R1
 vif_id_reg
-R2
+R8
 !i10b 1
 !s100 ;ccG2fcMUOoI^6QI]S?GN0
 IT29SK]9IVCb`=3ETY7HFX0
@@ -264,14 +264,14 @@ R5
 r1
 !s85 0
 31
-R7
+R9
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/if_id_reg.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/if_id_reg.v|
 !i113 0
-R6
+R7
 R1
 vimm_decode
-R2
+R8
 !i10b 1
 !s100 ZP:;=?Z7iS<A<_VPhHoSM0
 IbYbZTmeVM^C_F@DZVd[M12
@@ -285,14 +285,14 @@ R5
 r1
 !s85 0
 31
-R7
+R9
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/imm_decode.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/imm_decode.v|
 !i113 0
-R6
+R7
 R1
 vinstruction_mem
-R2
+R8
 !i10b 1
 !s100 K=X0o_zFS]XQXShPYl4RK3
 IGEWT=L:=e=45E=BH]PlP;3
@@ -306,14 +306,14 @@ R5
 r1
 !s85 0
 31
-R7
+R9
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/instruction_mem.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/instruction_mem.v|
 !i113 0
-R6
+R7
 R1
 vload_modifier
-R2
+R8
 !i10b 1
 !s100 @b^]GB=c`0I?f>0EhXhD[3
 I>ZXZiDdP;ZgkYohQjWQ[E1
@@ -327,14 +327,14 @@ R5
 r1
 !s85 0
 31
-R7
+R9
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/load_modifier.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/load_modifier.v|
 !i113 0
-R6
+R7
 R1
 vmem_wb_reg
-R2
+R8
 !i10b 1
 !s100 OkhaI:bKmNcAlTgn3=2mQ3
 I9W:1i<29`nz[SGN04k9<_3
@@ -348,98 +348,98 @@ R5
 r1
 !s85 0
 31
-R7
+R9
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/mem_wb_reg.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/mem_wb_reg.v|
 !i113 0
-R6
+R7
 R1
 vmux_2to1
-R2
+R8
 !i10b 1
 !s100 okMYCB>6OYX_6j2<;4LdL0
 I70Fn2SlFcJzF56W;ZVii<1
 R3
 R4
-Z8 w1725516037
-Z9 8/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/mux.v
-Z10 F/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/mux.v
+Z10 w1725516037
+Z11 8/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/mux.v
+Z12 F/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/mux.v
 L0 1
 R5
 r1
 !s85 0
 31
-R7
-Z11 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/mux.v|
-Z12 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/mux.v|
+R9
+Z13 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/mux.v|
+Z14 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/mux.v|
 !i113 0
-R6
+R7
 R1
 vmux_3to1
-R2
+R8
 !i10b 1
 !s100 OzC_TT@fj7dUb5VIa]L3M2
 IknYBfPoA:WCQR5hS[@KmM1
 R3
 R4
-R8
-R9
 R10
+R11
+R12
 L0 12
 R5
 r1
 !s85 0
 31
-R7
-R11
-R12
+R9
+R13
+R14
 !i113 0
-R6
+R7
 R1
 vmux_4to1
-R2
+R8
 !i10b 1
 !s100 ok`Wj50g92Xgf0AEP;lk:0
 I>j27k>7dIPOV<Y=7dXkc21
 R3
 R4
-R8
-R9
 R10
+R11
+R12
 L0 33
 R5
 r1
 !s85 0
 31
-R7
-R11
-R12
+R9
+R13
+R14
 !i113 0
-R6
+R7
 R1
 vmux_6to1
-R2
+R8
 !i10b 1
 !s100 FhGR_lz<=3Z_2LQUK1Rez3
 IK56BklYdn8Ld@hZhjB]@D0
 R3
 R4
-R8
-R9
 R10
+R11
+R12
 L0 56
 R5
 r1
 !s85 0
 31
-R7
-R11
-R12
+R9
+R13
+R14
 !i113 0
-R6
+R7
 R1
 vpc_reg
-R2
+R8
 !i10b 1
 !s100 KO;]dajKelD@mDUM@<Vah0
 IoD>@1GJk2Na6_R8a?G@Yk1
@@ -453,14 +453,14 @@ R5
 r1
 !s85 0
 31
-R7
+R9
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/pc_reg.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/pc_reg.v|
 !i113 0
-R6
+R7
 R1
 vregfile
-R2
+R8
 !i10b 1
 !s100 EGc5XL:i94GgeKMCDgkfh3
 IZ2]5iLcZI3eOXRzHE1nO;3
@@ -474,15 +474,15 @@ R5
 r1
 !s85 0
 31
-R7
+R9
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/regfile.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/regfile.v|
 !i113 0
-R6
+R7
 R1
 vsc_cpu_tb
 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
-R2
+R8
 !i10b 1
 !s100 3OX^bl5dK7f@d924bfdR_3
 IZhmh4[`UHO[NdPDCAcj=U2
@@ -498,14 +498,14 @@ R5
 r1
 !s85 0
 31
-R7
+R9
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/riscv_cb_tb1.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/riscv_cb_tb1.sv|
 !i113 0
 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 vstore_modifier
-R2
+R8
 !i10b 1
 !s100 ^]S>L8Q6Z9a6OoeSV71RT3
 I7X1zXzaN=V9`m;8INi?=h1
@@ -519,9 +519,9 @@ R5
 r1
 !s85 0
 31
-R7
+R9
 !s107 /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/store_modifier.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever1_MiniMotorway/core ver 1/store_modifier.v|
 !i113 0
-R6
+R7
 R1

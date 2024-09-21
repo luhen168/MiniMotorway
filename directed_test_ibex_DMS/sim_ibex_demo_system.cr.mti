@@ -22,19 +22,19 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	ibex_register_file_fpga
 
-} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/prim_ram_2p_pkg.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/prim_ram_2p_pkg.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling package prim_ram_2p_pkg
-
-Top level modules:
-	--none--
-
 } {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_csr.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_csr.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling module ibex_csr
 
 Top level modules:
 	ibex_csr
+
+} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/prim_ram_2p_pkg.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/prim_ram_2p_pkg.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package prim_ram_2p_pkg
+
+Top level modules:
+	--none--
 
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_top.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_top.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -51,6 +51,9 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	ibex_top
 
+} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/dv_fcov_macros.svh {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/dv_fcov_macros.svh
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_wb_stage.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_wb_stage.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling package ibex_pkg
@@ -60,16 +63,6 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 
 Top level modules:
 	ibex_wb_stage
-
-} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/dv_fcov_macros.svh {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/dv_fcov_macros.svh
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
-
-} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/prim_buf.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/prim_buf.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module prim_buf
-
-Top level modules:
-	prim_buf
 
 } {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_top.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_top.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -85,6 +78,13 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 
 Top level modules:
 	ibex_top
+
+} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/prim_buf.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/prim_buf.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module prim_buf
+
+Top level modules:
+	prim_buf
 
 } {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_controller.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_controller.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -1208,6 +1208,20 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	ibex_multdiv_fast
 
+} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/bus.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/bus.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module bus
+
+Top level modules:
+	bus
+
+} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_fetch_fifo.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_fetch_fifo.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module ibex_fetch_fifo
+
+Top level modules:
+	ibex_fetch_fifo
+
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/prim_generic_ram_2p.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/prim_generic_ram_2p.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling module prim_generic_ram_2p
@@ -1217,20 +1231,6 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	prim_generic_ram_2p
 
-} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_fetch_fifo.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_fetch_fifo.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module ibex_fetch_fifo
-
-Top level modules:
-	ibex_fetch_fifo
-
-} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/bus.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/bus.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module bus
-
-Top level modules:
-	bus
-
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/debounce.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/debounce.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling package debounce_sv_unit
@@ -1238,17 +1238,6 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 
 Top level modules:
 	debounce
-
-} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_clock_gating.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_clock_gating.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling package ibex_pkg
--- Compiling package prim_pkg
--- Compiling package prim_clock_gating_sv_unit
--- Importing package prim_pkg
--- Compiling module prim_clock_gating
-
-Top level modules:
-	prim_clock_gating
 
 } {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_icache.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_icache.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -1263,6 +1252,35 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 
 Top level modules:
 	ibex_icache
+
+} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_clock_gating.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_clock_gating.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package ibex_pkg
+-- Compiling package prim_pkg
+-- Compiling package prim_clock_gating_sv_unit
+-- Importing package prim_pkg
+-- Compiling module prim_clock_gating
+
+Top level modules:
+	prim_clock_gating
+
+} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_branch_predict.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_branch_predict.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package ibex_pkg
+-- Compiling package ibex_branch_predict_sv_unit
+-- Importing package ibex_pkg
+-- Compiling module ibex_branch_predict
+
+Top level modules:
+	ibex_branch_predict
+
+} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/debounce.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/debounce.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package debounce_sv_unit
+-- Compiling module debounce
+
+Top level modules:
+	debounce
 
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_id_stage.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_id_stage.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -1326,33 +1344,6 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	ibex_id_stage
 
-} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/debounce.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/debounce.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling package debounce_sv_unit
--- Compiling module debounce
-
-Top level modules:
-	debounce
-
-} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_branch_predict.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_branch_predict.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling package ibex_pkg
--- Compiling package ibex_branch_predict_sv_unit
--- Importing package ibex_pkg
--- Compiling module ibex_branch_predict
-
-Top level modules:
-	ibex_branch_predict
-
-} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/prim_ram_2p.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/prim_ram_2p.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module prim_ram_2p
--- Importing package prim_ram_2p_pkg
-** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/prim_ram_2p.sv(44): (vlog-13314) Defaulting port 'cfg_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-
-Top level modules:
-	prim_ram_2p
-
 } {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_ex_block.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_ex_block.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling package ibex_pkg
@@ -1365,12 +1356,14 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	ibex_ex_block
 
-} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ram_2p.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ram_2p.sv
+} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/prim_ram_2p.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/prim_ram_2p.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module ram_2p
+-- Compiling module prim_ram_2p
+-- Importing package prim_ram_2p_pkg
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/prim_ram_2p.sv(44): (vlog-13314) Defaulting port 'cfg_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
 
 Top level modules:
-	ram_2p
+	prim_ram_2p
 
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_compressed_decoder.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_compressed_decoder.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -1382,17 +1375,12 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	ibex_compressed_decoder
 
-} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_slow.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_slow.sv
+} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ram_2p.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ram_2p.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling package ibex_pkg
-** Warning: /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_slow.sv(36): (vlog-13314) Defaulting port 'imd_val_q_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
--- Compiling package ibex_multdiv_slow_sv_unit
--- Importing package ibex_pkg
--- Compiling module ibex_multdiv_slow
-** Warning: /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_slow.sv(36): (vlog-13314) Defaulting port 'imd_val_q_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module ram_2p
 
 Top level modules:
-	ibex_multdiv_slow
+	ram_2p
 
 } {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_core.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_core.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -1411,6 +1399,18 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 
 Top level modules:
 	ibex_core
+
+} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_slow.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_slow.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package ibex_pkg
+** Warning: /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_slow.sv(36): (vlog-13314) Defaulting port 'imd_val_q_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling package ibex_multdiv_slow_sv_unit
+-- Importing package ibex_pkg
+-- Compiling module ibex_multdiv_slow
+** Warning: /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_multdiv_slow.sv(36): (vlog-13314) Defaulting port 'imd_val_q_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+
+Top level modules:
+	ibex_multdiv_slow
 
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/prim_flop_macros.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/prim_flop_macros.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -1441,13 +1441,6 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	ibex_counter
 
-} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_register_file_fpga.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_register_file_fpga.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module ibex_register_file_fpga
-
-Top level modules:
-	ibex_register_file_fpga
-
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/bus.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/bus.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling module bus
@@ -1455,26 +1448,19 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	bus
 
+} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_register_file_fpga.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_register_file_fpga.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module ibex_register_file_fpga
+
+Top level modules:
+	ibex_register_file_fpga
+
 } {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_2p_pkg.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/prim_ram_2p_pkg.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling package prim_ram_2p_pkg
 
 Top level modules:
 	--none--
-
-} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_icache.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_icache.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling package ibex_pkg
-** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_icache.sv(57): (vlog-13314) Defaulting port 'ic_tag_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_icache.sv(62): (vlog-13314) Defaulting port 'ic_data_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
--- Compiling package ibex_icache_sv_unit
--- Importing package ibex_pkg
--- Compiling module ibex_icache
-** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_icache.sv(57): (vlog-13314) Defaulting port 'ic_tag_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_icache.sv(62): (vlog-13314) Defaulting port 'ic_data_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-
-Top level modules:
-	ibex_icache
 
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_cs_registers.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_cs_registers.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -1502,6 +1488,20 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	ibex_cs_registers
 
+} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_icache.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_icache.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package ibex_pkg
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_icache.sv(57): (vlog-13314) Defaulting port 'ic_tag_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_icache.sv(62): (vlog-13314) Defaulting port 'ic_data_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling package ibex_icache_sv_unit
+-- Importing package ibex_pkg
+-- Compiling module ibex_icache
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_icache.sv(57): (vlog-13314) Defaulting port 'ic_tag_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_icache.sv(62): (vlog-13314) Defaulting port 'ic_data_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+
+Top level modules:
+	ibex_icache
+
 } {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/dv_fcov_macros.svh {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/dv_fcov_macros.svh
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 
@@ -1519,29 +1519,6 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 
 Top level modules:
 	ibex_demo_system
-
-} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_pkg.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_pkg.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling package ibex_pkg
-
-Top level modules:
-	--none--
-
-} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_if_stage.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_if_stage.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling package ibex_pkg
-** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_if_stage.sv(56): (vlog-13314) Defaulting port 'ic_tag_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_if_stage.sv(61): (vlog-13314) Defaulting port 'ic_data_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_if_stage.sv(96): (vlog-13314) Defaulting port 'exc_cause' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
--- Compiling package ibex_if_stage_sv_unit
--- Importing package ibex_pkg
--- Compiling module ibex_if_stage
-** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_if_stage.sv(56): (vlog-13314) Defaulting port 'ic_tag_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_if_stage.sv(61): (vlog-13314) Defaulting port 'ic_data_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_if_stage.sv(96): (vlog-13314) Defaulting port 'exc_cause' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-
-Top level modules:
-	ibex_if_stage
 
 } {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_id_stage.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_id_stage.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -1605,6 +1582,37 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	ibex_id_stage
 
+} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_if_stage.sv {2 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_if_stage.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package ibex_pkg
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_if_stage.sv(56): (vlog-13314) Defaulting port 'ic_tag_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_if_stage.sv(61): (vlog-13314) Defaulting port 'ic_data_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_if_stage.sv(96): (vlog-13314) Defaulting port 'exc_cause' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling package ibex_if_stage_sv_unit
+-- Importing package ibex_pkg
+-- Compiling module ibex_if_stage
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_if_stage.sv(56): (vlog-13314) Defaulting port 'ic_tag_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_if_stage.sv(61): (vlog-13314) Defaulting port 'ic_data_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_if_stage.sv(96): (vlog-13314) Defaulting port 'exc_cause' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+
+Top level modules:
+	ibex_if_stage
+
+} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_pkg.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_pkg.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling package ibex_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_demo_system.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_demo_system.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module ibex_demo_system
+-- Importing package ibex_pkg
+
+Top level modules:
+	ibex_demo_system
+
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_dummy_instr.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_ibex_DMS/Ibex_demo_system/ibex_dummy_instr.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling package ibex_pkg
@@ -1614,14 +1622,6 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 
 Top level modules:
 	ibex_dummy_instr
-
-} {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_demo_system.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_demo_system.sv
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module ibex_demo_system
--- Importing package ibex_pkg
-
-Top level modules:
-	ibex_demo_system
 
 } {} {}} /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv {1 {vlog -work work -vopt -sv -stats=none /home/luanle/IBEX_synthesis/rtl/Ibex_demo_system/ibex_pkg.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
