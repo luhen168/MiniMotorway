@@ -68,13 +68,6 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	wb_stage
 
-} {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/pc.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/pc.v}
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module pc
-
-Top level modules:
-	pc
-
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Btype/controller.v {1 {vlog -work work -vopt -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Btype/controller.v
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling module controller
@@ -82,12 +75,12 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	controller
 
-} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Btype/tb_riscv.v {1 {vlog -work work -vopt -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Btype/tb_riscv.v
+} {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/pc.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/pc.v}
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module tb_riscv
+-- Compiling module pc
 
 Top level modules:
-	tb_riscv
+	pc
 
 } {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/mux_2_1.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/mux_2_1.v}
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -96,19 +89,24 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	mux_2_1
 
-} {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/mux_3_1.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/mux_3_1.v}
+} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Btype/tb_riscv.v {1 {vlog -work work -vopt -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Btype/tb_riscv.v
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module tb_riscv
+
+Top level modules:
+	tb_riscv
+
+} {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/imm_gen.v} {0 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/imm_gen.v}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module imm_gen
+** Error: (vlog-13069) /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/imm_gen.v(28): near "'0": syntax error, unexpected UNSIZED_BIT, expecting ':'.
+
+} {4.0 5.0} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/mux_3_1.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/mux_3_1.v}
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling module mux_3_1
 
 Top level modules:
 	mux_3_1
-
-} {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/imm_gen.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/imm_gen.v}
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module imm_gen
-
-Top level modules:
-	imm_gen
 
 } {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/reg_file.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/reg_file.v}
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
