@@ -22,12 +22,14 @@ module tb_riscv;
         // core.u_id_stage.u_reg_file.regfile[1] = 32'h00000005; // x1 = 5
         // core.u_id_stage.u_reg_file.regfile[2] = 32'h00000007; // x2 = 7
         //#1399 $finish;
-        repeat (150) @(posedge clk);
+        repeat (1000000) @(posedge clk);
         $stop;
     end
 
     initial begin
-        $readmemh("/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Btype/imem.mem", core.u_if_stage.u_imem.mem);
+        $readmemh("/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Utype/imem.mem", core.u_if_stage.u_imem.mem);
+        //$readmemh("/home/luanle/DigitalDesign/IbexDemoSystemQuestasimSimulation/ram.vmem", core.u_if_stage.u_imem.mem);
+        
     end
 
 endmodule

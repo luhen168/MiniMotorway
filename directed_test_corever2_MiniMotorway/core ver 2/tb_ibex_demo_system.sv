@@ -2,13 +2,13 @@
 
 import ibex_pkg::*;
 module tb_ibex_demo_system #(
-  // parameter int                 GpiWidth       = 8,
-  // parameter int                 GpoWidth       = 16,
-  // parameter int                 PwmWidth       = 12,
-  // parameter int unsigned        ClockFrequency = 50_000_000,
-  // parameter int unsigned        BaudRate       = 115_200,
-  // parameter ibex_pkg::regfile_e RegFile        = ibex_pkg::RegFileFPGA,
-  // parameter                     SRAMInitFile   = "/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever2_MiniMotorway/core ver 2/add-01.mem"
+  parameter int                 GpiWidth       = 8,
+  parameter int                 GpoWidth       = 16,
+  parameter int                 PwmWidth       = 12,
+  parameter int unsigned        ClockFrequency = 50_000_000,
+  parameter int unsigned        BaudRate       = 115_200,
+  parameter ibex_pkg::regfile_e RegFile        = ibex_pkg::RegFileFPGA,
+  parameter                     SRAMInitFile   = "ram.vmem"
 ) (
   
 );
@@ -19,7 +19,9 @@ module tb_ibex_demo_system #(
   
 
   // Instantiate the ibex_top
-  ibex_demo_system u_ibex_demo_system_i(
+  ibex_demo_system #(
+      .SRAMInitFile(SRAMInitFile)
+  ) u_ibex_demo_system_i(
       .clk_sys_i(clk_sys_i),
       .rst_sys_ni(rst_sys_ni),
 
@@ -42,7 +44,7 @@ module tb_ibex_demo_system #(
   // Clock generation
   initial begin
     clk_sys_i = 0;
-    forever #2 clk_sys_i = ~clk_sys_i;
+    forever #10 clk_sys_i = ~clk_sys_i;
   end
 
   // Test sequence
@@ -50,10 +52,10 @@ module tb_ibex_demo_system #(
     // Initialize inputs
     rst_sys_ni = 0;
     // Release reset after some time
-    #4 rst_sys_ni = 1;
+    #20 rst_sys_ni = 1;
     //Stop simulation
-    repeat (100000) @(posedge clk_sys_i);
-    $stop;
+    //repeat (100000) @(posedge clk_sys_i);
+    //$stop;
   end
 
   // initial begin

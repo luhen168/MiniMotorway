@@ -17,9 +17,8 @@ module ibex_demo_system #(
   parameter int                 PwmWidth       = 12,
   parameter int unsigned        ClockFrequency = 50_000_000,
   parameter int unsigned        BaudRate       = 115_200,
-  // parameter ibex_pkg::regfile_e RegFile        = ibex_pkg::RegFileFF,
-  // parameter                     SRAMInitFile   = "/home/luanle/Downloads/add-01.mem"
-  parameter                     SRAMInitFile   = "/home/luanle/DigitalDesign/Lab/MiniMotorway/directed_test_corever2_MiniMotorway/core ver 2/add-01.mem"
+  parameter ibex_pkg::regfile_e RegFile        = ibex_pkg::RegFileFF,
+  parameter                     SRAMInitFile   = ""
 
 ) (
   input  logic clk_sys_i,

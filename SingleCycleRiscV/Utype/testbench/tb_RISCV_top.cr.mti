@@ -19,13 +19,6 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	add_2_op
 
-} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Utype/wb_stage.v {1 {vlog -work work -vopt -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Utype/wb_stage.v
-QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module wb_stage
-
-Top level modules:
-	wb_stage
-
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Utype/tb_riscv.v {1 {vlog -work work -vopt -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Utype/tb_riscv.v
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling module tb_riscv
@@ -33,12 +26,26 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	tb_riscv
 
+} {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Utype/wb_stage.v {1 {vlog -work work -vopt -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Utype/wb_stage.v
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module wb_stage
+
+Top level modules:
+	wb_stage
+
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Utype/controller.v {1 {vlog -work work -vopt -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Utype/controller.v
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling module controller
 
 Top level modules:
 	controller
+
+} {} {}} {/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/sel_4_1.v} {1 {vlog -work work -vopt -stats=none {/home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/basic component/sel_4_1.v}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module sel_4_1
+
+Top level modules:
+	sel_4_1
 
 } {} {}} /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Utype/id_stage.v {1 {vlog -work work -vopt -stats=none /home/luanle/DigitalDesign/Lab/MiniMotorway/SingleCycleRiscV/Utype/id_stage.v
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018

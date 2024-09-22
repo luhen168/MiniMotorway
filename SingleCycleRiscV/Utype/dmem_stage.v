@@ -9,7 +9,7 @@ module dmem_stage (
     output [31:0] r_data_o
 );
 
-    reg [31:0] dmem [0:16384]; //64KiB
+    reg [31:0] dmem [0:16383]; //64KiB
     integer i;
 
     always @(posedge clk or negedge rst) begin
@@ -21,12 +21,6 @@ module dmem_stage (
             dmem[addr_i] = w_data_i;
     end
     
-    // integer i;
-    // initial
-    // begin
-    //     for(i=0;i<32;i=i+1)
-    //         ram[i] = 0;
-    // end
     
     assign r_data_o = dmem[addr_i];
 
