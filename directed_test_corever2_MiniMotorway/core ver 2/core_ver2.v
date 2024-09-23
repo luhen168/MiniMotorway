@@ -293,7 +293,7 @@ module core_ver2(
     );
     /********************** ALU **********************/
     // input a mux
-    assign alu_inputa = exe_auipc ? exe_pc : exe_regdata1;
+    assign alu_inputa = exe_auipc ? (exe_pc-4) : exe_regdata1;
     
     // input b mux
     assign alu_inputb = exe_aluimm ? exe_imm : exe_regdata2;

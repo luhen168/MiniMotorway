@@ -13,7 +13,7 @@ module imm_decode(
         7'b1100111: o_imm_val <= { {20{i_instr[31]&i_signext}} , i_instr[31:20] };                                            // JALR
         7'b1100011: o_imm_val <= { {20{i_instr[31]&i_signext}} , i_instr[7] , i_instr[30:25] , i_instr[11:8] , {1{1'b0}} };   // Branch
         7'b0110111: o_imm_val <= { i_instr[31:12], {12'b000000000000} };                                                      // lui
-        7'b0010011: 
+        7'b0010011: o_imm_val <= { i_instr[31:12], {12'b000000000000} };                                                      // auipc
         begin
             if(i_instr[14:12] == 3'b001 | i_instr[14:12] == 3'b101)                                                           // slli/srli/srlai
                     o_imm_val <= { {27'b0} , i_instr[24:20] };
