@@ -253,7 +253,153 @@ module ibex_tracer (
       12'd3857: return "mvendorid";
       12'd3858: return "marchid";
       12'd3859: return "mimpid";
+      12'd3860: return "mhartid";function automatic void printbuffer_dumpline(int fh);
+    string rvfi_insn_str;
+
+    // Write compressed instructions as four hex digits (16 bit word), and
+    // uncompressed ones as 8 hex digits (32 bit words).
+    if (insn_is_compressed) begin
+      rvfi_insn_str = $sformatf("%h", rvfi_insn[15:0]);
+    end else begin
+      rvfi_insn_str = $sformatf("%h", rvfi_insn);
+    end
+
+    $fwrite(fh, "%15t\t%d\t%h\t%s\t%s\t",
+            $time, cycle, rvfi_pc_rdata, rvfi_insn_str, decoded_str);
+
+    if ((data_accessed & RS1) != 0) begin
+      $fwrite(fh, " %s:0x%08x", reg_addr_to_str(rvfi_rs1_addr), rvfi_rs1_rdata);
+    end
+    if ((data_accessed & RS2) != 0) begin
+      $fwrite(fh, " %s:0x%08x", reg_addr_to_str(rvfi_rs2_addr), rvfi_rs2_rdata);
+    end
+    if ((data_accessed & RS3) != 0) begin
+      $fwrite(fh, " %s:0x%08x", reg_addr_to_str(rvfi_rs3_addr), rvfi_rs3_rdata);
+    end
+    if ((data_accessed & RD) != 0) begin
+      $fwrite(fh, " %s=0x%08x", reg_addr_to_str(rvfi_rd_addr), rvfi_rd_wdata);
+    end
+    if ((data_accessed & MEM) != 0) begin
+      $fwrite(fh, " PA:0x%08x", rvfi_mem_addr);
+
+      if (rvfi_mem_wmask != 4'b0000) begin
+        $fwrite(fh, " store:0x%08x", rvfi_mem_wdata);
+      end
+      if (rvfi_mem_rmask != 4'b0000) begin
+        $fwrite(fh, " load:0x%08x", rvfi_mem_rdata);
+      end
+    end
+
+    $fwrite(fh, "\n");
+  endfunction
+
+
+  // Format register address with "x" prefix, left-aligned to a fixed width of 3 characters.
+  function automatic string reg_addr_to_str(input logic [4:0] addr);
+    if (addr < 10) begin
+      return $sformatf(" x%0d", addr);
+    end else begin
+      return $sformatf("x%0d", addr);
+    end
+  endfunction
+
+  // Get a CSR name for a CSR address.
+  function automatic string get_csr_name(input logic [11:0] csr_addr);
+    unique case (csr_addr)
+      12'd0: return "ustatus";
+      12'd4: return "uie";
+      12'd5: return "utvec";
+      12'd64: return "uscratch";
+      12'd65: return "uepc";
+      12'd66: return "ucause";
+      12'd67: return "utval";
+      12'd68: return "uip";
+      12'd1: return "fflags";
+      12'd2: return "frm";
+      12'd3: return "fcsr";
+      12'd3072: return "cycle";
+      12'd3073: return "time";
+      12'd3074: return "instret";
+      12'd3075: return "hpmcounter3";
+      12'd3076: return "hpmcounter4";
+      12'd3077: return "hpmcounter5";
+      12'd3078: return "hpmcounter6";
+      12'd3079: return "hpmcounter7";
+      12'd3080: return "hpmcounter8";
+      12'd3081: return "hpmcounter9";
+      12'd3082: return "hpmcounter10";
+      12'd3083: return "hpmcounter11";
+      12'd3084: return "hpmcounter12";
+      12'd3085: return "hpmcounter13";
+      12'd3086: return "hpmcounter14";
+      12'd3087: return "hpmcounter15";
+      12'd3088: return "hpmcounter16";
+      12'd3089: return "hpmcounter17";
+      12'd3090: return "hpmcounter18";
+      12'd3091: return "hpmcounter19";
+      12'd3092: return "hpmcounter20";
+      12'd3093: return "hpmcounter21";
+      12'd3094: return "hpmcounter22";
+      12'd3095: return "hpmcounter23";
+      12'd3096: return "hpmcounter24";
+      12'd3097: return "hpmcounter25";
+      12'd3098: return "hpmcounter26";
+      12'd3099: return "hpmcounter27";
+      12'd3100: return "hpmcounter28";
+      12'd3101: return "hpmcounter29";
+      12'd3102: return "hpmcounter30";
+      12'd3103: return "hpmcounter31";
+      12'd3200: return "cycleh";
+      12'd3201: return "timeh";
+      12'd3202: return "instreth";
+      12'd3203: return "hpmcounter3h";
+      12'd3204: return "hpmcounter4h";
+      12'd3205: return "hpmcounter5h";
+      12'd3206: return "hpmcounter6h";
+      12'd3207: return "hpmcounter7h";
+      12'd3208: return "hpmcounter8h";
+      12'd3209: return "hpmcounter9h";
+      12'd3210: return "hpmcounter10h";
+      12'd3211: return "hpmcounter11h";
+      12'd3212: return "hpmcounter12h";
+      12'd3213: return "hpmcounter13h";
+      12'd3214: return "hpmcounter14h";
+      12'd3215: return "hpmcounter15h";
+      12'd3216: return "hpmcounter16h";
+      12'd3217: return "hpmcounter17h";
+      12'd3218: return "hpmcounter18h";
+      12'd3219: return "hpmcounter19h";
+      12'd3220: return "hpmcounter20h";
+      12'd3221: return "hpmcounter21h";
+      12'd3222: return "hpmcounter22h";
+      12'd3223: return "hpmcounter23h";
+      12'd3224: return "hpmcounter24h";
+      12'd3225: return "hpmcounter25h";
+      12'd3226: return "hpmcounter26h";
+      12'd3227: return "hpmcounter27h";
+      12'd3228: return "hpmcounter28h";
+      12'd3229: return "hpmcounter29h";
+      12'd3230: return "hpmcounter30h";
+      12'd3231: return "hpmcounter31h";
+      12'd256: return "sstatus";
+      12'd258: return "sedeleg";
+      12'd259: return "sideleg";
+      12'd260: return "sie";
+      12'd261: return "stvec";
+      12'd262: return "scounteren";
+      12'd320: return "sscratch";
+      12'd321: return "sepc";
+      12'd322: return "scause";
+      12'd323: return "stval";
+      12'd324: return "sip";
+      12'd384: return "satp";
+      12'd3857: return "mvendorid";
+      12'd3858: return "marchid";
+      12'd3859: return "mimpid";
       12'd3860: return "mhartid";
+      12'd768: return "mstatus";
+      12'd769: return "misa";
+      12'd770: return "medeleg";
       12'd768: return "mstatus";
       12'd769: return "misa";
       12'd770: return "medeleg";
