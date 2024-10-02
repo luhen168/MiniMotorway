@@ -6,7 +6,6 @@ module mux_4to1
     output reg [DATAWIDTH-1:0] selected_out
 );
 
-    /* verilator lint_off CASEX */
     always @(*)
     casex(select)
         2'b00:
@@ -21,4 +20,3 @@ module mux_4to1
             selected_out = 32'bx;
     endcase
 endmodule
-

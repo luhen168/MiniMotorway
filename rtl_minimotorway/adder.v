@@ -6,4 +6,3 @@ module adder (
 assign sum = a + b;
 
 endmodule
-

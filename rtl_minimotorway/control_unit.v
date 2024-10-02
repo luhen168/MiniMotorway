@@ -1,6 +1,5 @@
 module control_unit (
     // from instr mem
-    /* verilator lint_off UNUSEDSIGNAL */
     input i_resetn,
     input [6:0] opcode,
     input [2:0] funct3,

@@ -1,5 +1,4 @@
 module pc_reg(
-    /* verilator lint_off UNUSEDSIGNAL */
     input i_clk, i_resetn, i_we, 
     input [31:0] i_pc, 
     output reg [31:0] o_pc
@@ -9,7 +8,7 @@ module pc_reg(
     begin
         if(!i_resetn)
             o_pc <= 32'h80;
-        else
+        else if(i_we)
             o_pc <= i_pc;
     end
 

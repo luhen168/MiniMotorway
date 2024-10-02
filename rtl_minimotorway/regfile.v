@@ -5,7 +5,6 @@ module regfile (
     input [31:0] write_data,
     output [31:0] read_data1, read_data2,
 
-    /* verilator lint_off UNUSEDSIGNAL */
     input wire [31:0] core_reg_file [0:31] // Huy debug
 );
     integer i;
@@ -25,6 +24,6 @@ module regfile (
     assign read_data1 = reg_file[rs1]; // reg_file[0] hardwired to 0
     assign read_data2 = reg_file[rs2];
 
-
+    assign core_reg_file = reg_file; // Huy debug
 
 endmodule

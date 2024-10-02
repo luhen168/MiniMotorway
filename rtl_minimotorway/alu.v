@@ -5,10 +5,8 @@ module alu (
     output reg [31:0] result
 );
     reg [63:0] result_64bit;
-    /* verilator lint_off UNUSEDSIGNAL */
     reg [31:0] quotient;
 
-    /* verilator lint_off LATCH */
     always @(aluc, a, b) 
         begin
             case (aluc)
@@ -18,7 +16,8 @@ module alu (
                 5'b00011: result = a - b;  // SUB
                 5'b00100: result = a << b; // SLL (Shift left logical) 
                 5'b00101: result = a >> b; // SRL (Shift right logical)
-                5'b00110: result = $signed(a) >>> b;// SRA (Shift right arith)
+                // 5'b00110: result = $signed(a) >>> b;// SRA (Shift right arith)
+                5'b00110: result = a >>> b;// SRA (Shift right arith)
                 5'b00111: result = a ^ b;  // XOR 
                 5'b01000: result = b;      // dùng cho LUI
                 5'b01001: 
@@ -49,4 +48,3 @@ module alu (
             endcase
         end
 endmodule
-

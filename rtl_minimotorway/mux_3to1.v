@@ -5,7 +5,7 @@ module mux_3to1 #(
     input [1:0] select,
     output reg [DATAWIDTH-1:0] selected_out
 );
-    /* verilator lint_off CASEX */
+
     always @(*)
     casex(select)
         2'b00:
@@ -18,4 +18,3 @@ module mux_3to1 #(
             selected_out = 32'bx;
     endcase
 endmodule
-

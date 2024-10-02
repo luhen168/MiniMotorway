@@ -11,4 +11,3 @@ module comparator_1bit(
     assign out = a_and_b | a_lt_b;
 
 endmodule
-

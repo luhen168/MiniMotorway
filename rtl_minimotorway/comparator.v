@@ -1,4 +1,3 @@
-/* verilator lint_off WIDTHTRUNC */
 module comparator(
     input [31:0] a, b, 
     input unsigned_op, // if(unsigned operation) => 1 ; else => 0
@@ -14,7 +13,6 @@ module comparator(
 
     // intermediate signals
     wire a_lt_b;
-    /* verilator lint_off UNUSEDSIGNAL */
     wire final_a_lt_b; // final a_lt_b signal. 
     wire xor_r; // result of xor of input a and b
     
@@ -59,5 +57,3 @@ module comparator(
     assign o_a_eq_b = (xor_r == 0); 
 
 endmodule
-/* verilator lint_on WIDTHTRUNC */
-

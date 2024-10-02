@@ -3,7 +3,7 @@ module store_modifier (
     input [31:0] data_in,
     output reg [31:0] data_out
 );
-    always @(*)
+    always @(sb or sh or data_in)
     begin
         case({sb,sh})
             2'b00: data_out = data_in;                      // sw

@@ -1,6 +1,3 @@
-/* verilator lint_off IMPLICIT */
-/* verilator lint_off WIDTHEXPAND */
-/* verilator lint_off WIDTHTRUNC */
 module dmem_interface(
     // input signals in core
     input [31:0] i_data_addr,
@@ -11,9 +8,7 @@ module dmem_interface(
     // input signals from dmem
     input data_gnt_i,
     input data_rvalid_i,
-   
     input [31:0] data_rdata_i,
-   /* verilator lint_off UNUSEDSIGNAL */
     input [6:0] data_rdata_intg_i,
     input data_err_i,
 
@@ -23,7 +18,6 @@ module dmem_interface(
     output [3:0] data_be_o,
     output [31:0] data_addr_o,
     output [31:0] data_wdata_o,
-    /* verilator lint_off UNDRIVEN */
     output [31:0] data_wdata_intg_o,
 
     //output signal to core
@@ -41,12 +35,10 @@ module dmem_interface(
     assign data_wdata_o = i_data_wdata;
     assign data_be_o = 4'b1111; // Luan enter dump output 
     
-    assign o_data_rdata = (data_gnt_i & data_rvalid_i) ? data_rdata_i : 32'b0;
+    assign o_data_rdata = (data_gnt_i & data_rvalid_i) ? data_rdata_i : 32'hbabecafe;
 
 endmodule
 
-/* verilator lint_on IMPLICIT */
-/* verilator lint_on WIDTHEXPAND */
-/* verilator lint_on WIDTHTRUNC */
+
 
 

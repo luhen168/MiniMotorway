@@ -1,5 +1,3 @@
-/* verilator lint_off IMPLICIT */
-/* verilator lint_off WIDTHEXPAND */
 module core_ver2(
 
     
@@ -12,7 +10,6 @@ module core_ver2(
     output instr_req_o,
     output [31:0] instr_addr_o,
 
-    /* verilator lint_off UNUSEDSIGNAL */
     input                          test_en_i,     // enable all clock gates for testing
     input                          ram_cfg_i,
 
@@ -348,7 +345,7 @@ module core_ver2(
 
         .data_gnt_i(data_gnt_i),
         .data_rvalid_i(data_rvalid_i),
-        .data_rdata_i(data_rdata_i),
+        .data_rdata_i(data_rdata_i),           // input from ram 
         .data_rdata_intg_i(data_rdata_intg_i),
         .data_err_i(data_err_i),
 
@@ -369,6 +366,7 @@ module core_ver2(
     load_modifier load_unit (
         .lb(mem_lsb), .lh(mem_lsh), .load_signext(mem_loadsignext),
         .data_in(data_rdata_modified),
+        .addr_in(data_addr_o),
         .data_out(mod_rd_dmem)
     );
     /************************************************************/
@@ -392,7 +390,6 @@ module core_ver2(
 
     /********************** REGFILE **********************/
     assign reg_wdata = wb_mem2reg ? wb_dmem : wb_data;
-    /* verilator lint_off UNDRIVEN */
     wire [31:0] core_reg_file [0:31]; // Huy debug
     regfile register_file (
         .clk(~clk_i), .resetn(rst_ni),
@@ -413,7 +410,4 @@ module core_ver2(
     /*****************************************************/
 
 endmodule
-/* verilator lint_on IMPLICIT */
-/* verilator lint_on WIDTHEXPAND */
-
 

@@ -24,4 +24,3 @@ module mux_6to1
             selected_out = 32'bx;
     endcase
 endmodule
-

@@ -1,5 +1,3 @@
-/* verilator lint_off WIDTHEXPAND */
-/* verilator lint_off WIDTHTRUNC */
 module if_id_reg(
     input i_clk, i_resetn, i_we, i_flush,
     input [31:0] i_if_p4, i_if_pc, i_if_instr,
@@ -7,8 +5,7 @@ module if_id_reg(
     output reg [31:0] o_id_instr
 );
 
-/* verilator lint_off UNUSEDSIGNAL */    
-reg [31:0] id_instr;
+    reg [31:0] id_instr;
 
     always @(posedge i_clk or negedge i_resetn)
     begin
@@ -40,7 +37,3 @@ reg [31:0] id_instr;
     // assign o_id_instr = (i_flush) ? 32'h00007013 : id_instr; // if flush -> andi x0, x0, 0 | else -> id instr gets if instr
 
 endmodule
-/* verilator lint_on WIDTHTRUNC */
-/* verilator lint_on WIDTHEXPAND */
-
-
