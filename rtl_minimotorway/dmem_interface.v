@@ -13,7 +13,7 @@ module dmem_interface(
     input data_err_i,
 
     // output signals to dmem
-    output [31:0] data_req_o,
+    output data_req_o,
     output data_we_o,
     output [3:0] data_be_o,
     output [31:0] data_addr_o,
@@ -35,7 +35,8 @@ module dmem_interface(
     assign data_wdata_o = i_data_wdata;
     assign data_be_o = 4'b1111; // Luan enter dump output 
     
-    assign o_data_rdata = (data_gnt_i & data_rvalid_i) ? data_rdata_i : 32'hbabecafe;
+    // assign o_data_rdata = (data_gnt_i & data_rvalid_i) ? data_rdata_i : 32'hbabecafe;
+    assign o_data_rdata = (data_rvalid_i) ? data_rdata_i : 32'hbabecafe;
 
 endmodule
 

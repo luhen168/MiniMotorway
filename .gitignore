@@ -1,0 +1,11 @@
+# Bỏ qua tất cả file .log
+
+
+# Bỏ qua thư mục build
+/directed_test_corever1_MiniMotorway/
+/directed_test_ibex_core/
+/directed_test_ibex_compliance/
+
+# Bỏ qua tất cả file .DS_Store (trên macOS)
+
+

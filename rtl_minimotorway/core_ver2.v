@@ -148,6 +148,8 @@ module core_ver2(
     // pc reg
     pc_reg pc_pipeline_reg(
         .i_clk(clk_i), .i_resetn(rst_ni),
+        .i_data_req(data_req_o), 
+        .i_data_rvalid(data_rvalid_i),
         .i_we(not_stall),
         .i_pc(pc_next),
         .o_pc(if_pc)
@@ -299,7 +301,8 @@ module core_ver2(
     assign alu_inputb = exe_aluimm ? exe_imm : exe_regdata2;
     
     alu alu_unit(
-        .a(alu_inputa), .b(alu_inputb),
+        .a(alu_inputa), 
+        .b(alu_inputb),
         .aluc(exe_aluc),
         .result(alu_r)
     );
@@ -307,7 +310,9 @@ module core_ver2(
     assign lt_32bit[0] = exe_lt;
     // mux to select alu output, slt compare result, or pc+4 as write-back data
     mux_3to1 exe_data_mux (
-        .inputA(alu_r), .inputB(lt_32bit), .inputC(exe_p4),
+        .inputA(alu_r), 
+        .inputB(lt_32bit), 
+        .inputC(exe_p4),
         .select({exe_jal, exe_slt_instr}),
         .selected_out(exe_data)
     );
@@ -315,7 +320,9 @@ module core_ver2(
     
     /********************** STORE MODIFIER **********************/
     store_modifier store_unit (
-        .sb(exe_lsb), .sh(exe_lsh), 
+        .sb(exe_lsb), 
+        .sh(exe_lsh), 
+        .addr_in(exe_data),
         .data_in(exe_regdata2),
         .data_out(exe_dmem)
     );
@@ -364,7 +371,8 @@ module core_ver2(
 
     /*********************** LOAD MODIFIER **********************/
     load_modifier load_unit (
-        .lb(mem_lsb), .lh(mem_lsh), .load_signext(mem_loadsignext),
+        .lb(mem_lsb), .lh(mem_lsh), 
+        .load_signext(mem_loadsignext),
         .data_in(data_rdata_modified),
         .addr_in(data_addr_o),
         .data_out(mod_rd_dmem)
@@ -374,7 +382,7 @@ module core_ver2(
 
 
     /********************************************* WB STAGE ********************************************/
-    /********************** MEM/WB REG *********************/
+    /********************** MEM/WBi_exe_wmem REG *********************/
     mem_wb_reg mem_wb_pipeline_reg (
         .i_clk(clk_i), .i_resetn(rst_ni),
         // Control signals from MEM stage

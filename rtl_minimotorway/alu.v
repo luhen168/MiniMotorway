@@ -14,10 +14,10 @@ module alu (
                 5'b00001: result = a | b;  // OR
                 5'b00010: result = a + b;  // ADD
                 5'b00011: result = a - b;  // SUB
-                5'b00100: result = a << b; // SLL (Shift left logical) 
-                5'b00101: result = a >> b; // SRL (Shift right logical)
+                5'b00100: result = a << b[4:0]; // SLL (Shift left logical) 
+                5'b00101: result = a >> b[4:0]; // SRL (Shift right logical)
                 // 5'b00110: result = $signed(a) >>> b;// SRA (Shift right arith)
-                5'b00110: result = a >>> b;// SRA (Shift right arith)
+                5'b00110: result = $signed(a) >>> b[4:0];// SRA (Shift right arith)
                 5'b00111: result = a ^ b;  // XOR 
                 5'b01000: result = b;      // dùng cho LUI
                 5'b01001: 
