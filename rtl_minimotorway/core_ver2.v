@@ -110,6 +110,7 @@ module core_ver2(
     // Control signals 
     wire exe_mem2reg, exe_wmem, exe_aluimm, exe_slt_instr, exe_wreg, exe_auipc, exe_lsb, exe_lsh, exe_loadsignext, exe_jal;
     wire [4:0] exe_aluc;
+    wire [3:0] exe_data_be;
     // Data signals      
     wire exe_lt;
     wire [31:0] lt_32bit; // bit 0 is exe_lt, while rest of bits are set to 0
@@ -147,7 +148,8 @@ module core_ver2(
     /********************** PC REG *********************/
     // pc reg
     pc_reg pc_pipeline_reg(
-        .i_clk(clk_i), .i_resetn(rst_ni),
+        .i_clk(clk_i), 
+        .i_resetn(rst_ni),
         .i_data_req(data_req_o), 
         .i_data_rvalid(data_rvalid_i),
         .i_we(not_stall),
@@ -183,7 +185,9 @@ module core_ver2(
     
     // 3:1 MUX to select next pc
     mux_3to1 next_pc_mux (
-        .inputA(if_p4), .inputB(jalr_branch_pc), .inputC(jal_pc),
+        .inputA(if_p4), 
+        .inputB(jalr_branch_pc), 
+        .inputC(jal_pc),
         .select(pcsrc),
         .selected_out(pc_next)
     ); 
@@ -200,11 +204,16 @@ module core_ver2(
     /********************************************* ID STAGE *********************************************/
     /********************** IF/ID REG *********************/
     if_id_reg if_id_pipeline_reg (
-        .i_clk(clk_i), .i_resetn(rst_ni),
+        .i_clk(clk_i), 
+        .i_resetn(rst_ni),
         .i_we(not_stall),
         .i_flush(flush),
-        .i_if_p4(if_p4), .i_if_pc(mod_pc), .i_if_instr(i_instr_c),
-        .o_id_p4(id_p4), .o_id_pc(id_pc), .o_id_instr(id_instr)
+        .i_if_p4(if_p4), 
+        .i_if_pc(mod_pc), 
+        .i_if_instr(i_instr_c),
+        .o_id_p4(id_p4), 
+        .o_id_pc(id_pc), 
+        .o_id_instr(id_instr)
     );
     /******************************************************/
 
@@ -217,16 +226,35 @@ module core_ver2(
         .funct7(funct7),
         .rs1(rs1), .rs2(rs2),
         // from datapath
-        .i_compare_lt(compare_lt), .i_compare_eq(compare_eq),
-        .i_mem_wreg(mem_wreg), .i_mem_mem2reg(mem_mem2reg), .i_exe_wreg(exe_wreg), .i_exe_mem2reg(exe_mem2reg),     
-        .i_mem_rd(mem_rd), .i_exe_rd(exe_rd),
+        .i_compare_lt(compare_lt), 
+        .i_compare_eq(compare_eq),
+        .i_mem_wreg(mem_wreg), 
+        .i_mem_mem2reg(mem_mem2reg), 
+        .i_exe_wreg(exe_wreg), 
+        .i_exe_mem2reg(exe_mem2reg),     
+        .i_mem_rd(mem_rd), 
+        .i_exe_rd(exe_rd),
         // to datapath
-        .o_not_stall(not_stall), .o_flush(flush),
+        .o_not_stall(not_stall), 
+        .o_flush(flush),
         .aluc(aluc),
         .pcsrc(pcsrc),
-        .o_fwda(fwda), .o_fwdb(fwdb),
-        .o_wmem(wmem), .o_wreg(wreg),
-        .mem2reg(mem2reg), .aluimm(aluimm), .jal(jal), .jalr(jalr), .signext(signext), .auipc(auipc), .ls_b(ls_b), .ls_h(ls_h), .load_signext(load_signext), .slt_instr(slt_instr), .compare_signed(compare_signed), .compare_imm(compare_imm)
+        .o_fwda(fwda), 
+        .o_fwdb(fwdb),
+        .o_wmem(wmem), 
+        .o_wreg(wreg),
+        .mem2reg(mem2reg), 
+        .aluimm(aluimm), 
+        .jal(jal), 
+        .jalr(jalr), 
+        .signext(signext), 
+        .auipc(auipc), 
+        .ls_b(ls_b), 
+        .ls_h(ls_h), 
+        .load_signext(load_signext), 
+        .slt_instr(slt_instr), 
+        .compare_signed(compare_signed), 
+        .compare_imm(compare_imm)
     );
     /**********************************************************/
 
@@ -234,8 +262,12 @@ module core_ver2(
     assign compare_inputb = compare_imm ? imm_val : id_regdata2;
 
     comparator compare_unit (
-        .a(id_regdata1), .b(compare_inputb), .unsigned_op(~compare_signed),
-        .o_a_lt_b(compare_lt), .o_a_eq_b(compare_eq) // output a less-than b and a equal-to b
+        .a(id_regdata1), 
+        .b(compare_inputb), 
+        .unsigned_op(~compare_signed),
+
+        .o_a_lt_b(compare_lt), 
+        .o_a_eq_b(compare_eq) // output a less-than b and a equal-to b
     );
     /**********************************************************/
     
@@ -260,20 +292,30 @@ module core_ver2(
 
     // add imm to pc (branch) or reg_data1 (jalr). 
     adder br_jalr_adder (  
-        .a(imm_val), .b(jalr_branch_inputb),
+        .a(imm_val), 
+        .b(jalr_branch_inputb),
+
         .sum(jalr_branch_pc)
     );
 
     // 4x1 MUXs for data forwarding
     mux_4to1 fwda_mux (
-        .inputA(reg_rdata1), .inputB(exe_data), .inputC(mem_data), .inputD(mod_rd_dmem),
+        .inputA(reg_rdata1), 
+        .inputB(exe_data), 
+        .inputC(mem_data), 
+        .inputD(mod_rd_dmem),
         .select(fwda),
+
         .selected_out(id_regdata1)
     );
 
     mux_4to1 fwdb_mux (
-        .inputA(reg_rdata2), .inputB(exe_data), .inputC(mem_data), .inputD(mod_rd_dmem),
+        .inputA(reg_rdata2), 
+        .inputB(exe_data), 
+        .inputC(mem_data), 
+        .inputD(mod_rd_dmem),
         .select(fwdb),
+
         .selected_out(id_regdata2)
     );
     /****************************************************************************************************/
@@ -282,16 +324,48 @@ module core_ver2(
     /********************************************* EXE STAGE ********************************************/
     /********************** ID/EXE REG *********************/
     id_exe_reg id_exe_pipeline_reg (
-        .i_clk(clk_i), .i_resetn(rst_ni),
+        .i_clk(clk_i), 
+        .i_resetn(rst_ni),
         // Control signals from ID stage
-        .i_id_mem2reg(mem2reg), .i_id_wmem(wmem), .i_id_aluc(aluc), .i_id_aluimm(aluimm), .i_id_slt_instr(slt_instr), .i_id_wreg(wreg), .i_id_jal(jal), .i_id_auipc(auipc), .i_id_lsb(ls_b), .i_id_lsh(ls_h), .i_id_loadsignext(load_signext),
+        .i_id_mem2reg(mem2reg), 
+        .i_id_wmem(wmem), 
+        .i_id_aluc(aluc), 
+        .i_id_aluimm(aluimm), 
+        .i_id_slt_instr(slt_instr), 
+        .i_id_wreg(wreg), 
+        .i_id_jal(jal), 
+        .i_id_auipc(auipc), 
+        .i_id_lsb(ls_b), 
+        .i_id_lsh(ls_h), 
+        .i_id_loadsignext(load_signext),
         // Data from ID stage 
         .i_id_lt(compare_lt),          
-        .i_id_pc(id_pc), .i_id_regdata1(id_regdata1), .i_id_regdata2(id_regdata2), .i_id_rd(rd), .i_id_imm(imm_val), .i_id_p4(id_p4),
+        .i_id_pc(id_pc), 
+        .i_id_regdata1(id_regdata1), 
+        .i_id_regdata2(id_regdata2), 
+        .i_id_rd(rd), 
+        .i_id_imm(imm_val), 
+        .i_id_p4(id_p4),
         // Control signals to EXE stage
-        .o_exe_mem2reg(exe_mem2reg), .o_exe_wmem(exe_wmem), .o_exe_aluc(exe_aluc), .o_exe_aluimm(exe_aluimm), .o_exe_slt_instr(exe_slt_instr), .o_exe_wreg(exe_wreg), .o_exe_auipc(exe_auipc), .o_exe_lsb(exe_lsb), .o_exe_lsh(exe_lsh), .o_exe_loadsignext(exe_loadsignext), .o_exe_jal(exe_jal),
+        .o_exe_mem2reg(exe_mem2reg), 
+        .o_exe_wmem(exe_wmem), 
+        .o_exe_aluc(exe_aluc), 
+        .o_exe_aluimm(exe_aluimm), 
+        .o_exe_slt_instr(exe_slt_instr), 
+        .o_exe_wreg(exe_wreg), 
+        .o_exe_auipc(exe_auipc), 
+        .o_exe_lsb(exe_lsb), 
+        .o_exe_lsh(exe_lsh), 
+        .o_exe_loadsignext(exe_loadsignext), 
+        .o_exe_jal(exe_jal),
         // Data to EXE stage
-        .o_exe_pc(exe_pc), .o_exe_regdata1(exe_regdata1), .o_exe_regdata2(exe_regdata2), .o_exe_rd(exe_rd), .o_exe_imm(exe_imm), .o_exe_p4(exe_p4), .o_exe_lt(exe_lt)
+        .o_exe_pc(exe_pc), 
+        .o_exe_regdata1(exe_regdata1), 
+        .o_exe_regdata2(exe_regdata2), 
+        .o_exe_rd(exe_rd), 
+        .o_exe_imm(exe_imm), 
+        .o_exe_p4(exe_p4), 
+        .o_exe_lt(exe_lt)
     );
     /********************** ALU **********************/
     // input a mux
@@ -324,6 +398,8 @@ module core_ver2(
         .sh(exe_lsh), 
         .addr_in(exe_data),
         .data_in(exe_regdata2),
+        // .data_gnt(data_gnt),
+        .data_be_o(exe_data_be),
         .data_out(exe_dmem)
     );
     /************************************************************/
@@ -333,15 +409,32 @@ module core_ver2(
     /********************************************* MEM STAGE ********************************************/
     /********************** EXE/MEM REG *********************/
     exe_mem_reg exe_mem_pipeline_reg (
-        .i_clk(clk_i), .i_resetn(rst_ni),
+        .i_clk(clk_i), 
+        .i_resetn(rst_ni),
         // Control signals from EXE stage
-        .i_exe_mem2reg(exe_mem2reg), .i_exe_wmem(exe_wmem), .i_exe_wreg(exe_wreg), .i_exe_lsb(exe_lsb), .i_exe_lsh(exe_lsh), .i_exe_loadsignext(exe_loadsignext),
+        .i_exe_mem2reg(exe_mem2reg), 
+        .i_exe_wmem(exe_wmem), 
+        .i_exe_wreg(exe_wreg), 
+        .i_exe_lsb(exe_lsb), 
+        .i_exe_lsh(exe_lsh), 
+        .i_data_be(exe_data_be),
+        .i_exe_loadsignext(exe_loadsignext),
         // Data from EXE stage 
-        .i_exe_data(exe_data), .i_exe_rd(exe_rd), .i_exe_dmem(exe_dmem), 
+        .i_exe_data(exe_data), 
+        .i_exe_rd(exe_rd), 
+        .i_exe_dmem(exe_dmem), 
         // Control signals to MEM stage
-        .o_mem_mem2reg(mem_mem2reg), .o_mem_wmem(mem_wmem), .o_mem_wreg(mem_wreg), .o_mem_lsb(mem_lsb), .o_mem_lsh(mem_lsh), .o_mem_loadsignext(mem_loadsignext),
+        .o_mem_mem2reg(mem_mem2reg), 
+        .o_mem_wmem(mem_wmem), 
+        .o_mem_wreg(mem_wreg), 
+        .o_mem_lsb(mem_lsb), 
+        .o_mem_lsh(mem_lsh), 
+        .o_data_be(data_be_o),
+        .o_mem_loadsignext(mem_loadsignext),
         // Data to MEM stage
-        .o_mem_data(mem_data), .o_mem_rd(mem_rd), .o_mem_dmem(mem_dmem)
+        .o_mem_data(mem_data), 
+        .o_mem_rd(mem_rd), 
+        .o_mem_dmem(mem_dmem)
     );
     /***************************DMEM INTERFACE*****************************/
     dmem_interface dmem_interface(
@@ -366,6 +459,7 @@ module core_ver2(
 
     //output signal to core
         .o_data_rdata(data_rdata_modified)
+        // .o_data_rdata(data_rdata_i)
     );
 
 
@@ -384,15 +478,22 @@ module core_ver2(
     /********************************************* WB STAGE ********************************************/
     /********************** MEM/WBi_exe_wmem REG *********************/
     mem_wb_reg mem_wb_pipeline_reg (
-        .i_clk(clk_i), .i_resetn(rst_ni),
+        .i_clk(clk_i), 
+        .i_resetn(rst_ni),
         // Control signals from MEM stage
-        .i_mem_mem2reg(mem_mem2reg), .i_mem_wreg(mem_wreg), 
+        .i_mem_mem2reg(mem_mem2reg), 
+        .i_mem_wreg(mem_wreg), 
         // Data from MEM stage
-        .i_mem_data(mem_data), .i_mem_rd(mem_rd), .i_rd_dmem(mod_rd_dmem),
+        .i_mem_data(mem_data), 
+        .i_mem_rd(mem_rd), 
+        .i_rd_dmem(mod_rd_dmem),
         // Control signals to WB stage
-        .o_wb_mem2reg(wb_mem2reg), .o_wb_wreg(wb_wreg),
+        .o_wb_mem2reg(wb_mem2reg), 
+        .o_wb_wreg(wb_wreg),
         // Data to WB stage
-        .o_wb_data(wb_data), .o_wb_rd(wb_rd), .o_wb_dmem(wb_dmem)
+        .o_wb_data(wb_data), 
+        .o_wb_rd(wb_rd), 
+        .o_wb_dmem(wb_dmem)
     );
     /*******************************************************/
 
@@ -400,11 +501,15 @@ module core_ver2(
     assign reg_wdata = wb_mem2reg ? wb_dmem : wb_data;
     wire [31:0] core_reg_file [0:31]; // Huy debug
     regfile register_file (
-        .clk(~clk_i), .resetn(rst_ni),
-        .rs1(rs1), .rs2(rs2), .rd(wb_rd), // register source 1, 2; register destination
+        .clk(~clk_i), 
+        .resetn(rst_ni),
+        .rs1(rs1), 
+        .rs2(rs2), 
+        .rd(wb_rd), // register source 1, 2; register destination
         .reg_write(wb_wreg),
         .write_data(reg_wdata),
-        .read_data1(reg_rdata1), .read_data2(reg_rdata2),
+        .read_data1(reg_rdata1), 
+        .read_data2(reg_rdata2),
         .core_reg_file(core_reg_file)
     );
     /*****************************************************/

@@ -33,10 +33,10 @@ module dmem_interface(
     assign data_we_o = i_exe_wmem;
     assign data_addr_o = i_data_addr;
     assign data_wdata_o = i_data_wdata;
-    assign data_be_o = 4'b1111; // Luan enter dump output 
+    // assign data_be_o = 4'b1111; // Luan enter dump output 
     
-    // assign o_data_rdata = (data_gnt_i & data_rvalid_i) ? data_rdata_i : 32'hbabecafe;
-    assign o_data_rdata = (data_rvalid_i) ? data_rdata_i : 32'hbabecafe;
+    assign o_data_rdata = (data_gnt_i & data_rvalid_i) ? data_rdata_i : 32'hbabecafe;
+    // assign o_data_rdata = (data_rvalid_i) ? data_rdata_i : 32'hbabecafe;
 
 endmodule
 
