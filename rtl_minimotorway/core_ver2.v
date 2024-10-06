@@ -188,10 +188,12 @@ module core_ver2(
         .inputA(if_p4), 
         .inputB(jalr_branch_pc), 
         .inputC(jal_pc),
+        .i_if_instr(i_instr_c),
         .select(pcsrc),
         .selected_out(pc_next)
     ); 
 
+ 
     /****************************************************************************************************/
 	 wire unsused_1, unsused_2;
     compressed_decoder compressed_decoder(
@@ -382,13 +384,14 @@ module core_ver2(
     );
 
     assign lt_32bit[0] = exe_lt;
-    // mux to select alu output, slt compare result, or pc+4 as write-back data
     mux_3to1 exe_data_mux (
         .inputA(alu_r), 
         .inputB(lt_32bit), 
-        .inputC(exe_p4),
+        .inputC(exe_pc),
+        // .inputC(exe_p4),
         .select({exe_jal, exe_slt_instr}),
-        .selected_out(exe_data)
+        .selected_out(exe_data),
+        .i_if_instr('0)
     );
     /*************************************************/
     

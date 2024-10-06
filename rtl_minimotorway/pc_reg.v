@@ -19,8 +19,10 @@ module pc_reg(
         end else if(en_pc) begin
             if(i_we) begin                          // not stall: 1 update pc - stall or not rvalid: 0 not update pc
                 o_pc <= i_pc;
-                if((check_sig==1'b0) & (temp==1 && i_data_rvalid==0) || (check_sig==1'b0) & (temp==1 && i_data_rvalid===1'bx) )
+                if((check_sig==1'b0) & (temp==1 && i_data_rvalid==0) || (check_sig==1'b0) & (temp==1 && i_data_rvalid===1'bx))
                     en_pc <= 1'b0;
+                // else if(i_data_req===1'b1) en_pc <= 1'b1;
+                // else if ((i_data_req!==1'b1))
             end
         end else 
             o_pc <= 32'hx;
@@ -30,10 +32,8 @@ module pc_reg(
     // begin
     //     if(!i_resetn)
     //         o_pc <= 32'h80;
-    //     else if (i_we)      
+    //     else if(i_we)
     //         o_pc <= i_pc;
-
     // end
-
 
 endmodule

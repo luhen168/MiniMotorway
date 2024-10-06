@@ -2,13 +2,12 @@ module store_modifier (
     input sb, sh, 
     input [31:0] addr_in,
     input [31:0] data_in,
-    // input data_gnt,
     output reg [3:0] data_be_o,
     output reg [31:0] data_out
 );
     reg [1:0] rdata_offset;
     
-    always @(sb or sh or addr_in or data_in)
+    always @(sb or sh or addr_in)
     begin
         // Check address align
         rdata_offset = addr_in[1:0];

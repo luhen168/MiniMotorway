@@ -16,7 +16,7 @@ module if_id_reg(
             o_id_instr <= 1'b0;
         end
 
-        else if (i_flush)
+        else if ((i_flush == 1) & (i_if_instr[6:0] != 7'b0010111))
         begin
             o_id_p4    <= 1'b0;
             o_id_pc    <= 1'b0; 

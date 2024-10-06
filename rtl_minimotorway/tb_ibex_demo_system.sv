@@ -50,9 +50,10 @@ module tb_ibex_demo_system #(
   // Test sequence
   initial begin
     // Initialize inputs
-    rst_sys_ni = 0;
+    rst_sys_ni = 1;
     // Release reset after some time
-    #20 rst_sys_ni = 1;
+    #50 rst_sys_ni = 0;
+    #40 rst_sys_ni = 1;
     //Stop simulation
     //repeat (100000) @(posedge clk_sys_i);
     //$stop;
