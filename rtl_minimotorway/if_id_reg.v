@@ -9,7 +9,7 @@ module if_id_reg(
     wire current_flush;
     reg next_flush;
 
-    assign current_flush = (i_flush == 1'b1) & (is_auipc != 1'b1);
+    assign current_flush = (i_flush == 1'b1) & (is_auipc == 1'b0) & (i_if_instr[6:0] != 7'b0010111);
 
 
     always @(posedge i_clk or negedge i_resetn)
