@@ -452,7 +452,7 @@ module control_unit (
                 jalr    = 1'b0;
                 mem2reg = 1'b0;
                 aluimm  = 1'b0;
-                signext = 1'b0;
+                signext = 1'b1;
                 ls_b    = 1'bx;
                 ls_h    = 1'bx;
                 load_signext = 1'bx;

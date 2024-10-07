@@ -179,7 +179,8 @@ module core_ver2(
 
     // get p4 (pc+4)
     adder p4_adder(
-        .a(mod_pc), .b(32'h4), // 32-bit inputs
+        .a(mod_pc), 
+        .b(32'h4),             // 32-bit inputs
         .sum(if_p4)            // sum result
     );
     
@@ -195,7 +196,7 @@ module core_ver2(
 
  
     /****************************************************************************************************/
-	 wire unsused_1, unsused_2;
+	wire unsused_1, unsused_2;
     compressed_decoder compressed_decoder(
         .instr_i(instr_rdata),
         .instr_o(i_instr_c),
@@ -210,6 +211,7 @@ module core_ver2(
         .i_resetn(rst_ni),
         .i_we(not_stall),
         .i_flush(flush),
+        .is_auipc(auipc),
         .i_if_p4(if_p4), 
         .i_if_pc(mod_pc), 
         .i_if_instr(i_instr_c),
@@ -226,7 +228,8 @@ module core_ver2(
         .opcode(opcode),
         .funct3(funct3),
         .funct7(funct7),
-        .rs1(rs1), .rs2(rs2),
+        .rs1(rs1), 
+        .rs2(rs2),
         // from datapath
         .i_compare_lt(compare_lt), 
         .i_compare_eq(compare_eq),
@@ -284,13 +287,15 @@ module core_ver2(
     /**************************************************************/
 
     // jal pc 
-    adder jal_pc_adder (
-        .a(imm_val), .b(id_pc),
+    adder_pc_jal jal_pc_adder (
+        .a(imm_val), 
+        .b(id_pc),
+
         .sum(jal_pc)
     ); 
 
     // Inputb for adder
-    assign jalr_branch_inputb = jalr ? id_regdata1 : id_pc; 
+    assign jalr_branch_inputb = jalr ? id_regdata1 : exe_pc; 
 
     // add imm to pc (branch) or reg_data1 (jalr). 
     adder br_jalr_adder (  
@@ -388,10 +393,10 @@ module core_ver2(
         .inputA(alu_r), 
         .inputB(lt_32bit), 
         .inputC(exe_pc),
+        .i_if_instr('0),
         // .inputC(exe_p4),
         .select({exe_jal, exe_slt_instr}),
-        .selected_out(exe_data),
-        .i_if_instr('0)
+        .selected_out(exe_data)
     );
     /*************************************************/
     
@@ -468,7 +473,8 @@ module core_ver2(
 
     /*********************** LOAD MODIFIER **********************/
     load_modifier load_unit (
-        .lb(mem_lsb), .lh(mem_lsh), 
+        .lb(mem_lsb), 
+        .lh(mem_lsh), 
         .load_signext(mem_loadsignext),
         .data_in(data_rdata_modified),
         .addr_in(data_addr_o),
