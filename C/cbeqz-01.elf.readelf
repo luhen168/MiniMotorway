@@ -1,0 +1,185 @@
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           RISC-V
+  Version:                           0x1
+  Entry point address:               0x80
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          20224 (bytes into file)
+  Flags:                             0x1, RVC, soft-float ABI
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         2
+  Size of section headers:           40 (bytes)
+  Number of section headers:         9
+  Section header string table index: 8
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .text.trap        PROGBITS        00000000 001000 000042 00  AX  0   0 16
+  [ 2] .text.init        PROGBITS        00000080 001080 0015ee 00  AX  0   0 64
+  [ 3] .tohost           PROGBITS        00002000 003000 000108 00  WA  0   0 256
+  [ 4] .data             PROGBITS        00003000 004000 000304 00  WA  0   0 256
+  [ 5] .riscv.attributes RISCV_ATTRIBUTE 00000000 004304 000023 00      0   0  1
+  [ 6] .symtab           SYMTAB          00000000 004328 000780 10      7 106  4
+  [ 7] .strtab           STRTAB          00000000 004aa8 000405 00      0   0  1
+  [ 8] .shstrtab         STRTAB          00000000 004ead 000051 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  p (processor specific)
+
+There are no section groups in this file.
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  LOAD           0x001000 0x00000000 0x00000000 0x0166e 0x0166e R E 0x1000
+  LOAD           0x003000 0x00002000 0x00002000 0x01304 0x01304 RW  0x1000
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .text.trap .text.init 
+   01     .tohost .data 
+
+There is no dynamic section in this file.
+
+There are no relocations in this file.
+
+The decoding of unwind sections for machine type RISC-V is not currently supported.
+
+Symbol table '.symtab' contains 120 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 00000000     0 SECTION LOCAL  DEFAULT    1 
+     2: 00000080     0 SECTION LOCAL  DEFAULT    2 
+     3: 00002000     0 SECTION LOCAL  DEFAULT    3 
+     4: 00003000     0 SECTION LOCAL  DEFAULT    4 
+     5: 00000000     0 SECTION LOCAL  DEFAULT    5 
+     6: 00000000     0 FILE    LOCAL  DEFAULT  ABS /tmp/ccKrIgjA.o
+     7: 00000000     0 NOTYPE  LOCAL  DEFAULT    1 _trap_start
+     8: 0000001a     0 NOTYPE  LOCAL  DEFAULT    1 _trap_exception
+     9: 00000038     0 NOTYPE  LOCAL  DEFAULT    1 _int_exc
+    10: 000000b2     0 NOTYPE  LOCAL  DEFAULT    2 write_tohost
+    11: 00000154     0 NOTYPE  LOCAL  DEFAULT  ABS offset
+    12: 000000bc     0 NOTYPE  LOCAL  DEFAULT    2 reset_vector
+    13: 00000084     0 NOTYPE  LOCAL  DEFAULT    2 trap_vector
+    14: 000000ae     0 NOTYPE  LOCAL  DEFAULT    2 handle_exception
+    15: 000000ae     0 NOTYPE  LOCAL  DEFAULT    2 other_exception
+    16: 00000122     0 NOTYPE  LOCAL  DEFAULT    2 begin_testcode
+    17: 00003010     0 NOTYPE  LOCAL  DEFAULT    4 signature_x1_1
+    18: 00000240     0 NOTYPE  LOCAL  DEFAULT    2 inst_0
+    19: 00000004     0 NOTYPE  LOCAL  DEFAULT  ABS num
+    20: 00000268     0 NOTYPE  LOCAL  DEFAULT    2 inst_1
+    21: 0000028a     0 NOTYPE  LOCAL  DEFAULT    2 inst_2
+    22: 000002c4     0 NOTYPE  LOCAL  DEFAULT    2 inst_3
+    23: 000002ee     0 NOTYPE  LOCAL  DEFAULT    2 inst_4
+    24: 00000386     0 NOTYPE  LOCAL  DEFAULT    2 inst_5
+    25: 000003bc     0 NOTYPE  LOCAL  DEFAULT    2 inst_6
+    26: 000003dc     0 NOTYPE  LOCAL  DEFAULT    2 inst_7
+    27: 000003fc     0 NOTYPE  LOCAL  DEFAULT    2 inst_8
+    28: 00000426     0 NOTYPE  LOCAL  DEFAULT    2 inst_9
+    29: 0000044c     0 NOTYPE  LOCAL  DEFAULT    2 inst_10
+    30: 000004a2     0 NOTYPE  LOCAL  DEFAULT    2 inst_11
+    31: 000004c4     0 NOTYPE  LOCAL  DEFAULT    2 inst_12
+    32: 000004f0     0 NOTYPE  LOCAL  DEFAULT    2 inst_13
+    33: 00000512     0 NOTYPE  LOCAL  DEFAULT    2 inst_14
+    34: 000005a6     0 NOTYPE  LOCAL  DEFAULT    2 inst_15
+    35: 000005ce     0 NOTYPE  LOCAL  DEFAULT    2 inst_16
+    36: 00000696     0 NOTYPE  LOCAL  DEFAULT    2 inst_17
+    37: 000006b6     0 NOTYPE  LOCAL  DEFAULT    2 inst_18
+    38: 000006da     0 NOTYPE  LOCAL  DEFAULT    2 inst_19
+    39: 000006fa     0 NOTYPE  LOCAL  DEFAULT    2 inst_20
+    40: 00000750     0 NOTYPE  LOCAL  DEFAULT    2 inst_21
+    41: 00000770     0 NOTYPE  LOCAL  DEFAULT    2 inst_22
+    42: 00000790     0 NOTYPE  LOCAL  DEFAULT    2 inst_23
+    43: 000007b0     0 NOTYPE  LOCAL  DEFAULT    2 inst_24
+    44: 000007d4     0 NOTYPE  LOCAL  DEFAULT    2 inst_25
+    45: 0000080e     0 NOTYPE  LOCAL  DEFAULT    2 inst_26
+    46: 0000082e     0 NOTYPE  LOCAL  DEFAULT    2 inst_27
+    47: 00000884     0 NOTYPE  LOCAL  DEFAULT    2 inst_28
+    48: 000008a4     0 NOTYPE  LOCAL  DEFAULT    2 inst_29
+    49: 000008c4     0 NOTYPE  LOCAL  DEFAULT    2 inst_30
+    50: 000008e4     0 NOTYPE  LOCAL  DEFAULT    2 inst_31
+    51: 00000906     0 NOTYPE  LOCAL  DEFAULT    2 inst_32
+    52: 00000928     0 NOTYPE  LOCAL  DEFAULT    2 inst_33
+    53: 0000094c     0 NOTYPE  LOCAL  DEFAULT    2 inst_34
+    54: 000009e2     0 NOTYPE  LOCAL  DEFAULT    2 inst_35
+    55: 00000a06     0 NOTYPE  LOCAL  DEFAULT    2 inst_36
+    56: 00000a2a     0 NOTYPE  LOCAL  DEFAULT    2 inst_37
+    57: 00000a52     0 NOTYPE  LOCAL  DEFAULT    2 inst_38
+    58: 00000a72     0 NOTYPE  LOCAL  DEFAULT    2 inst_39
+    59: 00000a98     0 NOTYPE  LOCAL  DEFAULT    2 inst_40
+    60: 00000ab8     0 NOTYPE  LOCAL  DEFAULT    2 inst_41
+    61: 00000ad8     0 NOTYPE  LOCAL  DEFAULT    2 inst_42
+    62: 00000af8     0 NOTYPE  LOCAL  DEFAULT    2 inst_43
+    63: 00000b20     0 NOTYPE  LOCAL  DEFAULT    2 inst_44
+    64: 00000b42     0 NOTYPE  LOCAL  DEFAULT    2 inst_45
+    65: 00000b62     0 NOTYPE  LOCAL  DEFAULT    2 inst_46
+    66: 00000b98     0 NOTYPE  LOCAL  DEFAULT    2 inst_47
+    67: 00000bc0     0 NOTYPE  LOCAL  DEFAULT    2 inst_48
+    68: 00000bea     0 NOTYPE  LOCAL  DEFAULT    2 inst_49
+    69: 00000c28     0 NOTYPE  LOCAL  DEFAULT    2 inst_50
+    70: 00000cc0     0 NOTYPE  LOCAL  DEFAULT    2 inst_51
+    71: 00000ce4     0 NOTYPE  LOCAL  DEFAULT    2 inst_52
+    72: 00000d7e     0 NOTYPE  LOCAL  DEFAULT    2 inst_53
+    73: 00000daa     0 NOTYPE  LOCAL  DEFAULT    2 inst_54
+    74: 00000dd6     0 NOTYPE  LOCAL  DEFAULT    2 inst_55
+    75: 00000e00     0 NOTYPE  LOCAL  DEFAULT    2 inst_56
+    76: 00000ec4     0 NOTYPE  LOCAL  DEFAULT    2 inst_57
+    77: 00000eee     0 NOTYPE  LOCAL  DEFAULT    2 inst_58
+    78: 00000f18     0 NOTYPE  LOCAL  DEFAULT    2 inst_59
+    79: 00000f40     0 NOTYPE  LOCAL  DEFAULT    2 inst_60
+    80: 00000f64     0 NOTYPE  LOCAL  DEFAULT    2 inst_61
+    81: 00000f88     0 NOTYPE  LOCAL  DEFAULT    2 inst_62
+    82: 00001024     0 NOTYPE  LOCAL  DEFAULT    2 inst_63
+    83: 0000105e     0 NOTYPE  LOCAL  DEFAULT    2 inst_64
+    84: 00001082     0 NOTYPE  LOCAL  DEFAULT    2 inst_65
+    85: 000010c0     0 NOTYPE  LOCAL  DEFAULT    2 inst_66
+    86: 000010e0     0 NOTYPE  LOCAL  DEFAULT    2 inst_67
+    87: 00001100     0 NOTYPE  LOCAL  DEFAULT    2 inst_68
+    88: 00001128     0 NOTYPE  LOCAL  DEFAULT    2 inst_69
+    89: 0000114e     0 NOTYPE  LOCAL  DEFAULT    2 inst_70
+    90: 0000117c     0 NOTYPE  LOCAL  DEFAULT    2 inst_71
+    91: 000011ba     0 NOTYPE  LOCAL  DEFAULT    2 inst_72
+    92: 0000127e     0 NOTYPE  LOCAL  DEFAULT    2 inst_73
+    93: 000012a6     0 NOTYPE  LOCAL  DEFAULT    2 inst_74
+    94: 00001304     0 NOTYPE  LOCAL  DEFAULT    2 inst_75
+    95: 00001328     0 NOTYPE  LOCAL  DEFAULT    2 inst_76
+    96: 0000134c     0 NOTYPE  LOCAL  DEFAULT    2 inst_77
+    97: 000013e8     0 NOTYPE  LOCAL  DEFAULT    2 inst_78
+    98: 00001480     0 NOTYPE  LOCAL  DEFAULT    2 inst_79
+    99: 000014ac     0 NOTYPE  LOCAL  DEFAULT    2 inst_80
+   100: 00001570     0 NOTYPE  LOCAL  DEFAULT    2 inst_81
+   101: 00001594     0 NOTYPE  LOCAL  DEFAULT    2 inst_82
+   102: 000015b8     0 NOTYPE  LOCAL  DEFAULT    2 inst_83
+   103: 000015f2     0 NOTYPE  LOCAL  DEFAULT    2 inst_84
+   104: 00003000     0 NOTYPE  LOCAL  DEFAULT    4 rvtest_data
+   105: 00003010     0 NOTYPE  LOCAL  DEFAULT    4 signature_x1_0
+   106: 00003170     0 NOTYPE  GLOBAL DEFAULT    4 end_signature
+   107: 00003200     0 NOTYPE  GLOBAL DEFAULT    4 begin_regstate
+   108: 00000080     0 NOTYPE  GLOBAL DEFAULT    2 rvtest_entry_point
+   109: 00003010     0 NOTYPE  GLOBAL DEFAULT    4 begin_signature
+   110: 00000080     0 NOTYPE  GLOBAL DEFAULT    2 _start
+   111: 00000140     0 NOTYPE  GLOBAL DEFAULT    2 rvtest_init
+   112: 00001620     0 NOTYPE  GLOBAL DEFAULT    2 rvtest_code_end
+   113: 00003300     0 NOTYPE  GLOBAL DEFAULT    4 end_regstate
+   114: 00000238     0 NOTYPE  GLOBAL DEFAULT    2 rvtest_code_begin
+   115: 00003000     0 NOTYPE  GLOBAL DEFAULT    4 rvtest_data_begin
+   116: 00003004     0 NOTYPE  GLOBAL DEFAULT    4 rvtest_data_end
+   117: 00003304     0 NOTYPE  GLOBAL DEFAULT    4 _end
+   118: 00002100     0 NOTYPE  GLOBAL DEFAULT    3 fromhost
+   119: 00002000     0 NOTYPE  GLOBAL DEFAULT    3 tohost
+
+No version information found in this file.
+Attribute Section: riscv
+File Attributes
+  Tag_RISCV_arch: "rv32i2p0_c2p0"
+  Tag_RISCV_priv_spec: 1
+  Tag_RISCV_priv_spec_minor: 11

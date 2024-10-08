@@ -1,0 +1,475 @@
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           RISC-V
+  Version:                           0x1
+  Entry point address:               0x80
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          28496 (bytes into file)
+  Flags:                             0x1, RVC, soft-float ABI
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         2
+  Size of section headers:           40 (bytes)
+  Number of section headers:         9
+  Section header string table index: 8
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .text.trap        PROGBITS        00000000 001000 000042 00  AX  0   0 16
+  [ 2] .text.init        PROGBITS        00000080 001080 0014b4 00  AX  0   0 64
+  [ 3] .tohost           PROGBITS        00002000 003000 000108 00  WA  0   0 256
+  [ 4] .data             PROGBITS        00003000 004000 000704 00  WA  0   0 256
+  [ 5] .riscv.attributes RISCV_ATTRIBUTE 00000000 004704 000023 00      0   0  1
+  [ 6] .symtab           SYMTAB          00000000 004728 0019a0 10      7 396  4
+  [ 7] .strtab           STRTAB          00000000 0060c8 000e35 00      0   0  1
+  [ 8] .shstrtab         STRTAB          00000000 006efd 000051 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  p (processor specific)
+
+There are no section groups in this file.
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  LOAD           0x001000 0x00000000 0x00000000 0x01534 0x01534 R E 0x1000
+  LOAD           0x003000 0x00002000 0x00002000 0x01704 0x01704 RW  0x1000
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .text.trap .text.init 
+   01     .tohost .data 
+
+There is no dynamic section in this file.
+
+There are no relocations in this file.
+
+The decoding of unwind sections for machine type RISC-V is not currently supported.
+
+Symbol table '.symtab' contains 410 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 00000000     0 SECTION LOCAL  DEFAULT    1 
+     2: 00000080     0 SECTION LOCAL  DEFAULT    2 
+     3: 00002000     0 SECTION LOCAL  DEFAULT    3 
+     4: 00003000     0 SECTION LOCAL  DEFAULT    4 
+     5: 00000000     0 SECTION LOCAL  DEFAULT    5 
+     6: 00000000     0 FILE    LOCAL  DEFAULT  ABS /tmp/ccM7hTfA.o
+     7: 00000000     0 NOTYPE  LOCAL  DEFAULT    1 _trap_start
+     8: 0000001a     0 NOTYPE  LOCAL  DEFAULT    1 _trap_exception
+     9: 00000038     0 NOTYPE  LOCAL  DEFAULT    1 _int_exc
+    10: 000000b2     0 NOTYPE  LOCAL  DEFAULT    2 write_tohost
+    11: 0000056c     0 NOTYPE  LOCAL  DEFAULT  ABS offset
+    12: 000000bc     0 NOTYPE  LOCAL  DEFAULT    2 reset_vector
+    13: 00000084     0 NOTYPE  LOCAL  DEFAULT    2 trap_vector
+    14: 000000ae     0 NOTYPE  LOCAL  DEFAULT    2 handle_exception
+    15: 000000ae     0 NOTYPE  LOCAL  DEFAULT    2 other_exception
+    16: 00000122     0 NOTYPE  LOCAL  DEFAULT    2 begin_testcode
+    17: 00003010     0 NOTYPE  LOCAL  DEFAULT    4 signature_x11_1
+    18: 00000240     0 NOTYPE  LOCAL  DEFAULT    2 inst_0
+    19: 0000024a     0 NOTYPE  LOCAL  DEFAULT    2 inst_1
+    20: 00000252     0 NOTYPE  LOCAL  DEFAULT    2 inst_2
+    21: 0000025c     0 NOTYPE  LOCAL  DEFAULT    2 inst_3
+    22: 00000264     0 NOTYPE  LOCAL  DEFAULT    2 inst_4
+    23: 0000026e     0 NOTYPE  LOCAL  DEFAULT    2 inst_5
+    24: 00000276     0 NOTYPE  LOCAL  DEFAULT    2 inst_6
+    25: 0000027e     0 NOTYPE  LOCAL  DEFAULT    2 inst_7
+    26: 00000286     0 NOTYPE  LOCAL  DEFAULT    2 inst_8
+    27: 00000290     0 NOTYPE  LOCAL  DEFAULT    2 inst_9
+    28: 0000029e     0 NOTYPE  LOCAL  DEFAULT    2 inst_10
+    29: 000002a8     0 NOTYPE  LOCAL  DEFAULT    2 inst_11
+    30: 000002b6     0 NOTYPE  LOCAL  DEFAULT    2 inst_12
+    31: 000002c4     0 NOTYPE  LOCAL  DEFAULT    2 inst_13
+    32: 000002d2     0 NOTYPE  LOCAL  DEFAULT    2 inst_14
+    33: 000002dc     0 NOTYPE  LOCAL  DEFAULT    2 inst_15
+    34: 000002ea     0 NOTYPE  LOCAL  DEFAULT    2 inst_16
+    35: 000002f4     0 NOTYPE  LOCAL  DEFAULT    2 inst_17
+    36: 000002fe     0 NOTYPE  LOCAL  DEFAULT    2 inst_18
+    37: 00000306     0 NOTYPE  LOCAL  DEFAULT    2 inst_19
+    38: 00000310     0 NOTYPE  LOCAL  DEFAULT    2 inst_20
+    39: 00000318     0 NOTYPE  LOCAL  DEFAULT    2 inst_21
+    40: 00000322     0 NOTYPE  LOCAL  DEFAULT    2 inst_22
+    41: 0000032c     0 NOTYPE  LOCAL  DEFAULT    2 inst_23
+    42: 00000336     0 NOTYPE  LOCAL  DEFAULT    2 inst_24
+    43: 00000340     0 NOTYPE  LOCAL  DEFAULT    2 inst_25
+    44: 0000034e     0 NOTYPE  LOCAL  DEFAULT    2 inst_26
+    45: 00000358     0 NOTYPE  LOCAL  DEFAULT    2 inst_27
+    46: 00003080     0 NOTYPE  LOCAL  DEFAULT    4 signature_x1_0
+    47: 0000036a     0 NOTYPE  LOCAL  DEFAULT    2 inst_28
+    48: 00000374     0 NOTYPE  LOCAL  DEFAULT    2 inst_29
+    49: 0000037e     0 NOTYPE  LOCAL  DEFAULT    2 inst_30
+    50: 00000388     0 NOTYPE  LOCAL  DEFAULT    2 inst_31
+    51: 00000392     0 NOTYPE  LOCAL  DEFAULT    2 inst_32
+    52: 0000039c     0 NOTYPE  LOCAL  DEFAULT    2 inst_33
+    53: 000003a6     0 NOTYPE  LOCAL  DEFAULT    2 inst_34
+    54: 000003b0     0 NOTYPE  LOCAL  DEFAULT    2 inst_35
+    55: 000003ba     0 NOTYPE  LOCAL  DEFAULT    2 inst_36
+    56: 000003c4     0 NOTYPE  LOCAL  DEFAULT    2 inst_37
+    57: 000003ce     0 NOTYPE  LOCAL  DEFAULT    2 inst_38
+    58: 000003d8     0 NOTYPE  LOCAL  DEFAULT    2 inst_39
+    59: 000003e2     0 NOTYPE  LOCAL  DEFAULT    2 inst_40
+    60: 000003ec     0 NOTYPE  LOCAL  DEFAULT    2 inst_41
+    61: 000003f6     0 NOTYPE  LOCAL  DEFAULT    2 inst_42
+    62: 00000400     0 NOTYPE  LOCAL  DEFAULT    2 inst_43
+    63: 0000040a     0 NOTYPE  LOCAL  DEFAULT    2 inst_44
+    64: 00000414     0 NOTYPE  LOCAL  DEFAULT    2 inst_45
+    65: 0000041e     0 NOTYPE  LOCAL  DEFAULT    2 inst_46
+    66: 00000428     0 NOTYPE  LOCAL  DEFAULT    2 inst_47
+    67: 00000432     0 NOTYPE  LOCAL  DEFAULT    2 inst_48
+    68: 0000043c     0 NOTYPE  LOCAL  DEFAULT    2 inst_49
+    69: 00000446     0 NOTYPE  LOCAL  DEFAULT    2 inst_50
+    70: 00000450     0 NOTYPE  LOCAL  DEFAULT    2 inst_51
+    71: 0000045a     0 NOTYPE  LOCAL  DEFAULT    2 inst_52
+    72: 00000464     0 NOTYPE  LOCAL  DEFAULT    2 inst_53
+    73: 0000046e     0 NOTYPE  LOCAL  DEFAULT    2 inst_54
+    74: 0000047c     0 NOTYPE  LOCAL  DEFAULT    2 inst_55
+    75: 0000048a     0 NOTYPE  LOCAL  DEFAULT    2 inst_56
+    76: 00000498     0 NOTYPE  LOCAL  DEFAULT    2 inst_57
+    77: 000004a6     0 NOTYPE  LOCAL  DEFAULT    2 inst_58
+    78: 000004b4     0 NOTYPE  LOCAL  DEFAULT    2 inst_59
+    79: 000004c2     0 NOTYPE  LOCAL  DEFAULT    2 inst_60
+    80: 000004d0     0 NOTYPE  LOCAL  DEFAULT    2 inst_61
+    81: 000004de     0 NOTYPE  LOCAL  DEFAULT    2 inst_62
+    82: 000004ec     0 NOTYPE  LOCAL  DEFAULT    2 inst_63
+    83: 000004fa     0 NOTYPE  LOCAL  DEFAULT    2 inst_64
+    84: 00000508     0 NOTYPE  LOCAL  DEFAULT    2 inst_65
+    85: 00000516     0 NOTYPE  LOCAL  DEFAULT    2 inst_66
+    86: 00000524     0 NOTYPE  LOCAL  DEFAULT    2 inst_67
+    87: 00000532     0 NOTYPE  LOCAL  DEFAULT    2 inst_68
+    88: 00000540     0 NOTYPE  LOCAL  DEFAULT    2 inst_69
+    89: 0000054e     0 NOTYPE  LOCAL  DEFAULT    2 inst_70
+    90: 0000055c     0 NOTYPE  LOCAL  DEFAULT    2 inst_71
+    91: 0000056a     0 NOTYPE  LOCAL  DEFAULT    2 inst_72
+    92: 00000578     0 NOTYPE  LOCAL  DEFAULT    2 inst_73
+    93: 00000582     0 NOTYPE  LOCAL  DEFAULT    2 inst_74
+    94: 0000058c     0 NOTYPE  LOCAL  DEFAULT    2 inst_75
+    95: 00000596     0 NOTYPE  LOCAL  DEFAULT    2 inst_76
+    96: 000005a0     0 NOTYPE  LOCAL  DEFAULT    2 inst_77
+    97: 000005aa     0 NOTYPE  LOCAL  DEFAULT    2 inst_78
+    98: 000005b4     0 NOTYPE  LOCAL  DEFAULT    2 inst_79
+    99: 000005be     0 NOTYPE  LOCAL  DEFAULT    2 inst_80
+   100: 000005c8     0 NOTYPE  LOCAL  DEFAULT    2 inst_81
+   101: 000005d2     0 NOTYPE  LOCAL  DEFAULT    2 inst_82
+   102: 000005dc     0 NOTYPE  LOCAL  DEFAULT    2 inst_83
+   103: 000005e6     0 NOTYPE  LOCAL  DEFAULT    2 inst_84
+   104: 000005f0     0 NOTYPE  LOCAL  DEFAULT    2 inst_85
+   105: 000005fa     0 NOTYPE  LOCAL  DEFAULT    2 inst_86
+   106: 00000604     0 NOTYPE  LOCAL  DEFAULT    2 inst_87
+   107: 00000612     0 NOTYPE  LOCAL  DEFAULT    2 inst_88
+   108: 00000620     0 NOTYPE  LOCAL  DEFAULT    2 inst_89
+   109: 0000062e     0 NOTYPE  LOCAL  DEFAULT    2 inst_90
+   110: 0000063c     0 NOTYPE  LOCAL  DEFAULT    2 inst_91
+   111: 0000064a     0 NOTYPE  LOCAL  DEFAULT    2 inst_92
+   112: 00000658     0 NOTYPE  LOCAL  DEFAULT    2 inst_93
+   113: 00000666     0 NOTYPE  LOCAL  DEFAULT    2 inst_94
+   114: 00000674     0 NOTYPE  LOCAL  DEFAULT    2 inst_95
+   115: 00000682     0 NOTYPE  LOCAL  DEFAULT    2 inst_96
+   116: 00000690     0 NOTYPE  LOCAL  DEFAULT    2 inst_97
+   117: 0000069e     0 NOTYPE  LOCAL  DEFAULT    2 inst_98
+   118: 000006ac     0 NOTYPE  LOCAL  DEFAULT    2 inst_99
+   119: 000006ba     0 NOTYPE  LOCAL  DEFAULT    2 inst_100
+   120: 000006c8     0 NOTYPE  LOCAL  DEFAULT    2 inst_101
+   121: 000006d6     0 NOTYPE  LOCAL  DEFAULT    2 inst_102
+   122: 000006e4     0 NOTYPE  LOCAL  DEFAULT    2 inst_103
+   123: 000006f2     0 NOTYPE  LOCAL  DEFAULT    2 inst_104
+   124: 00000700     0 NOTYPE  LOCAL  DEFAULT    2 inst_105
+   125: 0000070e     0 NOTYPE  LOCAL  DEFAULT    2 inst_106
+   126: 0000071c     0 NOTYPE  LOCAL  DEFAULT    2 inst_107
+   127: 0000072a     0 NOTYPE  LOCAL  DEFAULT    2 inst_108
+   128: 00000738     0 NOTYPE  LOCAL  DEFAULT    2 inst_109
+   129: 00000746     0 NOTYPE  LOCAL  DEFAULT    2 inst_110
+   130: 00000754     0 NOTYPE  LOCAL  DEFAULT    2 inst_111
+   131: 00000762     0 NOTYPE  LOCAL  DEFAULT    2 inst_112
+   132: 00000770     0 NOTYPE  LOCAL  DEFAULT    2 inst_113
+   133: 0000077a     0 NOTYPE  LOCAL  DEFAULT    2 inst_114
+   134: 00000784     0 NOTYPE  LOCAL  DEFAULT    2 inst_115
+   135: 0000078e     0 NOTYPE  LOCAL  DEFAULT    2 inst_116
+   136: 00000798     0 NOTYPE  LOCAL  DEFAULT    2 inst_117
+   137: 000007a2     0 NOTYPE  LOCAL  DEFAULT    2 inst_118
+   138: 000007ac     0 NOTYPE  LOCAL  DEFAULT    2 inst_119
+   139: 000007b6     0 NOTYPE  LOCAL  DEFAULT    2 inst_120
+   140: 000007c0     0 NOTYPE  LOCAL  DEFAULT    2 inst_121
+   141: 000007ca     0 NOTYPE  LOCAL  DEFAULT    2 inst_122
+   142: 000007d4     0 NOTYPE  LOCAL  DEFAULT    2 inst_123
+   143: 000007de     0 NOTYPE  LOCAL  DEFAULT    2 inst_124
+   144: 000007e8     0 NOTYPE  LOCAL  DEFAULT    2 inst_125
+   145: 000007f2     0 NOTYPE  LOCAL  DEFAULT    2 inst_126
+   146: 000007fc     0 NOTYPE  LOCAL  DEFAULT    2 inst_127
+   147: 0000080a     0 NOTYPE  LOCAL  DEFAULT    2 inst_128
+   148: 00000818     0 NOTYPE  LOCAL  DEFAULT    2 inst_129
+   149: 00000826     0 NOTYPE  LOCAL  DEFAULT    2 inst_130
+   150: 00000834     0 NOTYPE  LOCAL  DEFAULT    2 inst_131
+   151: 00000842     0 NOTYPE  LOCAL  DEFAULT    2 inst_132
+   152: 00000850     0 NOTYPE  LOCAL  DEFAULT    2 inst_133
+   153: 0000085e     0 NOTYPE  LOCAL  DEFAULT    2 inst_134
+   154: 0000086c     0 NOTYPE  LOCAL  DEFAULT    2 inst_135
+   155: 0000087a     0 NOTYPE  LOCAL  DEFAULT    2 inst_136
+   156: 00000888     0 NOTYPE  LOCAL  DEFAULT    2 inst_137
+   157: 00000896     0 NOTYPE  LOCAL  DEFAULT    2 inst_138
+   158: 000008a4     0 NOTYPE  LOCAL  DEFAULT    2 inst_139
+   159: 000008b2     0 NOTYPE  LOCAL  DEFAULT    2 inst_140
+   160: 000008c0     0 NOTYPE  LOCAL  DEFAULT    2 inst_141
+   161: 000008ce     0 NOTYPE  LOCAL  DEFAULT    2 inst_142
+   162: 000008dc     0 NOTYPE  LOCAL  DEFAULT    2 inst_143
+   163: 000008ea     0 NOTYPE  LOCAL  DEFAULT    2 inst_144
+   164: 000008f8     0 NOTYPE  LOCAL  DEFAULT    2 inst_145
+   165: 00000906     0 NOTYPE  LOCAL  DEFAULT    2 inst_146
+   166: 00000914     0 NOTYPE  LOCAL  DEFAULT    2 inst_147
+   167: 00000922     0 NOTYPE  LOCAL  DEFAULT    2 inst_148
+   168: 00000930     0 NOTYPE  LOCAL  DEFAULT    2 inst_149
+   169: 0000093e     0 NOTYPE  LOCAL  DEFAULT    2 inst_150
+   170: 0000094c     0 NOTYPE  LOCAL  DEFAULT    2 inst_151
+   171: 0000095a     0 NOTYPE  LOCAL  DEFAULT    2 inst_152
+   172: 00000968     0 NOTYPE  LOCAL  DEFAULT    2 inst_153
+   173: 00000976     0 NOTYPE  LOCAL  DEFAULT    2 inst_154
+   174: 00000984     0 NOTYPE  LOCAL  DEFAULT    2 inst_155
+   175: 00000992     0 NOTYPE  LOCAL  DEFAULT    2 inst_156
+   176: 000009a0     0 NOTYPE  LOCAL  DEFAULT    2 inst_157
+   177: 000009ae     0 NOTYPE  LOCAL  DEFAULT    2 inst_158
+   178: 000009bc     0 NOTYPE  LOCAL  DEFAULT    2 inst_159
+   179: 000009ca     0 NOTYPE  LOCAL  DEFAULT    2 inst_160
+   180: 000009d8     0 NOTYPE  LOCAL  DEFAULT    2 inst_161
+   181: 000009e6     0 NOTYPE  LOCAL  DEFAULT    2 inst_162
+   182: 000009f4     0 NOTYPE  LOCAL  DEFAULT    2 inst_163
+   183: 00000a02     0 NOTYPE  LOCAL  DEFAULT    2 inst_164
+   184: 00000a10     0 NOTYPE  LOCAL  DEFAULT    2 inst_165
+   185: 00000a1e     0 NOTYPE  LOCAL  DEFAULT    2 inst_166
+   186: 00000a2c     0 NOTYPE  LOCAL  DEFAULT    2 inst_167
+   187: 00000a3a     0 NOTYPE  LOCAL  DEFAULT    2 inst_168
+   188: 00000a48     0 NOTYPE  LOCAL  DEFAULT    2 inst_169
+   189: 00000a56     0 NOTYPE  LOCAL  DEFAULT    2 inst_170
+   190: 00000a64     0 NOTYPE  LOCAL  DEFAULT    2 inst_171
+   191: 00000a72     0 NOTYPE  LOCAL  DEFAULT    2 inst_172
+   192: 00000a80     0 NOTYPE  LOCAL  DEFAULT    2 inst_173
+   193: 00000a8e     0 NOTYPE  LOCAL  DEFAULT    2 inst_174
+   194: 00000a9c     0 NOTYPE  LOCAL  DEFAULT    2 inst_175
+   195: 00000aaa     0 NOTYPE  LOCAL  DEFAULT    2 inst_176
+   196: 00000ab8     0 NOTYPE  LOCAL  DEFAULT    2 inst_177
+   197: 00000ac6     0 NOTYPE  LOCAL  DEFAULT    2 inst_178
+   198: 00000ad4     0 NOTYPE  LOCAL  DEFAULT    2 inst_179
+   199: 00000ae2     0 NOTYPE  LOCAL  DEFAULT    2 inst_180
+   200: 00000af0     0 NOTYPE  LOCAL  DEFAULT    2 inst_181
+   201: 00000afe     0 NOTYPE  LOCAL  DEFAULT    2 inst_182
+   202: 00000b08     0 NOTYPE  LOCAL  DEFAULT    2 inst_183
+   203: 00000b12     0 NOTYPE  LOCAL  DEFAULT    2 inst_184
+   204: 00000b1c     0 NOTYPE  LOCAL  DEFAULT    2 inst_185
+   205: 00000b26     0 NOTYPE  LOCAL  DEFAULT    2 inst_186
+   206: 00000b30     0 NOTYPE  LOCAL  DEFAULT    2 inst_187
+   207: 00000b3a     0 NOTYPE  LOCAL  DEFAULT    2 inst_188
+   208: 00000b44     0 NOTYPE  LOCAL  DEFAULT    2 inst_189
+   209: 00000b4e     0 NOTYPE  LOCAL  DEFAULT    2 inst_190
+   210: 00000b58     0 NOTYPE  LOCAL  DEFAULT    2 inst_191
+   211: 00000b62     0 NOTYPE  LOCAL  DEFAULT    2 inst_192
+   212: 00000b6c     0 NOTYPE  LOCAL  DEFAULT    2 inst_193
+   213: 00000b76     0 NOTYPE  LOCAL  DEFAULT    2 inst_194
+   214: 00000b80     0 NOTYPE  LOCAL  DEFAULT    2 inst_195
+   215: 00000b8e     0 NOTYPE  LOCAL  DEFAULT    2 inst_196
+   216: 00000b9c     0 NOTYPE  LOCAL  DEFAULT    2 inst_197
+   217: 00000baa     0 NOTYPE  LOCAL  DEFAULT    2 inst_198
+   218: 00000bb8     0 NOTYPE  LOCAL  DEFAULT    2 inst_199
+   219: 00000bc6     0 NOTYPE  LOCAL  DEFAULT    2 inst_200
+   220: 00000bd4     0 NOTYPE  LOCAL  DEFAULT    2 inst_201
+   221: 00000be2     0 NOTYPE  LOCAL  DEFAULT    2 inst_202
+   222: 00000bf0     0 NOTYPE  LOCAL  DEFAULT    2 inst_203
+   223: 00000bfe     0 NOTYPE  LOCAL  DEFAULT    2 inst_204
+   224: 00000c0c     0 NOTYPE  LOCAL  DEFAULT    2 inst_205
+   225: 00000c1a     0 NOTYPE  LOCAL  DEFAULT    2 inst_206
+   226: 00000c28     0 NOTYPE  LOCAL  DEFAULT    2 inst_207
+   227: 00000c36     0 NOTYPE  LOCAL  DEFAULT    2 inst_208
+   228: 00000c44     0 NOTYPE  LOCAL  DEFAULT    2 inst_209
+   229: 00000c4e     0 NOTYPE  LOCAL  DEFAULT    2 inst_210
+   230: 00000c58     0 NOTYPE  LOCAL  DEFAULT    2 inst_211
+   231: 00000c62     0 NOTYPE  LOCAL  DEFAULT    2 inst_212
+   232: 00000c6c     0 NOTYPE  LOCAL  DEFAULT    2 inst_213
+   233: 00000c76     0 NOTYPE  LOCAL  DEFAULT    2 inst_214
+   234: 00000c80     0 NOTYPE  LOCAL  DEFAULT    2 inst_215
+   235: 00000c8a     0 NOTYPE  LOCAL  DEFAULT    2 inst_216
+   236: 00000c94     0 NOTYPE  LOCAL  DEFAULT    2 inst_217
+   237: 00000c9e     0 NOTYPE  LOCAL  DEFAULT    2 inst_218
+   238: 00000ca8     0 NOTYPE  LOCAL  DEFAULT    2 inst_219
+   239: 00000cb2     0 NOTYPE  LOCAL  DEFAULT    2 inst_220
+   240: 00000cbc     0 NOTYPE  LOCAL  DEFAULT    2 inst_221
+   241: 00000cc6     0 NOTYPE  LOCAL  DEFAULT    2 inst_222
+   242: 00000cd0     0 NOTYPE  LOCAL  DEFAULT    2 inst_223
+   243: 00000cda     0 NOTYPE  LOCAL  DEFAULT    2 inst_224
+   244: 00000ce4     0 NOTYPE  LOCAL  DEFAULT    2 inst_225
+   245: 00000cee     0 NOTYPE  LOCAL  DEFAULT    2 inst_226
+   246: 00000cf8     0 NOTYPE  LOCAL  DEFAULT    2 inst_227
+   247: 00000d02     0 NOTYPE  LOCAL  DEFAULT    2 inst_228
+   248: 00000d0c     0 NOTYPE  LOCAL  DEFAULT    2 inst_229
+   249: 00000d16     0 NOTYPE  LOCAL  DEFAULT    2 inst_230
+   250: 00000d20     0 NOTYPE  LOCAL  DEFAULT    2 inst_231
+   251: 00000d2a     0 NOTYPE  LOCAL  DEFAULT    2 inst_232
+   252: 00000d34     0 NOTYPE  LOCAL  DEFAULT    2 inst_233
+   253: 00000d3e     0 NOTYPE  LOCAL  DEFAULT    2 inst_234
+   254: 00000d48     0 NOTYPE  LOCAL  DEFAULT    2 inst_235
+   255: 00000d56     0 NOTYPE  LOCAL  DEFAULT    2 inst_236
+   256: 00000d64     0 NOTYPE  LOCAL  DEFAULT    2 inst_237
+   257: 00000d72     0 NOTYPE  LOCAL  DEFAULT    2 inst_238
+   258: 00000d80     0 NOTYPE  LOCAL  DEFAULT    2 inst_239
+   259: 00000d8e     0 NOTYPE  LOCAL  DEFAULT    2 inst_240
+   260: 00000d9c     0 NOTYPE  LOCAL  DEFAULT    2 inst_241
+   261: 00000daa     0 NOTYPE  LOCAL  DEFAULT    2 inst_242
+   262: 00000db8     0 NOTYPE  LOCAL  DEFAULT    2 inst_243
+   263: 00000dc6     0 NOTYPE  LOCAL  DEFAULT    2 inst_244
+   264: 00000dd4     0 NOTYPE  LOCAL  DEFAULT    2 inst_245
+   265: 00000de2     0 NOTYPE  LOCAL  DEFAULT    2 inst_246
+   266: 00000df0     0 NOTYPE  LOCAL  DEFAULT    2 inst_247
+   267: 00000dfe     0 NOTYPE  LOCAL  DEFAULT    2 inst_248
+   268: 00000e0c     0 NOTYPE  LOCAL  DEFAULT    2 inst_249
+   269: 00000e1a     0 NOTYPE  LOCAL  DEFAULT    2 inst_250
+   270: 00000e28     0 NOTYPE  LOCAL  DEFAULT    2 inst_251
+   271: 00000e36     0 NOTYPE  LOCAL  DEFAULT    2 inst_252
+   272: 00000e44     0 NOTYPE  LOCAL  DEFAULT    2 inst_253
+   273: 00000e52     0 NOTYPE  LOCAL  DEFAULT    2 inst_254
+   274: 00000e60     0 NOTYPE  LOCAL  DEFAULT    2 inst_255
+   275: 00000e6e     0 NOTYPE  LOCAL  DEFAULT    2 inst_256
+   276: 00000e7c     0 NOTYPE  LOCAL  DEFAULT    2 inst_257
+   277: 00000e8a     0 NOTYPE  LOCAL  DEFAULT    2 inst_258
+   278: 00000e98     0 NOTYPE  LOCAL  DEFAULT    2 inst_259
+   279: 00000ea6     0 NOTYPE  LOCAL  DEFAULT    2 inst_260
+   280: 00000eb4     0 NOTYPE  LOCAL  DEFAULT    2 inst_261
+   281: 00000ec2     0 NOTYPE  LOCAL  DEFAULT    2 inst_262
+   282: 00000ed0     0 NOTYPE  LOCAL  DEFAULT    2 inst_263
+   283: 00000ede     0 NOTYPE  LOCAL  DEFAULT    2 inst_264
+   284: 00000eec     0 NOTYPE  LOCAL  DEFAULT    2 inst_265
+   285: 00000efa     0 NOTYPE  LOCAL  DEFAULT    2 inst_266
+   286: 00000f08     0 NOTYPE  LOCAL  DEFAULT    2 inst_267
+   287: 00000f16     0 NOTYPE  LOCAL  DEFAULT    2 inst_268
+   288: 00000f24     0 NOTYPE  LOCAL  DEFAULT    2 inst_269
+   289: 00000f32     0 NOTYPE  LOCAL  DEFAULT    2 inst_270
+   290: 00000f40     0 NOTYPE  LOCAL  DEFAULT    2 inst_271
+   291: 00000f4e     0 NOTYPE  LOCAL  DEFAULT    2 inst_272
+   292: 00000f5c     0 NOTYPE  LOCAL  DEFAULT    2 inst_273
+   293: 00000f6a     0 NOTYPE  LOCAL  DEFAULT    2 inst_274
+   294: 00000f78     0 NOTYPE  LOCAL  DEFAULT    2 inst_275
+   295: 00000f86     0 NOTYPE  LOCAL  DEFAULT    2 inst_276
+   296: 00000f94     0 NOTYPE  LOCAL  DEFAULT    2 inst_277
+   297: 00000fa2     0 NOTYPE  LOCAL  DEFAULT    2 inst_278
+   298: 00000fb0     0 NOTYPE  LOCAL  DEFAULT    2 inst_279
+   299: 00000fbe     0 NOTYPE  LOCAL  DEFAULT    2 inst_280
+   300: 00000fcc     0 NOTYPE  LOCAL  DEFAULT    2 inst_281
+   301: 00000fda     0 NOTYPE  LOCAL  DEFAULT    2 inst_282
+   302: 00000fe8     0 NOTYPE  LOCAL  DEFAULT    2 inst_283
+   303: 00000ff6     0 NOTYPE  LOCAL  DEFAULT    2 inst_284
+   304: 00001004     0 NOTYPE  LOCAL  DEFAULT    2 inst_285
+   305: 00001012     0 NOTYPE  LOCAL  DEFAULT    2 inst_286
+   306: 00001020     0 NOTYPE  LOCAL  DEFAULT    2 inst_287
+   307: 0000102e     0 NOTYPE  LOCAL  DEFAULT    2 inst_288
+   308: 0000103c     0 NOTYPE  LOCAL  DEFAULT    2 inst_289
+   309: 0000104a     0 NOTYPE  LOCAL  DEFAULT    2 inst_290
+   310: 00001058     0 NOTYPE  LOCAL  DEFAULT    2 inst_291
+   311: 00001066     0 NOTYPE  LOCAL  DEFAULT    2 inst_292
+   312: 00001074     0 NOTYPE  LOCAL  DEFAULT    2 inst_293
+   313: 00001082     0 NOTYPE  LOCAL  DEFAULT    2 inst_294
+   314: 00001090     0 NOTYPE  LOCAL  DEFAULT    2 inst_295
+   315: 0000109e     0 NOTYPE  LOCAL  DEFAULT    2 inst_296
+   316: 000010ac     0 NOTYPE  LOCAL  DEFAULT    2 inst_297
+   317: 000010ba     0 NOTYPE  LOCAL  DEFAULT    2 inst_298
+   318: 000010c8     0 NOTYPE  LOCAL  DEFAULT    2 inst_299
+   319: 000010d6     0 NOTYPE  LOCAL  DEFAULT    2 inst_300
+   320: 000010e4     0 NOTYPE  LOCAL  DEFAULT    2 inst_301
+   321: 000010f2     0 NOTYPE  LOCAL  DEFAULT    2 inst_302
+   322: 00001100     0 NOTYPE  LOCAL  DEFAULT    2 inst_303
+   323: 0000110e     0 NOTYPE  LOCAL  DEFAULT    2 inst_304
+   324: 0000111c     0 NOTYPE  LOCAL  DEFAULT    2 inst_305
+   325: 00001126     0 NOTYPE  LOCAL  DEFAULT    2 inst_306
+   326: 00001130     0 NOTYPE  LOCAL  DEFAULT    2 inst_307
+   327: 0000113a     0 NOTYPE  LOCAL  DEFAULT    2 inst_308
+   328: 00001144     0 NOTYPE  LOCAL  DEFAULT    2 inst_309
+   329: 0000114e     0 NOTYPE  LOCAL  DEFAULT    2 inst_310
+   330: 00001158     0 NOTYPE  LOCAL  DEFAULT    2 inst_311
+   331: 00001162     0 NOTYPE  LOCAL  DEFAULT    2 inst_312
+   332: 00001170     0 NOTYPE  LOCAL  DEFAULT    2 inst_313
+   333: 0000117e     0 NOTYPE  LOCAL  DEFAULT    2 inst_314
+   334: 0000118c     0 NOTYPE  LOCAL  DEFAULT    2 inst_315
+   335: 0000119a     0 NOTYPE  LOCAL  DEFAULT    2 inst_316
+   336: 000011a8     0 NOTYPE  LOCAL  DEFAULT    2 inst_317
+   337: 000011b6     0 NOTYPE  LOCAL  DEFAULT    2 inst_318
+   338: 000011c4     0 NOTYPE  LOCAL  DEFAULT    2 inst_319
+   339: 000011d2     0 NOTYPE  LOCAL  DEFAULT    2 inst_320
+   340: 000011e0     0 NOTYPE  LOCAL  DEFAULT    2 inst_321
+   341: 000011ee     0 NOTYPE  LOCAL  DEFAULT    2 inst_322
+   342: 000011fc     0 NOTYPE  LOCAL  DEFAULT    2 inst_323
+   343: 0000120a     0 NOTYPE  LOCAL  DEFAULT    2 inst_324
+   344: 00001218     0 NOTYPE  LOCAL  DEFAULT    2 inst_325
+   345: 00001226     0 NOTYPE  LOCAL  DEFAULT    2 inst_326
+   346: 00001234     0 NOTYPE  LOCAL  DEFAULT    2 inst_327
+   347: 00001242     0 NOTYPE  LOCAL  DEFAULT    2 inst_328
+   348: 0000124c     0 NOTYPE  LOCAL  DEFAULT    2 inst_329
+   349: 00001256     0 NOTYPE  LOCAL  DEFAULT    2 inst_330
+   350: 00001260     0 NOTYPE  LOCAL  DEFAULT    2 inst_331
+   351: 0000126a     0 NOTYPE  LOCAL  DEFAULT    2 inst_332
+   352: 00001274     0 NOTYPE  LOCAL  DEFAULT    2 inst_333
+   353: 0000127e     0 NOTYPE  LOCAL  DEFAULT    2 inst_334
+   354: 00001288     0 NOTYPE  LOCAL  DEFAULT    2 inst_335
+   355: 00001296     0 NOTYPE  LOCAL  DEFAULT    2 inst_336
+   356: 000012a4     0 NOTYPE  LOCAL  DEFAULT    2 inst_337
+   357: 000012b2     0 NOTYPE  LOCAL  DEFAULT    2 inst_338
+   358: 000012c0     0 NOTYPE  LOCAL  DEFAULT    2 inst_339
+   359: 000012ce     0 NOTYPE  LOCAL  DEFAULT    2 inst_340
+   360: 000012dc     0 NOTYPE  LOCAL  DEFAULT    2 inst_341
+   361: 000012ea     0 NOTYPE  LOCAL  DEFAULT    2 inst_342
+   362: 000012f8     0 NOTYPE  LOCAL  DEFAULT    2 inst_343
+   363: 00001306     0 NOTYPE  LOCAL  DEFAULT    2 inst_344
+   364: 00001314     0 NOTYPE  LOCAL  DEFAULT    2 inst_345
+   365: 00001322     0 NOTYPE  LOCAL  DEFAULT    2 inst_346
+   366: 00001330     0 NOTYPE  LOCAL  DEFAULT    2 inst_347
+   367: 0000133e     0 NOTYPE  LOCAL  DEFAULT    2 inst_348
+   368: 0000134c     0 NOTYPE  LOCAL  DEFAULT    2 inst_349
+   369: 0000135a     0 NOTYPE  LOCAL  DEFAULT    2 inst_350
+   370: 00001368     0 NOTYPE  LOCAL  DEFAULT    2 inst_351
+   371: 00001376     0 NOTYPE  LOCAL  DEFAULT    2 inst_352
+   372: 00001384     0 NOTYPE  LOCAL  DEFAULT    2 inst_353
+   373: 00001392     0 NOTYPE  LOCAL  DEFAULT    2 inst_354
+   374: 000013a0     0 NOTYPE  LOCAL  DEFAULT    2 inst_355
+   375: 000013ae     0 NOTYPE  LOCAL  DEFAULT    2 inst_356
+   376: 000013bc     0 NOTYPE  LOCAL  DEFAULT    2 inst_357
+   377: 000013ca     0 NOTYPE  LOCAL  DEFAULT    2 inst_358
+   378: 000013d8     0 NOTYPE  LOCAL  DEFAULT    2 inst_359
+   379: 000013e6     0 NOTYPE  LOCAL  DEFAULT    2 inst_360
+   380: 000013f4     0 NOTYPE  LOCAL  DEFAULT    2 inst_361
+   381: 00001402     0 NOTYPE  LOCAL  DEFAULT    2 inst_362
+   382: 00001410     0 NOTYPE  LOCAL  DEFAULT    2 inst_363
+   383: 0000141e     0 NOTYPE  LOCAL  DEFAULT    2 inst_364
+   384: 0000142c     0 NOTYPE  LOCAL  DEFAULT    2 inst_365
+   385: 0000143a     0 NOTYPE  LOCAL  DEFAULT    2 inst_366
+   386: 00001448     0 NOTYPE  LOCAL  DEFAULT    2 inst_367
+   387: 00001456     0 NOTYPE  LOCAL  DEFAULT    2 inst_368
+   388: 00001464     0 NOTYPE  LOCAL  DEFAULT    2 inst_369
+   389: 00001472     0 NOTYPE  LOCAL  DEFAULT    2 inst_370
+   390: 00001480     0 NOTYPE  LOCAL  DEFAULT    2 inst_371
+   391: 0000148e     0 NOTYPE  LOCAL  DEFAULT    2 inst_372
+   392: 0000149c     0 NOTYPE  LOCAL  DEFAULT    2 inst_373
+   393: 000014aa     0 NOTYPE  LOCAL  DEFAULT    2 inst_374
+   394: 00003000     0 NOTYPE  LOCAL  DEFAULT    4 rvtest_data
+   395: 00003010     0 NOTYPE  LOCAL  DEFAULT    4 signature_x11_0
+   396: 000035f0     0 NOTYPE  GLOBAL DEFAULT    4 end_signature
+   397: 00003600     0 NOTYPE  GLOBAL DEFAULT    4 begin_regstate
+   398: 00000080     0 NOTYPE  GLOBAL DEFAULT    2 rvtest_entry_point
+   399: 00003010     0 NOTYPE  GLOBAL DEFAULT    4 begin_signature
+   400: 00000080     0 NOTYPE  GLOBAL DEFAULT    2 _start
+   401: 00000140     0 NOTYPE  GLOBAL DEFAULT    2 rvtest_init
+   402: 000014c0     0 NOTYPE  GLOBAL DEFAULT    2 rvtest_code_end
+   403: 00003700     0 NOTYPE  GLOBAL DEFAULT    4 end_regstate
+   404: 00000238     0 NOTYPE  GLOBAL DEFAULT    2 rvtest_code_begin
+   405: 00003000     0 NOTYPE  GLOBAL DEFAULT    4 rvtest_data_begin
+   406: 00003004     0 NOTYPE  GLOBAL DEFAULT    4 rvtest_data_end
+   407: 00003704     0 NOTYPE  GLOBAL DEFAULT    4 _end
+   408: 00002100     0 NOTYPE  GLOBAL DEFAULT    3 fromhost
+   409: 00002000     0 NOTYPE  GLOBAL DEFAULT    3 tohost
+
+No version information found in this file.
+Attribute Section: riscv
+File Attributes
+  Tag_RISCV_arch: "rv32i2p0_c2p0"
+  Tag_RISCV_priv_spec: 1
+  Tag_RISCV_priv_spec_minor: 11

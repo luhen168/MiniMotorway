@@ -1,0 +1,11 @@
+Tracing can be toggled by sending SIGUSR1 to this process:
+$ kill -USR1 34355
+
+Simulation running, end by pressing CTRL-c.
+Simulation timeout of 100000 cycles reached, shutting down simulation.
+
+Simulation statistics
+=====================
+Executed cycles:  100000
+Wallclock time:   0.046 s
+Simulation speed: 2.17391e+06 cycles/s (2173.91 kHz)
