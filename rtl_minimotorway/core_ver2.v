@@ -473,6 +473,8 @@ module core_ver2(
 
     /*********************** LOAD MODIFIER **********************/
     load_modifier load_unit (
+        .i_clk(clk_i),
+        .i_resetn(rst_ni),
         .lb(mem_lsb), 
         .lh(mem_lsh), 
         .load_signext(mem_loadsignext),
@@ -502,13 +504,47 @@ module core_ver2(
         // Data to WB stage
         .o_wb_data(wb_data), 
         .o_wb_rd(wb_rd), 
-        .o_wb_dmem(wb_dmem)
+        .o_wb_dmem(),
+        .o_immediate_wb_data_from_dmem(wb_dmem)
+
     );
     /*******************************************************/
 
     /********************** REGFILE **********************/
     assign reg_wdata = wb_mem2reg ? wb_dmem : wb_data;
-    wire [31:0] core_reg_file [0:31]; // Huy debug
+    wire [31:0] x0;
+    wire [31:0] x1;
+    wire [31:0] x2;
+    wire [31:0] x3;
+    wire [31:0] x4;
+    wire [31:0] x5;
+    wire [31:0] x6;
+    wire [31:0] x7;
+    wire [31:0] x8;
+    wire [31:0] x9;
+    wire [31:0] x10;
+    wire [31:0] x11;
+    wire [31:0] x12;
+    wire [31:0] x13;
+    wire [31:0] x14;
+    wire [31:0] x15;
+    wire [31:0] x16;
+    wire [31:0] x17;
+    wire [31:0] x18;
+    wire [31:0] x19;
+    wire [31:0] x20;
+    wire [31:0] x21;
+    wire [31:0] x22;
+    wire [31:0] x23;
+    wire [31:0] x24;
+    wire [31:0] x25;
+    wire [31:0] x26;
+    wire [31:0] x27;
+    wire [31:0] x28;
+    wire [31:0] x29;
+    wire [31:0] x30;
+    wire [31:0] x31;
+
     regfile register_file (
         .clk(~clk_i), 
         .resetn(rst_ni),
@@ -519,7 +555,39 @@ module core_ver2(
         .write_data(reg_wdata),
         .read_data1(reg_rdata1), 
         .read_data2(reg_rdata2),
-        .core_reg_file(core_reg_file)
+        .x0(x0),
+        .x1(x1),
+        .x2(x2),
+        .x3(x3),
+        .x4(x4),
+        .x5(x5),
+        .x6(x6),
+        .x7(x7),
+        .x8(x8),
+        .x9(x9),
+        .x10(x10),
+        .x11(x11),
+        .x12(x12),
+        .x13(x13),
+        .x14(x14),
+        .x15(x15),
+        .x16(x16),
+        .x17(x17),
+        .x18(x18),
+        .x19(x19),
+        .x20(x20),
+        .x21(x21),
+        .x22(x22),
+        .x23(x23),
+        .x24(x24),
+        .x25(x25),
+        .x26(x26),
+        .x27(x27),
+        .x28(x28),
+        .x29(x29),
+        .x30(x30),
+        .x31(x31)
+
     );
     /*****************************************************/
     /****************************************************************************************************/

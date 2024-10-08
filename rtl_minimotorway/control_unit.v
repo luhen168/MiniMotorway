@@ -490,16 +490,16 @@ module control_unit (
             
             default:
             begin
-                wreg    = 1'bx;
+                wreg    = 1'b0;
                 jal     = 1'bx;
                 jalr    = 1'bx;
-                mem2reg = 1'bx;
+                mem2reg = 1'b0;
                 aluimm  = 1'bx;
                 signext = 1'bx;
                 ls_b    = 1'bx;
                 ls_h    = 1'bx;
                 load_signext = 1'bx;
-                wmem    = 1'bx;
+                wmem    = 1'b0;
                 pcsrc   = 2'b00;
                 aluc    = 5'bxxxxx;
                 auipc   = 1'bx;

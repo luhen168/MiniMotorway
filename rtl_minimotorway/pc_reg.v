@@ -8,7 +8,11 @@ module pc_reg(
     reg temp;
     reg check_sig;
     reg en_pc;
-
+    // wire current_req_rvalid;
+    // reg next_req_rvalid:
+    // assign current_req_rvalid = (i_data_req===1'b1) && (i_data_rvalid===1'b0);
+    // next_req_rvalid <= current_req_rvalid;
+    // if (next_req_rvalid
     always @(posedge i_clk or negedge i_resetn)
     begin
         temp <= i_data_req;
