@@ -1,3 +1,5 @@
+/* verilator lint_off UNUSEDSIGNAL */
+/* verilator lint_off WIDTHEXPAND */
 module imem_interface(
   // CORE to imem_interface
   input [31:0] pc_addr_i,

@@ -1,3 +1,5 @@
+/* verilator lint_off UNUSEDSIGNAL */
+/* verilator lint_off LATCH */
 module alu (
     input [31:0] a,
     input [31:0] b,
@@ -48,3 +50,6 @@ module alu (
             endcase
         end
 endmodule
+
+
+

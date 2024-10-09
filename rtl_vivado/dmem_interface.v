@@ -1,3 +1,8 @@
+/* verilator lint_off IMPLICIT */
+/* verilator lint_off UNUSEDSIGNAL */
+/* verilator lint_off UNDRIVEN*/
+/* verilator lint_off WIDTHTRUNC */
+
 module dmem_interface(
     // input signals in core
     input [31:0] i_data_addr,

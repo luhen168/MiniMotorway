@@ -1,3 +1,5 @@
+/* verilator lint_off UNUSEDSIGNAL */
+/* verilator lint_off BLKSEQ */
 module load_modifier (
     input lb, lh, load_signext,
     input [31:0] data_in,

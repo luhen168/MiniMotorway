@@ -1,3 +1,5 @@
+/* verilator lint_off CASEX */
+
 module imm_decode(
     input [31:0] i_instr,
     input [6:0] i_opcode,

@@ -1,3 +1,5 @@
+/* verilator lint_off CASEX */
+
 module mux_4to1 
 #(parameter DATAWIDTH = 32)
 (
@@ -20,3 +22,5 @@ module mux_4to1
             selected_out = 32'bx;
     endcase
 endmodule
+
+

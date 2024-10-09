@@ -1,16 +1,17 @@
 module exe_mem_reg(
-    input i_clk, i_resetn, 
+    input i_clk, i_resetn,
     // Control signals from EXE stage
     input i_exe_mem2reg, i_exe_wmem, i_exe_wreg, i_exe_loadsignext,
     // Input for store
     input i_exe_lsb, i_exe_lsh, [3:0] i_data_be,
-    // Data from EXE stage 
+    // Data from EXE stage
     input [4:0] i_exe_rd,
-    input [31:0] i_exe_data, i_exe_dmem, 
+    input [31:0] i_exe_data, i_exe_dmem,
     // Control signals to MEM stage
     output reg o_mem_mem2reg, o_mem_wmem, o_mem_wreg, o_mem_loadsignext,
     // Output for store
-    output reg o_mem_lsb, o_mem_lsh, [3:0] o_data_be,
+    output reg o_mem_lsb, o_mem_lsh,
+    output reg [3:0] o_data_be,
     // Data to MEM stage
     output reg [4:0] o_mem_rd,
     output reg [31:0] o_mem_data, o_mem_dmem
