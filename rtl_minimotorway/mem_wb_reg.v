@@ -34,21 +34,10 @@ module mem_wb_reg(
             // Data signals
             o_wb_data    <= i_mem_data;
             o_wb_rd  <= i_mem_rd;
-
-            // if( i_mem_data == 32'b0)
-                        //              begin
-            //     o_wb_rd  <= 5'b0;
-                        //              end
-            // else
-                        //              begin
-            //     o_wb_rd  <= i_mem_rd;
-                        //              end
-
             o_wb_dmem    <= i_rd_dmem;
         end
     end
 
-    assign o_immediate_wb_data_from_alu = i_mem_data;
     assign o_immediate_wb_data_from_dmem = i_rd_dmem;
 
 endmodule

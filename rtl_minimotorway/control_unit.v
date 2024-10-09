@@ -1,3 +1,4 @@
+/* verilator lint_off UNUSEDSIGNAL */
 module control_unit (
     // from instr mem
     input i_resetn,

@@ -265,26 +265,6 @@ module ibex_demo_system #(
     .data_rdata_intg_i('0),
     .data_err_i       (host_err[CoreD])
 
-    // .irq_software_i(1'b0),
-    // .irq_timer_i   (timer_irq),
-    // .irq_external_i(1'b0),
-    // .irq_fast_i    ({14'b0, uart_irq}),
-    // .irq_nm_i      (1'b0),
-
-    // .scramble_key_valid_i('0),
-    // .scramble_key_i      ('0),
-    // .scramble_nonce_i    ('0),
-    // .scramble_req_o      (),
-
-    // .debug_req_i        (dm_debug_req),
-    // .crash_dump_o       (),
-    // .double_fault_seen_o(),
-
-    // .fetch_enable_i        ('1),
-    // .alert_minor_o         (),
-    // .alert_major_internal_o(),
-    // .alert_major_bus_o     (),
-    // .core_sleep_o          ()
   );
 
   ram_2p #(
@@ -304,13 +284,6 @@ module ibex_demo_system #(
     .a_rdata_o (device_rdata[Ram]),
 
     // Instruction
-    // .b_req_i   (core_instr_req),
-    // .b_we_i    (1'b0),
-    // .b_be_i    (4'b0),
-    // .b_addr_i  (core_instr_addr),
-    // .b_wdata_i (32'b0),
-    // .b_rvalid_o(),
-    // .b_rdata_o (core_instr_rdata)
     .b_req_i   (mem_instr_req),
     .b_we_i    (1'b0),
     .b_be_i    (4'b0),

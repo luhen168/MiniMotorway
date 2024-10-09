@@ -1,3 +1,5 @@
+/* verilator lint_off UNUSEDSIGNAL */
+/* verilator lint_off CASEX */
 // module mux_3to1 #(
 //     parameter DATAWIDTH = 32
 // ) (
@@ -42,3 +44,5 @@ module mux_3to1 #(
             selected_out = 32'bx;
     endcase
 endmodule
+
+
