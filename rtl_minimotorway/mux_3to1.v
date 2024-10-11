@@ -22,7 +22,8 @@
 module mux_3to1 #(
     parameter DATAWIDTH = 32
 ) (
-    input [DATAWIDTH-1:0] inputA, inputB, inputC,
+    input [DATAWIDTH-1:0] inputA, inputB, inputC, inputD,
+    input compress,
     input [1:0] select,
     input [31:0] i_if_instr,
     output reg [DATAWIDTH-1:0] selected_out
@@ -35,7 +36,7 @@ module mux_3to1 #(
         2'b01:
             selected_out = inputB;
         2'b10: begin
-            if (i_if_instr[6:0] == 7'b0010111) selected_out = inputA;
+            if (compress) selected_out = inputD;
             else selected_out = inputC;
         end
         default:

@@ -1,6 +1,7 @@
 module control_unit (
     // from instr mem
     input i_resetn,
+    input [31:0] i_pc,
     input [6:0] opcode,
     input [2:0] funct3,
     input [6:0] funct7,
@@ -9,6 +10,8 @@ module control_unit (
     input i_compare_lt, i_compare_eq,
     input i_mem_wreg, i_mem_mem2reg, i_exe_wreg, i_exe_mem2reg,
     input [4:0] i_mem_rd, i_exe_rd,
+    //valid
+    input valid_i,
     // to datapath
     output o_not_stall, o_flush, 
     output reg [4:0] aluc,
@@ -78,25 +81,28 @@ module control_unit (
     /******************************** Instruction Decode ********************************/
     always @(*)
     begin
-        wreg    = 1'bx;
-        jal     = 1'bx;
-        jalr    = 1'bx;
-        mem2reg = 1'bx;
-        aluimm  = 1'bx;
-        signext = 1'bx;
-        ls_b    = 1'bx;
-        ls_h    = 1'bx;
-        load_signext = 1'bx;
-        wmem    = 1'bx;
+        if (!i_resetn) pcsrc = 2'b11;
+        else if ((valid_i == 0) & (i_pc != 32'h80)) begin
+        wreg    = 1'b0;
+        jal     = 1'b0;
+        jalr    = 1'b0;
+        mem2reg = 1'b0;
+        aluimm  = 1'b0;
+        signext = 1'b0;
+        ls_b    = 1'b0;
+        ls_h    = 1'b0;
+        load_signext = 1'b0;
+        wmem    = 1'b0;
         pcsrc   = 2'b00;
         aluc    = 5'bxxxxx;
-        auipc   = 1'bx;
-        slt_instr = 1'bx;
-        compare_signed = 1'bx;
-        compare_imm = 1'bx;
-        use_rs1 = 1'bx;
-        use_rs2 = 1'bx;
-
+        auipc   = 1'b0;
+        slt_instr = 1'b0;
+        compare_signed = 1'b0;
+        compare_imm = 1'b0;
+        use_rs1 = 1'b0;
+        use_rs2 = 1'b0;
+        end 
+        else begin
         case(opcode)
             7'b0110011: // R-Type
             begin
@@ -508,8 +514,10 @@ module control_unit (
                 compare_imm = 1'bx;
                 use_rs1 = 1'bx;
                 use_rs2 = 1'bx;
+  
             end
         endcase
+    end
     end
     
 endmodule

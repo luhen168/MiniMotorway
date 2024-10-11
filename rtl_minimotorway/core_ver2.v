@@ -143,81 +143,121 @@ module core_ver2(
 
     wire [31:0] data_rdata_modified;
 
+    wire ready_i; //to prefetch
 
     /********************************************* IF STAGE *********************************************/
     /********************** PC REG *********************/
     // pc reg
-    pc_reg pc_pipeline_reg(
+    en_pc ready_signal(
         .i_clk(clk_i), 
         .i_resetn(rst_ni),
         .i_data_req(data_req_o), 
         .i_data_rvalid(data_rvalid_i),
         .i_we(not_stall),
-        .i_pc(pc_next),
-        .o_pc(if_pc)
+        .en_pc(ready_i)
     );
-    /***********************************************/
+    // /***********************************************/
     
-    // pc modifier
-    pc_modifier pc_modifier(
-        .pc_in(if_pc),
-        .modified_pc(mod_pc)
-    );
+    // // pc modifier
+    // pc_modifier pc_modifier(
+    //     .pc_in(if_pc),
+    //     .modified_pc(mod_pc)
+    // );
 
-    // imem_interface
-    imem_interface imem_interface(
-        .pc_addr_i(mod_pc),
-        .instr_gnt_i(instr_gnt_i),
-        .instr_rvalid_i(instr_rvalid_i),
-        .instr_rdata_i(instr_rdata_i),
-        .instr_rdata_intg_i(instr_rdata_intg_i),
-        .instr_err_i(instr_err_i), 
-        .instr_req_o(instr_req_o),
-        .instr_addr_o(instr_addr_o),
-        .instr_rdata_o(instr_rdata)
-    );
+    // // imem_interface
+    // imem_interface imem_interface(
+    //     .pc_addr_i(mod_pc),
+    //     .instr_gnt_i(instr_gnt_i),
+    //     .instr_rvalid_i(instr_rvalid_i),
+    //     .instr_rdata_i(instr_rdata_i),
+    //     .instr_rdata_intg_i(instr_rdata_intg_i),
+    //     .instr_err_i(instr_err_i), 
+    //     .instr_req_o(instr_req_o),
+    //     .instr_addr_o(instr_addr_o),
+    //     .instr_rdata_o(instr_rdata)
+    // );
 
-    // get p4 (pc+4)
-    adder p4_adder(
-        .a(mod_pc), 
-        .b(32'h4),             // 32-bit inputs
-        .sum(if_p4)            // sum result
-    );
+    // // get p4 (pc+4)
+    // adder p4_adder(
+    //     .a(mod_pc), 
+    //     .b(32'h4),             // 32-bit inputs
+    //     .sum(if_p4)            // sum result
+    // );
     
     // 3:1 MUX to select next pc
-    mux_3to1 next_pc_mux (
-        .inputA(if_p4), 
-        .inputB(jalr_branch_pc), 
-        .inputC(jal_pc),
-        .i_if_instr(i_instr_c),
-        .select(pcsrc),
-        .selected_out(pc_next)
-    ); 
+    // mux_3to1 next_pc_mux (
+    //     .inputA(if_p4), 
+    //     .inputB(jalr_branch_pc), 
+    //     .inputC(jal_pc),
+    //     .i_if_instr(i_instr_c),
+    //     .select(pcsrc),
+    //     .selected_out(pc_next)
+    // ); 
 
- 
     /****************************************************************************************************/
-	wire unsused_1, unsused_2;
+    wire fetch_valid, fetch_err, busy_o, fetch_err_plus2;
+    ibex_prefetch_buffer #(
+     .ResetAll        ('0)
+   ) prefetch_buffer_i (
+       .clk_i               ( clk_i                      ),
+       .rst_ni              ( rst_ni                     ),
+
+
+       .req_i               ( 1'b1                       ),
+
+
+       .branch_i            ( pcsrc                      ),
+       .addr_i_jalr         ( jalr_branch_pc             ),
+       .addr_i_jal          ( jal_pc                     ),
+
+       .ready_i             ( ready_i                    ),
+       .valid_o             ( fetch_valid                ),
+       .rdata_o             ( instr_rdata                ),
+       .addr_o              ( mod_pc                     ),
+       .err_o               ( fetch_err                  ),
+       .err_plus2_o         ( fetch_err_plus2            ),
+
+
+       .instr_req_o         ( instr_req_o                ),
+       .instr_addr_o        ( instr_addr_o               ),
+       .instr_gnt_i         ( instr_gnt_i                ),
+       .instr_rvalid_i      ( instr_rvalid_i             ),
+       .instr_rdata_i       ( instr_rdata_i[31:0]        ),
+       .instr_err_i         ( instr_err_i                ),
+
+
+       .busy_o              ( busy_o                     )
+   );
+
+
+    /****************************************************************************************************/
+	wire if_compress, id_compress, exe_compress, unsused_2;
     compressed_decoder compressed_decoder(
         .instr_i(instr_rdata),
         .instr_o(i_instr_c),
-        .is_compressed_o(unused_1),
+        .is_compressed_o(if_compress),
         .illegal_instr_o(unused_2)
     );
     
     /********************************************* ID STAGE *********************************************/
     /********************** IF/ID REG *********************/
+    wire if_valid;
     if_id_reg if_id_pipeline_reg (
         .i_clk(clk_i), 
         .i_resetn(rst_ni),
         .i_we(not_stall),
         .i_flush(flush),
         .is_auipc(auipc),
-        .i_if_p4(if_p4), 
+        .i_valid(fetch_valid & ~fetch_err),
+        .i_compress(if_compress),
+        .o_compress(id_compress),
+        // .i_if_p4(if_p4), 
         .i_if_pc(mod_pc), 
         .i_if_instr(i_instr_c),
-        .o_id_p4(id_p4), 
+        // .o_id_p4(id_p4), 
         .o_id_pc(id_pc), 
-        .o_id_instr(id_instr)
+        .o_id_instr(id_instr),
+        .o_valid(if_valid)
     );
     /******************************************************/
 
@@ -259,7 +299,10 @@ module core_ver2(
         .load_signext(load_signext), 
         .slt_instr(slt_instr), 
         .compare_signed(compare_signed), 
-        .compare_imm(compare_imm)
+        .compare_imm(compare_imm),
+        // valid
+        .i_pc (id_pc),
+        .valid_i(if_valid)
     );
     /**********************************************************/
 
@@ -287,7 +330,7 @@ module core_ver2(
     /**************************************************************/
 
     // jal pc 
-    adder_pc_jal jal_pc_adder (
+    adder jal_pc_adder (
         .a(imm_val), 
         .b(id_pc),
 
@@ -295,7 +338,7 @@ module core_ver2(
     ); 
 
     // Inputb for adder
-    assign jalr_branch_inputb = jalr ? id_regdata1 : exe_pc; 
+    assign jalr_branch_inputb = jalr ? id_regdata1 : id_pc; 
 
     // add imm to pc (branch) or reg_data1 (jalr). 
     adder br_jalr_adder (  
@@ -352,7 +395,10 @@ module core_ver2(
         .i_id_regdata2(id_regdata2), 
         .i_id_rd(rd), 
         .i_id_imm(imm_val), 
-        .i_id_p4(id_p4),
+        // .i_id_p4(id_p4),
+        //compress
+        .i_compress(id_compress),
+        .o_compress(exe_compress),
         // Control signals to EXE stage
         .o_exe_mem2reg(exe_mem2reg), 
         .o_exe_wmem(exe_wmem), 
@@ -371,12 +417,12 @@ module core_ver2(
         .o_exe_regdata2(exe_regdata2), 
         .o_exe_rd(exe_rd), 
         .o_exe_imm(exe_imm), 
-        .o_exe_p4(exe_p4), 
+        // .o_exe_p4(exe_p4), 
         .o_exe_lt(exe_lt)
     );
     /********************** ALU **********************/
     // input a mux
-    assign alu_inputa = exe_auipc ? (exe_pc-4) : exe_regdata1;
+    assign alu_inputa = exe_auipc ? (exe_pc) : exe_regdata1;
     
     // input b mux
     assign alu_inputb = exe_aluimm ? exe_imm : exe_regdata2;
@@ -392,8 +438,9 @@ module core_ver2(
     mux_3to1 exe_data_mux (
         .inputA(alu_r), 
         .inputB(lt_32bit), 
-        .inputC(exe_pc),
-        .i_if_instr('0),
+        .inputC(exe_pc+4),
+        .inputD(exe_pc+2),
+        .compress(exe_compress),
         // .inputC(exe_p4),
         .select({exe_jal, exe_slt_instr}),
         .selected_out(exe_data)
@@ -467,6 +514,7 @@ module core_ver2(
 
     //output signal to core
         .o_data_rdata(data_rdata_modified)
+        // .o_data_rdata(data_rdata_i)
     );
 
 

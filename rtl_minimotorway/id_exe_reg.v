@@ -8,8 +8,9 @@ module id_exe_reg(
     input i_id_lt,  // less-than result
     input [4:0] i_id_rd,
     input [31:0] i_id_pc, i_id_regdata1, i_id_regdata2, i_id_imm, i_id_p4,
+    input i_compress,
     // Control signals to EXE stage
-    output reg o_exe_mem2reg, o_exe_wmem, o_exe_aluimm, o_exe_slt_instr, o_exe_wreg, o_exe_auipc, o_exe_lsb, o_exe_lsh, o_exe_loadsignext, o_exe_jal,
+    output reg o_exe_mem2reg, o_exe_wmem, o_exe_aluimm, o_exe_slt_instr, o_exe_wreg, o_exe_auipc, o_exe_lsb, o_exe_lsh, o_exe_loadsignext, o_exe_jal, o_compress,
     output reg [4:0] o_exe_aluc, 
     // Data to EXE stage
     output reg o_exe_lt,
@@ -41,6 +42,7 @@ module id_exe_reg(
         o_exe_rd          <= 'b0;
         o_exe_imm         <= 'b0;
         o_exe_p4          <= 'b0;
+        o_compress        <= 'b0;
         end
 
         else
@@ -65,6 +67,7 @@ module id_exe_reg(
         o_exe_rd          <= i_id_rd;
         o_exe_imm         <= i_id_imm;
         o_exe_p4          <= i_id_p4;
+        o_compress        <= i_compress;
         end
     end
 
